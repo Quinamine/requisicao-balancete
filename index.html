@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-MZ" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Requisição/Balancete</title>
+        <meta name="robots" content="index, follow"/>
+        <meta name="description" content="Serviço online gratuito que auxilia na elaboração da Requisição/Balancete, através do cálculo automático da quantidade a requisitar, a partir dos dados inseridos pelo usuário (Profissional de Saúde). Tem a estrutura idêntica ao modelo da ficha de Requisição/Balancete actualmente (2023) vigente no Serviço Nacional de Saúde (SNS) em Moçambique."/>
+        <meta name="keywords" content="Requisição/Balancete, Balancete, Requisição de Medicamentos e Artigos Médicos, Stock no Início de Período, Soma das Entradas, Soma das Saídas, Soma Teórico Fim do Período, Total dos Pedidos, Inventário do Stock, Diferença, Quantidade a Requisitar." />
+        <meta name="author" content="Adérito Félix Quinamine" />
+
+        <!-- PARTILHA NAS REDES SOCIAIS -->
+        <meta property="og:url" content="https://www.quinamine.github.io/totalizador-de-resumo-mensal-de-consultas/index.html" />
+        <meta property="og:title" content="Requisição/Balancete" />
+        <meta property="og:description" content="Serviço online gratuito que auxilia na elaboração da Requisição/Balancete, através do cálculo automático da quantidade a requisitar, a partir dos dados inseridos pelo usuário (Profissional de Saúde). Tem a estrutura idêntica ao modelo da ficha de Requisição/Balancete actualmente (2023) vigente no Serviço Nacional de Saúde (SNS) em Moçambique." />
+        <meta property="og:image" content="https://www.quinamine.github.io/totalizador-de-resumo-mensal-de-consultas/requisicao-balancete.png" />
+
+        <!-- DESIGN -->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/layout.css" />
+        <link rel="stylesheet" href="styles/ficha.css" />
+        <link rel="stylesheet" href="styles/aside.css" />
+
+        <!-- FUNCIONALIDADES -->
+        <script src="scripts/menu.js"></script>
+        <script src="scripts/inputvalidation.js"></script>
+        <script src="scripts/webstorage.js"></script>
+
+        <noscript>O seu navegador está com o JavaScript desabilitado e isso bloqueia as funcionalidades desta plataforma. Habilite-o nas configurações do navegador e recarregue a página.</noscript>
+
+    </head>
+    <body id="ficha" ontouchstart="">
+        <header>
+            <div class="linha do-cabecalho">
+                <a href="index.html" class="logo">
+                    Requisição/Balancete
+                </a>                                     
+                <section class="menu" role="navigation">
+                    <ul>
+                        <li class="destacar-as-celulas-automaticas" title="Adicionar um fundo opaco às celulas dos totais">
+                            <input type="checkbox" id="readonlyinputs-darker"/> 
+                            <label for="readonlyinputs-darker">Destacar&nbsp;o&nbsp;fundo&nbsp;das&nbsp;células&nbsp;automáticas</label>
+                        </li>
+                        <li title="Migrar até uma determinada linha">
+                            <button class="ir-para">Pesquisar&nbsp;fármaco/artigo&nbsp;médico</button>
+                        </li>                             
+                        <li title="Limpar os dados da ficha">
+                            <button class="esvaziar-ficha">Esvaziar&nbsp;a&nbsp;ficha</button>
+                        </li>
+                        <li title="Imprimir a ficha" class="impressao">
+                            <button class="imprimir">Imprimir</button>
+                        </li>
+                        <li title="Tutorial">
+                            <button class="salvar-como-pdf">
+                                Salvar&nbsp;como&nbsp;PDF <span class="question-mark">?</span>
+                            </button>
+                        </li>
+                        <li title="Sobre o totalizador" class="sobre">
+                            <button class="abrir-artigo-sobre">Sobre</button>
+                        </li>
+                        <li title="Partilhar o endereço do totalizador" class="partilha">
+                            <button class="partilhar">Partilhar...</button>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <header>
+                    <div class="col c1">
+                        <div class="coluna-com-titulo-cmam">
+                            <span><b>CMAM-Modelo 01</b></span>
+                        </div>
+                        <div class="coluna-com-emblema-e-republica">
+                            <div class="row row1">
+                                <figure>
+                                    <img src="images/emblema.png" alt="emblema da República de Moçambique" />
+                                </figure>
+                                <div class="coluna-de-republica">
+                                    <span>República de Moçambique</span>
+                                    <span>Ministério da Saúde</span>
+                                    <span><b>Central de Medicamentos e Artigos Médicos</b></span>
+                                </div>
+                            </div>
+                            <div class="row row2">
+                                <label for="us">Unidade Sanitária:</label>
+                                <input type="text" id="us"/>
+                            </div>
+                            <div class="row row3">
+                                <label for="distrito">Distrito:</label>
+                                <input type="text" id="distrito" />
+                            </div>
+                            <div class="row row4">
+                                <label for="nivel-do-dc">
+                                    Nível&nbsp;de&nbsp;Qualificação&nbsp;do&nbsp;Responsável&nbsp;Clínico:
+                                </label>
+                                <input type="text" id="nivel-do-dc" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col c2">
+                        <div class="row row1">
+                            <h1>Requisição/Balancete N<sup>o</sup></h1>
+                            <input type="number" id="numero-de-requisicao"/>
+                        </div>
+
+                        <div class="row row2">
+                            <div class="col1">
+                                <label for="provincia">Província:</label>
+                                <input type="text" id="provincia" />
+                            </div>
+                            <div class="col2">
+                                <label for="periodo">Período:</label>
+                                <input type="text" id="periodo" />
+                            </div>
+                            <div class="col3">
+                                <label for="ate">Até:</label>
+                                <input type="text" id="ate" />
+                            </div>
+                        </div>
+                        <div class="row3">
+                            <div class="col1">
+
+                            </div>
+                            <div class="col2">
+                                <label for="numero-de-kits">N<sup>o</sup>de Kits<br/>Recebido:</label>
+                                <input type="number" id="numero-de-kits" />
+                            </div>
+                            <div class="col3">
+                                <label for="kit-us">US:</label>
+                                <input type="number" id="kit-us" />
+                            </div>
+                            <div class="col4">
+                                <label for="kit-ape">Até:</label>
+                                <input type="number" id="kit-ape" />
+                            </div>
+                        </div>
+
+                        <div class="row4">
+                            <div class="col1">
+                                <label for="numero-de-consultas-externas">N<sup>o</sup>de Consultas Externas Realizadas:</label>
+                                <input type="number" id="numero-de-consultas-externas">
+                            </div>
+                            <div class="col2">
+                                <label for="numero-de-kits-abertos">N<sup>o</sup>de Kits<br/>Abertos:</label>
+                                <input type="number" id="numero-de-kits-abertos" />
+                            </div>
+                            <div class="col3">
+                                <label for="kits-us-abertos">US:</label>
+                                <input type="number" id="kits-us-abertos" />
+                            </div>
+                            <div class="col4">
+                                <label for="kits-ape-abertos">Até:</label>
+                                <input type="number" id="kits-ape-abertos" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col c3">
+                        <div class="row1">
+                            <label for="normal">Normal</label>
+                            <input type="checkbox" id="normal"/>
+                        </div>
+                        <div class="row2">
+                            <label for="especial">Especial/Urgência</label>
+                            <input type="checkbox" id="especial"/>
+                        </div>
+                        <div class="row3">
+                            <label for="segunda-via">2<sup>a</sup> Via</label>
+                            <input type="checkbox" id="segunda-via"/>
+                        </div>
+
+                        <div>
+                            <label for="data-de-requisicao">
+                                Data de Requisição:
+                            </label>
+                            <input type="text" id="data-de-realizacao" />
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+            <aside class="manipulacao-do-menu">    
+                <!-- Caixa de pesquisa "Ir para" -->
+                <div class="pesquisa">
+                    <div class="caixa-de-pesquisa">
+                        <input type="number" placeholder="Introduza o número da linha" min="1" max="63" class="pesquisar-linha">    
+                        <button class="fechar" title="Fechar">&times;</button>
+                    </div>
+                    
+                    <div class="caixa-de-alerta query-out-of-range">
+                        <p><b class="entered-num"></b> não corresponde à nenhuma linha. A ficha tem no máximo 53 linhas a partir de 1.</p>
+                        
+                        <button>OK</button>
+                    </div>
+                </div> 
+    
+                <!-- Esvaziamento da ficha -->
+                <div class="esvaziamento">
+                    <div class="caixa-de-confirmacao">
+                        <h3>Esvaziar a ficha</h3>
+    
+                        <p>Tem certeza de que pretende esvaziar a ficha?</p>
+    
+                        <div class="alerta">
+                            <svg style="width: 40px; height: 40px; ">
+    
+                                <linearGradient id="meuGradiente" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color: gray" ></stop>
+                                    <stop offset="100%" style="stop-color: yellow" ></stop>
+                                </linearGradient>
+    
+                                <polygon points="20,0 40,40, 0,40" fill="url(#meuGradiente)" stroke-width="1" stroke="#333"></polygon>
+    
+                                <text x="15.335" y="35.5" style="font-weight: bold; font-size: 28px">!</text>
+                            </svg>
+    
+                            <p>Esta acção não pode ser desfeita.</p>
+    
+                        </div>
+    
+                        <h4>Dados adicionais</h4>
+                        <ul class="limpadores-de-dados-adicionais">
+                            <li>
+                                <input type="checkbox" id="us" checked data-for="nome-da-us" />
+                                <label for="us">Nome da US</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="month" checked data-for="mes" />
+                                <label for="month">Mês</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="nome" checked data-for="nome-do-ps"/>
+                                <label for="nome">Nome do Responsável pelo preenchimento</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="ocupacao" checked data-for="categoria"/>
+                                <label for="ocupacao">Categoria</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" id="date" checked data-for="data-de-elaboracao"/>
+                                <label for="date">Data</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="nota-do-resumo" checked data-for="nota"/>
+                                <label for="nota-do-resumo">Nota do resumo</label>
+                            </li>
+                        </ul>
+    
+                        <div class="botoes-de-confirmacao">
+                            <button class="cancelar">Cancelar</button>
+                            <button class="confirmar">Confirmar</button>
+                        </div>
+                    </div>
+                    <div class="caixa-de-alerta ficha-vazia">
+                        <p>A ficha encontra-se vazia.</p>                    
+                        <button>OK</button>
+                    </div>
+                </div>
+    
+                <!-- Restrição à readonly cels -->
+                <div class="caixa-de-alerta restricao-de-acesso-celular">
+                    <p>Para proteger os resultados de prováveis alterações acidentais, as células dos totais têm o acesso interdito.</p>               
+                    <button>OK</button>
+                </div>
+    
+                <div class="caixa-de-alerta indicador-nao-aplicavel">
+                    <p>Indicador não aplicável para o sexo <span class="sexo-output"></span>.</p>               
+                    <button>OK</button>
+                </div>
+    
+                 <!-- Razão pelas células com fundo vermelho  -->
+                 <div class="razao-pelas-celulas-com-fundo-vermelho">
+                    <h2>Por que algumas células ficaram com o fundo vermelho?</h2>
+                    <p class="destaque obs">
+                        Toda célula cujo fundo está vermelho tem um ou mais algarismos omissos por indisponibilidade de espaço na respectiva célula.
+                    </p>
+                    <p>
+                        As células de entrada de dados do Totalizador têm uma largura para 7 algarismos no máximo, portanto, só podem mostrar valores até <strong>9&nbsp;999&nbsp;999</strong>. A partir de 10&nbsp;000&nbsp;000, ficam visíveis somente os primeiros 7 algarismos e do 8º em diante, ficam fora da área visível da célula.
+                    </p>
+                    <p class="destaque suposicao">
+                        Presumo que actualmente (2022) não haja uma Unidade Sanitária em Moçambique com um número de consultas externas maior que 9&nbsp;999&nbsp;999.
+                    </p>
+                    <div class="seccao-de-interatividade">
+                        <div>
+                            <input type="checkbox" id="nao-mostrar-mais" />
+                            <label for="nao-mostrar-mais">Não mostrar mais esta mensagem</label>
+                        </div>
+                        <button class="close-redcels-obs">Fechar</button>
+                    </div>
+                </div>
+    
+                <!-- AVISO DE USO DE COOKIES -->
+                <div class="aviso-de-uso-de-cookies">
+                    <p>                    
+                        Ao utilizar o Totalizador de Resumo Mensal de Consultas, o usuário concorda com o armazenamento local de dados, a fim de melhorar a sua experiência de utilização. <button class="abrir-artigo-cookies">Saiba mais...</button>
+                    </p>
+        
+                    <button class="aceitar-cookies">Prosseguir</button>
+                </div> 
+            </aside>
+        </main>
+
+        <!-- Sobre e Cookies  -->
+        <article >
+            <section id="sobre">
+                <h1>Sobre o totalizador</h1>
+                
+                <figure>
+                    <img src="imagens/totalizador-de-resumo-mensal-de-consultas.png" alt="Totalizador de Resumo Mensal de Consultas"/>
+                </figure>
+
+                <p> <b>O Totalizador de Resumo Mensal de Consultas</b> é um serviço online gratuito que, como o nome sugere,  <b>auxilia na elaboração do resumo mensal de consultas externas através do cálculo automático dos subtotais e totais a partir dos dados preenchidos</b> pelo usuário (Profissional de Saúde). Tem a estrutura idêntica ao modelo da ficha de resumo mensal de consultas externas actualmente (2022) vigente no Serviço Nacional de Saúde (SNS) em Moçambique.</p>
+            
+                <h2>Qual é o propósito?</h2>
+            
+                <p>O propósito é de flexibilizar a elaboração do resumo auxiliando no <b>cálculo dos subtotais e totais automaticamente</b> e de minimizar possíveis erros de soma por confusão (por exemplo, somar valores de células não correspondentes, como feminino e masculino para achar um subtotal feminino ou vice versa) <b>através do uso de um algorítimo atenciosamente programado para realizar cálculos de soma de forma correcta e com a vantagem de autopreencher as células correspondentes (subtotais e totais)</b>.</p>
+            
+                <h2>Como funciona?</h2>
+            
+                <p>O serviço espera como parâmetros os dados colhidos do(s) Livro(s) de Registo de Consultas Externas da  respectiva Unidade Sanitária durante o mês em consideração e com base nesses dados, as células correspondentes aos subtotais e totais são calculadas automaticamente e em tempo real. Após obter os totais, o usuário pode copiar os valores para a ficha original a partir da tela do seu dispositivo ou pode optar por imprimir a ficha do Totalizador para copiar a partir do papel.</p>
+            
+                <h2>O que o usuário precisa dispor?</h2>
+            
+                <p>Além de um dispositivo como computador (recomendável para uma melhor experiência) ou celular (alternativo) e outros serviços (internet) para ter acesso à plataforma, é importante que o profissional (usuário) tenha colhido os dados relativos as variáveis ou indicadores da ficha no(s) Livro(s) de  Registo de Consultas Externas da sua Unidade Sanitária. <strong>Essa responsabilidade é inteiramente do usuário, a plataforma só se limita a fazer o cálculo dos subtotais e totais.</strong></p>
+            
+                <h2>Qual é o destino dos dados que o usuário insere?</h2>
+            
+                <p>Eles são guardados no seu próprio navegador através de um recurso chamado Local Storage (Armazenamento Local). E mesmo fechando o navegador, eles permanecem no local até o usuário eliminá-los pela opção "<b>Esvaziar a ficha</b>".
+        
+                <h2>Quais as vantagens de se usar o serviço?</h2>
+            
+                <ul>
+                    <li>Calcula e preenche automaticamente as células correspondentes aos subtotais e totais;</li>
+                    <li>É lógico (fornece resultados verdadeiros);</li>
+                    <li>Flexibiliza a elaboração do resumo;</li>
+                    <li>Salva os dados no navegador do usuário até este eliminá-los.</li>
+					<li>Pode ser impresso.</li>
+                </ul>
+                
+                <button class="fechar-artigo" title="Fechar">
+                    &times;
+                </button>
+            </section>
+            <section id="cookies">
+                <h1>Política de Armazenamento de dados</h1>
+
+                <p><b>Web Storage</b> é um recurso para armazenamento local (no navegador do usuário) de informações por meio de pequenos arquivos de texto, útil para guardar predefinições.</p>
+
+                <p class="mb-10">Existem 2 tipos de Web Storage:</p>
+
+                <ul>
+                    <li> <b>Session Storage (Armazenamento de Sessão)</b> – elimina os dados gravados quando a janela da página é fechada.</li>
+    
+                    <li> <b>Local Storage (Armazenamento Local)</b> – mantém os dados salvos por um período determinado ou até que o usuário exclua.</li>
+                </ul>
+                  
+                <p>
+                    O Totalizador de Resumo Mensal de Consultas utiliza o primeiro para guardar o consentimento do usuário à Política de Armazenamento e o último pelas razões do subtítulo a seguir.
+                </p>
+
+                <h2>Por que armazeno dados?</h2>
+
+                <p class="mb-10">Por 3 razões, descritivamente:</p>
+
+                <dl>
+                    <dt id="um">Fazer um backup local</dt>
+
+                    <dd class="mb-10">
+                        Fazer uma cópia de segurança dos dados da ficha no navegador do usuário. Se forem preenchidos, os dados que são salvos incluem:
+                    </dd>
+                    <ul>
+                        <li>
+                            <b>Os dados da ficha propriamente dita.</b>
+                        </li>
+                        <li>
+                            <b>Dados adicionais como:</b>
+                            <ul>
+                                <li>Nome da Unidade Sanitária;</li>
+                                <li>Mês;</li>
+                                <li>Nome do Responsável pelo preenchimento;</li>
+                                <li>Assinatura do Responsável pelo preenchimento;</li>
+                                <li>Data de elaboração;</li>
+                                <li>Nota do resumo;</li>
+                            </ul>  
+                        </li>
+                                                
+                    </ul>
+
+                    <dt id="dois">Durabilidade dos dados</dt>
+                    <dd>
+                        Manter salvos os dados previamente inseridos no acto de preenchimento da ficha por tempo suficiente para serem aproveitáveis. Isso é importante, pois possibilita o Profissional interromper sem o risco de voltar à estaca zero, a elaboração do resumo para continuar num outro momento oportuno, sobretudo se ainda lhe faltar dados de alguns indicadores para preencher nas respectivas células da ficha.
+                    </dd>
+
+                    <dt id="tres">Salvar preferências</dt>
+
+                    <dd>
+                        Por exemplo, quando o usuário marca a opção <b>“Destacar o fundo dos totais"</b>, essa escolha é salva na Web Storage para manter nas suas próximas visitas à plataforma.
+                    </dd>
+                </dl>
+
+                <h2>Destino dos dados</h2>  
+
+                <p>Todos os dados são salvos localmente (no navegador do usuário). O armazenamento local é para fins de memorização e com isso tornar os dados suficientemente duráveis.</p>
+
+                <h2>Gerenciamento dos dados pelo usuário</h2>  
+
+                <p>No menu do Totalizador, existe a opção <strong>“Esvaziar a ficha”</strong>, que permite ao usuário apagar todos os dados da ficha salvos pelo Totalizador na Web Storage.</p>
+
+                <div class="consentimento">
+                    <p class="destaque">
+                        A aceitação dos termos de armazenamento apresentados neste bloco é dada pela utilização do Totalizador de Resumo Mensal de Consultas.
+                    </p>
+                </div>
+                                
+                <button class="fechar-artigo" title="Fechar">
+                    <span class="times">
+                        &times;
+                    </span>                  
+                    <svg style="width: 16px; height: 16px; ">
+                        <line x1="0%" x2="50%" y1="50%" y2="0" stroke-width="2px" stroke="#333"></line>
+                        <line x1="0%" x2="50%" y1="50%" y2="100%" stroke-width="2px" stroke="#333"></line>
+                        <line x1="-1" x2="100%" y1="50%" y2="50%" stroke-width="2px" stroke="#333"></line>
+                    </svg>
+                </button>
+            </section>
+            <section id="conversao-pdf">
+                <h1>Como salvar a ficha em PDF?</h1>
+            
+                <ol>
+                    <li>Clique na opção "<b>Imprimir</b>".</li>
+            
+                    <li>Na janela que abrirá, no campo de <b>Impressora</b> ou <b>Destino</b> selecione a opção “<b>Salvar como PDF</b>”.</li>
+            
+                    <li>No campo de <b>Layout</b> ou <b>Orientação</b>, selecione "<b>Paisagem</b>". Isso é para que toda ficha caiba no papel A4 e não haja omissão das últimas colunas.</li>
+            
+                    <li>Por fim, clique em <b>salvar</b> e escolha o destino no seu computador.</li>
+                </ol>
+            
+                <p class="destaque">Se no navegador Firefox haver omissão das últimas colunas no modo paisagem, teste no modo retrato.</p>
+
+                <button class="fechar-artigo" title="Fechar">
+                    &times;
+                </button>
+            </section>
+        </article>
+
+        <footer>
+            
+            <div class="linha do-rodape">
+
+                <div class="hiperligacoes">
+                    <h4>Hiperligações para outros serviços relacionados</h4>
+                    <ul>
+                        <li>
+                            <a href="https://quinamine.github.io/totalizador-de-resumo-mensal-de-saaj/index.html" target="_blank">Totalizador de Resumo Mensal de SAAJ</a>
+                        </li>
+                        <li>
+                            <a href="https://quinamine.github.io/totalizador-de-resumo-mensal-de-hiv-e-sida/index.html" target="_blank">Totalizador de Resumo Mensal de HIV/SIDA</a>
+                        </li>
+                        <li>
+                            <a href="https://quinamine.github.io/tarv-pediatrico/index.html" target="_blank">Doseador Pediátrico de Antirretrovirais</a>
+                        </li>
+                        <li>
+                            <a href="https://quinamine.github.io/calculadora-de-doses-pediatricas/index.html" target="_blank">Calculadora de Doses Pediátricas</a>
+                        </li>                  
+                    </ul>   
+                </div>
+
+                <p>Desenvolvido com &#128153; por <a href="https://quinamine.github.io/aderito-felix-quinamine/index.html">Adérito Félix Quinamine</a> |&nbsp;&copy; 2022 - Totalizador de Resumo Mensal de Consultas</p>
+
+                <a href="#ficha" class="voltar">Voltar ao topo</a>
+            </div>
+        </footer>
+        <div class="desfoque"></div>
+    </body>
+</html>
