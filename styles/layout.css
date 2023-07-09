@@ -22,6 +22,7 @@
     --blue: #0060EE; 
     --purple: rgb(116, 116, 235);
     --orange: #faa032;
+    --brown: rgb(165, 32, 32);
 }
 
 @media print {

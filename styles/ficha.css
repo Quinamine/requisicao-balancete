@@ -48,140 +48,168 @@ div.container input:focus {
 
 div.container {
     max-width: 1300px;
+    min-width: 1300px;
     margin: 20px auto 0 auto;
     border: 1px solid var(--border-color);
+    border-bottom: none;
     padding-left: 20px;
 }
 
 div.container header {
     display: grid;
-    grid-template-columns: 445px 1fr 222px;
+    grid-template-columns: 445px 660px 222px;
 }
 
-div.container header div.row {
-    min-height: 25px;
+/* CSS REUTILIZÁVEL */
+header div.contentor-de-inputs {
+    padding-left: 8px;
+    display: flex;
+    align-items: center;
+    min-height: 27px;
+    max-height: 27px;
     border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
 }
 
-div.container header div.c1 {
+/*div.linha-de-provincia div.contentor-de-inputs:last-child,
+div.linha-de-kits div.contentor-de-inputs:last-child {
+    border-right: none;
+}*/
+
+header div.contentor-de-inputs input {
+    flex: 1;
+    margin-left: 2px;
+    overflow: hidden;
+    height: 23px;
+}
+
+/* CSS ESPECÍFICO */
+header div.col-de-cmam-emblema-us-distrito-nivel {
     display: grid;
     grid-template-columns: 30px 415px;
 }
 
-div.coluna-com-titulo-cmam {
+div.col-de-cmam-emblema-us-distrito-nivel 
+div.col-de-cmam-modelo-1 {
     background-color: var(--fullblack);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-div.coluna-com-titulo-cmam span {
+div.col-de-cmam-modelo-1 span {
     color: var(--yt);
     transform: rotate(-90deg);
     display: inline-block;
     text-wrap: nowrap;
 }
 
-div.coluna-com-emblema-e-republica {
+
+div.col-de-emblema-us-distrito-nivel 
+div.linha-de-emblema-e-republica {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 85px;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
 }
 
-
-div.coluna-com-emblema-e-republica div.row:nth-child(n+2) {
-    padding-left: 10px;
-    display: flex;
-    align-items: center;
-}
-
-div.coluna-com-emblema-e-republica div.row:nth-child(n+2) input {
-    flex: 1;
-    margin-left: 2px;
-    overflow: hidden;
-    height: 20px;
-    max-height: 20px;
-}
-
-
-div.coluna-com-emblema-e-republica div.row1 {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    padding-top: 10px;
-    border-bottom: 1px solid var(--border-color);
-}
-
-div.coluna-com-emblema-e-republica figure {
+div.linha-de-emblema-e-republica figure {
     margin: 0;
 }
 
-div.coluna-com-emblema-e-republica figure img {
+div.linha-de-emblema-e-republica figure img {
     display: block;
     margin: auto;
     width: 80px;
 }
 
-div.coluna-com-emblema-e-republica div.coluna-de-republica span {
+div.linha-de-emblema-republica 
+div.coluna-de-republica {
+    margin-top: 6px;
+}
+
+div.coluna-de-republica span {
     display: block;
     text-transform: uppercase;
     line-height: 1.5;
 }
 
-div.coluna-com-emblema-e-republica div.coluna-de-republica {
-    margin-top: 6px;
-}
-
-
 /* COLUNA 2 */
-div.container header div.c2 {
+div.container header 
+div.col-com-h1-provincia-num-de-kits-e-consultas {
     display: grid;
-    grid-template-rows: 84.4px 24px;
+    grid-template-rows: 86px 27px;
     border-right: 1px solid var(--border-color);
 }
 
-header > div.c2 div.row1 {
+/* COL 2 - LINHA DE TITULO */
+div.col-com-h1-provincia-num-de-kits-e-consultas 
+div.linha-de-titulo {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    height: 86px;
 }
 
-header > div.c2 div.row1 h1 {
+div.linha-de-titulo h1 {
     margin: 0;
     text-transform: uppercase;
     font-size: 20px;
 }
 
-header > div.c2 div.row1 h1 sup {
+div.linha-de-titulo h1 sup {
     font-weight: 700;
 }
-header > div.c2 div.row1 input {
+
+div.linha-de-titulo input {
     border: 1px solid var(--border-color);
     height: 30px;
     margin-left: 20px;
     width: 215px;
     text-align: center;
-    color: brown;
+    color: var(--brown);
     font: 30px bold !important;
     font-family: 'Times New Roman', Times, serif !important;
 }
 
-header > div.c2 div.row2 {
+/* COL 2 - LINHA DE PROVINCIA */
+div.col-com-h1-provincia-num-de-kits-e-consultas 
+div.linha-de-provincia { 
     display: grid;
-    grid-template-columns: 240px 80px 200px 90px;
-    grid-template-areas: "c1 . c2 c3";
+    grid-template-columns: 250px 120px 180px 110px;
 }
 
-header > div.c2 div.row2 div.col1 {
-    grid-area: c1;
+div.linha-de-provincia div.col-de-ate label {
+    height: 100%;
+    display: flex;
+    align-items: center;
     border-right: 1px solid var(--border-color);
+    padding-right: 8px;
 }
 
-header > div.c2 div.row2 div.col2 {
-    grid-area: c2;
-    border-left: 1px solid var(--border-color);
+/* COL 2 - LINHA DE KITS */
+div.col-com-h1-provincia-num-de-kits-e-consultas 
+div.linha-de-kits {
+    display: grid;
+    grid-template-columns: 250px 120px 120px 60px 110px;
+    grid-template-areas: "numero-de-consultas . kits-abertos kits-us-abertos kits-ape-abertos";
 }
 
-header > div.c2 div.row2 div.col3 {
-    grid-area: c3;
-    border-left: 1px solid var(--border-color);
+div.linha-de-kits div.col-numero-de-consultas {
+    grid-area: numero-de-consultas;
 }
 
+div.linha-de-kits div.col-kits-abertos {
+    grid-area: kits-abertos;
+}
 
+div.linha-de-kits div.col-kits-us-abertos {
+    grid-area: kits-us-abertos
+}
+
+div.linha-de-kits div.col-kits-ape-abertos {
+    grid-area: kits-ape-abertos;
+}
