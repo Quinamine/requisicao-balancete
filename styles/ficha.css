@@ -60,6 +60,14 @@ div.container header {
     grid-template-columns: 445px 660px 222px;
 }
 
+div.container input[type=number] {
+    text-align: center;
+}
+
+div.container input {
+    font-weight: bold;
+}
+
 /* CSS REUTILIZÁVEL */
 header div.contentor-de-inputs {
     padding-left: 8px;
@@ -182,34 +190,60 @@ div.linha-de-provincia {
     grid-template-columns: 250px 120px 180px 110px;
 }
 
-div.linha-de-provincia div.col-de-ate label {
+div.linha-de-kits div.col-kits-us-recebidos label,
+div.linha-de-kits div.col-kits-us-abertos label,
+div.linha-de-kits div.col-kits-ape-recebidos label,
+div.linha-de-kits div.col-kits-ape-abertos label,
+div.linha-de-provincia div.col-de-ate label,
+div.linha-de-kits div.col-numero-de-consultas label {
     height: 100%;
     display: flex;
     align-items: center;
     border-right: 1px solid var(--border-color);
-    padding-right: 8px;
+    padding-right: 10px; 
 }
 
 /* COL 2 - LINHA DE KITS */
+
 div.col-com-h1-provincia-num-de-kits-e-consultas 
 div.linha-de-kits {
     display: grid;
     grid-template-columns: 250px 120px 120px 60px 110px;
-    grid-template-areas: "numero-de-consultas . kits-abertos kits-us-abertos kits-ape-abertos";
+    grid-template-areas: "numero-de-consultas numero-de-consultas kits-abertos kits-us-abertos kits-ape-abertos";
 }
 
 div.linha-de-kits div.col-numero-de-consultas {
     grid-area: numero-de-consultas;
+    display: grid;
+    grid-template-columns: 242px 1fr;
+}
+
+div.linha-de-kits div.col-kits-recebidos label {
+    padding-right: 4px;
+    border-right: 1px solid var(--border-color);
 }
 
 div.linha-de-kits div.col-kits-abertos {
     grid-area: kits-abertos;
+    border-left: 1px solid var(--border-color);
+    margin-left: -1px;
+}
+
+div.linha-de-kits div.col-kits-abertos label {
+    border-right: 1px solid var(--border-color);
+    padding-right: 8px;
 }
 
 div.linha-de-kits div.col-kits-us-abertos {
-    grid-area: kits-us-abertos
+    grid-area: kits-us-abertos;
 }
 
 div.linha-de-kits div.col-kits-ape-abertos {
     grid-area: kits-ape-abertos;
 }
+
+div.linha-de-kits div.col-kits-ape-recebidos label,
+div.linha-de-kits div.col-kits-ape-abertos label {
+    padding-right: 4px;
+}
+
