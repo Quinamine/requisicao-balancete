@@ -47,17 +47,17 @@ div.container input:focus {
 /* REQUISICAO PROPRIAMENTE DITA */
 
 div.container {
-    max-width: 1300px;
-    min-width: 1300px;
+    max-width: 1340px;
+    min-width: 1340px;
     margin: 20px auto 0 auto;
     border: 1px solid var(--border-color);
     border-bottom: none;
-    padding-left: 20px;
+    padding-left: 14px;
 }
 
 div.container header {
     display: grid;
-    grid-template-columns: 445px 660px 222px;
+    grid-template-columns: 445px 669px 210px;
 }
 
 div.container input[type=number] {
@@ -134,11 +134,11 @@ div.linha-de-emblema-e-republica figure img {
 }
 
 div.linha-de-emblema-republica 
-div.coluna-de-republica {
+div.col-de-republica {
     margin-top: 6px;
 }
 
-div.coluna-de-republica span {
+div.col-de-republica span {
     display: block;
     text-transform: uppercase;
     line-height: 1.5;
@@ -187,7 +187,7 @@ div.linha-de-titulo input {
 div.col-com-h1-provincia-num-de-kits-e-consultas 
 div.linha-de-provincia { 
     display: grid;
-    grid-template-columns: 250px 120px 180px 110px;
+    grid-template-columns: 241px 100px 208px 120px;
 }
 
 div.linha-de-kits div.col-kits-us-recebidos label,
@@ -200,7 +200,6 @@ div.linha-de-kits div.col-numero-de-consultas label {
     display: flex;
     align-items: center;
     border-right: 1px solid var(--border-color);
-    padding-right: 10px; 
 }
 
 /* COL 2 - LINHA DE KITS */
@@ -208,18 +207,24 @@ div.linha-de-kits div.col-numero-de-consultas label {
 div.col-com-h1-provincia-num-de-kits-e-consultas 
 div.linha-de-kits {
     display: grid;
-    grid-template-columns: 250px 120px 120px 60px 110px;
+    grid-template-columns: 241px 100px 156px 52px 120px;
     grid-template-areas: "numero-de-consultas numero-de-consultas kits-abertos kits-us-abertos kits-ape-abertos";
 }
 
 div.linha-de-kits div.col-numero-de-consultas {
     grid-area: numero-de-consultas;
     display: grid;
-    grid-template-columns: 242px 1fr;
+    grid-template-columns: 233px 1fr;
+}
+
+div.contentor-de-inputs.col-kits-recebidos,
+div.contentor-de-inputs.col-kits-abertos {
+    display: grid;
+    grid-template-columns: 70px 1fr;
 }
 
 div.linha-de-kits div.col-kits-recebidos label {
-    padding-right: 4px;
+    padding-right: 7px;
     border-right: 1px solid var(--border-color);
 }
 
@@ -236,14 +241,133 @@ div.linha-de-kits div.col-kits-abertos label {
 
 div.linha-de-kits div.col-kits-us-abertos {
     grid-area: kits-us-abertos;
+    padding: 0;
 }
 
 div.linha-de-kits div.col-kits-ape-abertos {
     grid-area: kits-ape-abertos;
 }
 
-div.linha-de-kits div.col-kits-ape-recebidos label,
-div.linha-de-kits div.col-kits-ape-abertos label {
-    padding-right: 4px;
+
+div.linha-de-provincia div.col-de-ate,
+div.linha-de-kits div.col-kits-us-recebidos,
+div.linha-de-kits div.col-kits-us-abertos,
+div.linha-de-kits div.col-kits-ape-recebidos,
+div.linha-de-kits div.col-kits-ape-abertos {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 30px 1fr;
 }
 
+div.linha-de-provincia div.col-de-ate,
+div.linha-de-kits div.col-kits-ape-recebidos,
+div.linha-de-kits div.col-kits-ape-abertos {
+    grid-template-columns: 35px 1fr;
+}
+
+div.linha-de-provincia div.col-de-ate label,
+div.linha-de-kits div.col-kits-us-recebidos label,
+div.linha-de-kits div.col-kits-us-abertos label,
+div.linha-de-kits div.col-kits-ape-recebidos label,
+div.linha-de-kits div.col-kits-ape-abertos label {
+    justify-content: center;
+}
+
+/* COLUNA TIPO DE REQUISICAO */
+
+div.container header
+div.col-tipo-de-requisicao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+div.col-tipo-de-requisicao div.tipo {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.col-tipo-de-requisicao input {
+    width: 20px;
+    height: 20px;
+}
+
+/* CORPO DA FICHA */
+div.container div.main header {
+    display: grid;
+    grid-template-columns: 70px 375px 584px 84px repeat(2, 110px);
+    margin-top: 8px;
+    border-top: 1px solid var(--border-color);
+}
+
+div.main header div.col-fnm {
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.main header div.col-nome-de-farmaco {
+    border-right: 1px solid var(--border-color);
+}
+
+div.main header div.col-requisicao-de-nivel-prov-ou-distrital {
+    display: grid;
+    grid-template-rows: repeat(2, 25px) 50px;
+}
+
+div.col-requisicao-de-nivel-prov-ou-distrital 
+div.linha-com-subtitulos-de-controlo {
+    display: grid;
+    grid-template-columns: 85px repeat(2, 78px) 100px repeat(2, 78px) 87px;
+}
+
+div.linha-com-titulo-requisicao,
+div.linha-de-controlo span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    text-align: center;
+}
+
+div.linha-com-titulo-requisicao {
+    border-bottom: 1px solid var(--border-color);
+}
+
+div.linha-de-controlo {
+    display: grid;
+    grid-template-columns: 419px 1fr;
+    border-bottom: 1px solid var(--border-color);
+}
+
+div.linha-de-controlo span:first-child {
+    border-right: 1px solid var(--border-color);
+}
+
+div.linha-com-subtitulos-de-controlo span {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid var(--border-color);
+}
+
+div.col-qtd-a-requisitar {
+    padding-top: 50px;
+}
+
+div.col-qtd-a-requisitar,
+div.col-qtd-pedida,
+div.col-qtd-autorizada {
+    text-align: center;
+}
+
+@media print {
+
+    div.container {
+        visibility: visible;
+    }
+}

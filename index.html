@@ -72,14 +72,14 @@
                 <header>
                     <div class="col-de-cmam-emblema-us-distrito-nivel">
                         <div class="col-de-cmam-modelo-1">
-                            <span><b>CMAM-Modelo 01</b></span>
+                            <span><b>CMAM-Modelo&nbsp;01</b></span>
                         </div>
                         <div class="col-de-emblema-us-distrito-nivel">
                             <div class="row linha-de-emblema-e-republica">
                                 <figure>
                                     <img src="images/emblema.png" alt="emblema da República de Moçambique" />
                                 </figure>
-                                <div class="coluna-de-republica">
+                                <div class="col-de-republica">
                                     <span>República de Moçambique</span>
                                     <span>Ministério da Saúde</span>
                                     <span><b>Central de Medicamentos e Artigos Médicos</b></span>
@@ -103,7 +103,7 @@
                     </div>
                     <div class="col-com-h1-provincia-num-de-kits-e-consultas">
                         <div class="row linha-de-titulo">
-                            <h1>Requisição/Balancete N<sup>o</sup></h1>
+                            <h1>Requisição/Balancete N°</h1>
                             <input type="number" id="numero-de-requisicao"/>
                         </div>
 
@@ -128,7 +128,7 @@
                             <div class="contentor-de-inputs"></div>
 
                             <div class="contentor-de-inputs col-kits-recebidos">
-                                <label for="numero-de-kits">N<sup>o</sup>de Kits<br/>Recebido:</label>
+                                <label for="numero-de-kits">N°&nbsp;de&nbsp;Kits<br/>Recebido:</label>
                                 <input type="number" id="numero-de-kits" />
                             </div>
                             <div class="contentor-de-inputs col-kits-us-recebidos">
@@ -143,11 +143,11 @@
 
                         <div class="row linha-de-kits abertos">
                             <div class="contentor-de-inputs col-numero-de-consultas">
-                                <label for="numero-de-consultas-externas">N<sup>o</sup>de Consultas Externas Realizadas:</label>
+                                <label for="numero-de-consultas-externas">N° de Consultas Externas Realizadas:</label>
                                 <input type="number" id="numero-de-consultas-externas">
                             </div>
                             <div class="contentor-de-inputs col-kits-abertos">
-                                <label for="numero-de-kits-abertos">N<sup>o</sup>de Kits<br/>Abertos:</label>
+                                <label for="numero-de-kits-abertos">N°&nbsp;de&nbsp;Kits<br/>Abertos:</label>
                                 <input type="number" id="numero-de-kits-abertos" />
                             </div>
                             <div class="contentor-de-inputs col-kits-us-abertos">
@@ -160,21 +160,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col third-column">
-                        <div class="row1">
+                    <div class="col-tipo-de-requisicao">
+                        <div class="tipo linha-do-tipo-normal">
                             <label for="normal">Normal</label>
                             <input type="checkbox" id="normal"/>
                         </div>
-                        <div class="row2">
+                        <div class="tipo linha-do-tipo-especial">
                             <label for="especial">Especial/Urgência</label>
                             <input type="checkbox" id="especial"/>
                         </div>
-                        <div class="row3">
-                            <label for="segunda-via">2<sup>a</sup> Via</label>
+                        <div class="tipo linha-do-tipo-segunda-via">
+                            <label for="segunda-via">2ª Via</label>
                             <input type="checkbox" id="segunda-via"/>
                         </div>
 
-                        <div>
+                        <div class="linha-da-data-de-requisicao">
                             <label for="data-de-requisicao">
                                 Data de Requisição:
                             </label>
@@ -182,6 +182,66 @@
                         </div>
                     </div>
                 </header>
+                <div class="main">
+                    <header>
+                        <div class="col-fnm">
+                            <span>FNM</span>
+                        </div>
+                        <div class="col-nome-de-farmaco">
+                            <div>
+                                <span>Designação</span>
+                            </div>
+                            <div>
+                                <span>Nome</span>
+                                <span>Dosagem</span>
+                                <span>Forma Farmacêutica</span>
+                            </div>
+                        </div>
+
+                        <div class="col-requisicao-de-nivel-prov-ou-distrital">
+                            <div class="linha-com-titulo-requisicao">
+                                <span>Requisição do Nível Provincial ou Distrital</span>
+                            </div>
+                            <div class="linha-de-controlo">
+                                <span>Controlo da Ficha de Stock</span>
+
+                                <span>Controlo de Inventário</span>
+                            </div>
+                            <div class="linha-com-subtitulos-de-controlo">
+                                <span>Stock no Início do Período</span>
+                                <span>Soma&nbsp;das<br/>Entradas</span>
+                                <span>Soma&nbsp;das<br/>Saídas</span>
+                                <span>Stock&nbsp;Teórico&nbsp;Fim<br/>do Período</span>
+                                <span>Total&nbsp;dos<br/>Pedídos</span>
+                                <span>Inventário&nbsp;do<br/>Stock</span>
+                                <span>Diferença</span>
+                       
+
+                                <!-- SIGLAS DOS SUBTITULOS DE CONTROLO -->
+                                <span>SI</span>
+                                <span>E</span>
+                                <span>S</span>
+                                <span>SF=SI&plus;E&minus;S</span>
+                                <span>P</span>
+                                <span>I</span>
+                                <span>I&minus;SF</span>
+                            </div>
+                        </div>
+                        <div class="col-qtd-a-requisitar">
+                            <span>Quantidade&nbsp;a<br/>Requisitar</span>
+                        </div>
+
+                        <div class="col-qtd-pedida">
+                            <span>Quantidade&nbsp;Pedida</span>
+                        </div>
+
+                        <div class="col-qtd-autorizada">
+                            <span>Qtd.&nbsp;Autorizada pelo&nbsp;Responsável<br/>Clínico</span>
+                        </div>
+                    </header>
+
+
+                </div>
             </div>
 
             <aside class="manipulacao-do-menu">    
