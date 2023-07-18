@@ -49,10 +49,14 @@ div.container input:focus {
 div.container {
     max-width: 1340px;
     min-width: 1340px;
-    margin: 20px auto 0 auto;
+    margin: 20px auto;
     border: 1px solid var(--border-color);
-    border-bottom: none;
+    border-right: none;
     padding-left: 14px;
+}
+
+div.container span {
+    line-height: 1.2 !important;
 }
 
 div.container header {
@@ -281,6 +285,7 @@ div.col-tipo-de-requisicao {
     flex-direction: column;
     justify-content: space-around;
     padding: 0 8px;
+    border-right: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -346,7 +351,7 @@ div.col-nome-de-farmaco div.nome-dosagem-forma {
 div.main header 
 div.col-requisicao-de-nivel-prov-ou-distrital {
     display: grid;
-    grid-template-rows: repeat(2, 25px) 50px;
+    grid-template-rows: repeat(2, 27px) 64px;
 }
 
 div.col-requisicao-de-nivel-prov-ou-distrital 
@@ -408,14 +413,55 @@ div.col-qtd-pedida,
 div.col-qtd-autorizada {
     text-align: center;
     border-bottom: 1px solid var(--border-color);
-}
-
-div.col-qtd-pedida {
     border-right: 1px solid var(--border-color);
 }
+
+/* BODY DA FICHA */
+div.main div.body div.row {
+    display: grid;
+    grid-template-columns: 70px 360px 85px repeat(2, 78px) 100px repeat(2, 78px) 87px 85px repeat(2, 113px);
+    grid-template-rows: 27px;
+}
+
+div.body div.row input {
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+div.body div.row input:first-child {
+    border-left: 1px solid var(--border-color);
+}
+
+div.body div.row input:nth-child(2) {
+    padding: 0 8px;
+    text-align: left;
+}
+
+/* Rodapé da ficha */
+div.main footer {
+    margin-top: 8px;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-bottom: none;
+    min-height: 70px;
+    display: grid;
+    grid-template-columns: 761px 1fr;
+}
+
+div.main footer div:nth-child(2) {
+    padding-left: 8px;
+}
+
+div.main footer input {
+    min-width: 200px;
+}
+
+
 @media print {
 
     div.container {
         visibility: visible;
+        margin-top: 50px;
     }
 }
