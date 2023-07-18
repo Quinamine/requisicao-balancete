@@ -57,7 +57,7 @@ div.container {
 
 div.container header {
     display: grid;
-    grid-template-columns: 445px 669px 210px;
+    grid-template-columns: 430px 669px 226px;
 }
 
 div.container input[type=number] {
@@ -94,7 +94,7 @@ header div.contentor-de-inputs input {
 /* CSS ESPECÍFICO */
 header div.col-de-cmam-emblema-us-distrito-nivel {
     display: grid;
-    grid-template-columns: 30px 415px;
+    grid-template-columns: 30px 400px;
 }
 
 div.col-de-cmam-emblema-us-distrito-nivel 
@@ -116,7 +116,7 @@ div.col-de-cmam-modelo-1 span {
 div.col-de-emblema-us-distrito-nivel 
 div.linha-de-emblema-e-republica {
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 85px 1fr;
     grid-template-rows: 85px;
     align-items: center;
     border-bottom: 1px solid var(--border-color);
@@ -280,16 +280,28 @@ div.col-tipo-de-requisicao {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding-left: 8px;
+    padding: 0 8px;
     border-bottom: 1px solid var(--border-color);
 }
 
-div.col-tipo-de-requisicao div.tipo {
+div.col-tipo-de-requisicao div {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-div.col-tipo-de-requisicao input {
+div.col-tipo-de-requisicao 
+div.linha-da-data-de-requisicao {
+    justify-content: initial;
+}
+
+div.linha-da-data-de-requisicao input {
+    flex: 1;
+    margin-left: 4px;
+}
+
+div.col-tipo-de-requisicao 
+input[type=checkbox] {
     width: 20px;
     height: 20px;
 }
@@ -297,7 +309,7 @@ div.col-tipo-de-requisicao input {
 /* CORPO DA FICHA */
 div.container div.main header {
     display: grid;
-    grid-template-columns: 70px 375px 584px 84px repeat(2, 110px);
+    grid-template-columns: 70px 360px 669px repeat(2, 113px);
     margin-top: 8px;
     border-top: 1px solid var(--border-color);
 }
@@ -305,16 +317,34 @@ div.container div.main header {
 div.main header div.col-fnm {
     border-left: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-div.main header div.col-nome-de-farmaco {
+div.main header 
+div.col-nome-de-farmaco {
     border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    padding: 0 8px;
 }
 
-div.main header div.col-requisicao-de-nivel-prov-ou-distrital {
+div.col-nome-de-farmaco div.designacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.col-nome-de-farmaco div.nome-dosagem-forma {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.main header 
+div.col-requisicao-de-nivel-prov-ou-distrital {
     display: grid;
     grid-template-rows: repeat(2, 25px) 50px;
 }
@@ -322,26 +352,36 @@ div.main header div.col-requisicao-de-nivel-prov-ou-distrital {
 div.col-requisicao-de-nivel-prov-ou-distrital 
 div.linha-com-subtitulos-de-controlo {
     display: grid;
-    grid-template-columns: 85px repeat(2, 78px) 100px repeat(2, 78px) 87px;
+    grid-template-columns: 85px repeat(2, 78px) 100px repeat(2, 78px) 87px 85px;
+}
+
+div.main header span,
+div.main div.col-qtd-pedida,
+div.main div.col-qtd-autorizada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 div.linha-com-titulo-requisicao,
 div.linha-de-controlo span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-weight: 700;
     text-align: center;
 }
 
 div.linha-com-titulo-requisicao {
     border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 div.linha-de-controlo {
     display: grid;
     grid-template-columns: 419px 1fr;
     border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
 }
 
 div.linha-de-controlo span:first-child {
@@ -355,16 +395,24 @@ div.linha-com-subtitulos-de-controlo span {
     border-right: 1px solid var(--border-color);
 }
 
-div.col-qtd-a-requisitar {
-    padding-top: 50px;
+div.linha-com-subtitulos-de-controlo span:nth-child(n+9) {
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
-div.col-qtd-a-requisitar,
+div.linha-com-subtitulos-de-controlo span:last-child {
+    border-top: none;
+}
+
 div.col-qtd-pedida,
 div.col-qtd-autorizada {
     text-align: center;
+    border-bottom: 1px solid var(--border-color);
 }
 
+div.col-qtd-pedida {
+    border-right: 1px solid var(--border-color);
+}
 @media print {
 
     div.container {
