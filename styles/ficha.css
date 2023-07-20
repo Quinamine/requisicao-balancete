@@ -47,12 +47,12 @@ div.container input:focus {
 /* REQUISICAO PROPRIAMENTE DITA */
 
 div.container {
-    max-width: 1340px;
-    min-width: 1340px;
+    max-width: 1336px;
+    min-width: 1336px;
     margin: 20px auto;
     border: 1px solid var(--border-color);
     border-right: none;
-    padding-left: 14px;
+    padding-left: 20px;
 }
 
 div.container span {
@@ -61,7 +61,7 @@ div.container span {
 
 div.container header {
     display: grid;
-    grid-template-columns: 430px 669px 226px;
+    grid-template-columns: 420px 669px 226px;
 }
 
 div.container input[type=number] {
@@ -71,6 +71,8 @@ div.container input[type=number] {
 div.container input {
     font-weight: bold;
 }
+
+
 
 /* CSS REUTILIZÁVEL */
 header div.contentor-de-inputs {
@@ -83,11 +85,6 @@ header div.contentor-de-inputs {
     border-right: 1px solid var(--border-color);
 }
 
-/*div.linha-de-provincia div.contentor-de-inputs:last-child,
-div.linha-de-kits div.contentor-de-inputs:last-child {
-    border-right: none;
-}*/
-
 header div.contentor-de-inputs input {
     flex: 1;
     margin-left: 2px;
@@ -98,7 +95,7 @@ header div.contentor-de-inputs input {
 /* CSS ESPECÍFICO */
 header div.col-de-cmam-emblema-us-distrito-nivel {
     display: grid;
-    grid-template-columns: 30px 400px;
+    grid-template-columns: 30px 390px;
 }
 
 div.col-de-cmam-emblema-us-distrito-nivel 
@@ -120,7 +117,7 @@ div.col-de-cmam-modelo-1 span {
 div.col-de-emblema-us-distrito-nivel 
 div.linha-de-emblema-e-republica {
     display: grid;
-    grid-template-columns: 85px 1fr;
+    grid-template-columns: 75px 1fr;
     grid-template-rows: 85px;
     align-items: center;
     border-bottom: 1px solid var(--border-color);
@@ -300,6 +297,10 @@ div.linha-da-data-de-requisicao {
     justify-content: initial;
 }
 
+div.linha-da-data-de-requisicao {
+    min-height: 18px;
+}
+
 div.linha-da-data-de-requisicao input {
     flex: 1;
     margin-left: 4px;
@@ -314,7 +315,7 @@ input[type=checkbox] {
 /* CORPO DA FICHA */
 div.container div.main header {
     display: grid;
-    grid-template-columns: 70px 360px 669px repeat(2, 113px);
+    grid-template-columns: 60px 360px 669px repeat(2, 113px);
     margin-top: 8px;
     border-top: 1px solid var(--border-color);
 }
@@ -400,6 +401,11 @@ div.linha-com-subtitulos-de-controlo span {
     border-right: 1px solid var(--border-color);
 }
 
+div.linha-com-subtitulos-de-controlo span.diferenca {
+    align-items: baseline;
+    padding-top: 5px;
+}
+
 div.linha-com-subtitulos-de-controlo span:nth-child(n+9) {
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
@@ -419,7 +425,7 @@ div.col-qtd-autorizada {
 /* BODY DA FICHA */
 div.main div.body div.row {
     display: grid;
-    grid-template-columns: 70px 360px 85px repeat(2, 78px) 100px repeat(2, 78px) 87px 85px repeat(2, 113px);
+    grid-template-columns: 60px 360px 85px repeat(2, 78px) 100px repeat(2, 78px) 87px 85px repeat(2, 113px);
     grid-template-rows: 27px;
 }
 
@@ -457,6 +463,31 @@ div.main footer input {
     min-width: 200px;
 }
 
+div.container {
+    position: relative;
+}
+
+div.container aside {
+    position: absolute;
+    top: 280px;
+    left: -28px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    height: 415px;
+}
+
+div.container aside div {
+    transform: rotate(-90deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.container aside input {
+    width: 15px;
+    height: 15px;
+
+}
 
 @media print {
 
@@ -464,4 +495,22 @@ div.main footer input {
         visibility: visible;
         margin-top: 50px;
     }
+}
+
+/* JAVASCRIPT */
+div.container, 
+div.container input {
+    transition: background-color 400ms ease-out;
+}
+
+.pagina-original {
+    background-color: var(--yt);
+}
+
+.pagina-duplicada {
+    background-color: var(--yellow);
+}
+
+.pagina-triplicada {
+    background-color: var(--azulCiano)
 }

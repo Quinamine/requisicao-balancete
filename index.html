@@ -26,6 +26,7 @@
         <!-- FUNCIONALIDADES -->
         <script src="scripts/menu.js"></script>
         <script src="scripts/inputvalidation.js"></script>
+        <script src="scripts/balancete.js"></script>
         <script src="scripts/webstorage.js"></script>
 
         <noscript>O seu navegador está com o JavaScript desabilitado e isso bloqueia as funcionalidades desta plataforma. Habilite-o nas configurações do navegador e recarregue a página.</noscript>
@@ -163,7 +164,7 @@
                     <div class="col-tipo-de-requisicao">
                         <div class="tipo linha-do-tipo-normal">
                             <label for="normal">Normal</label>
-                            <input type="checkbox" id="normal"/>
+                            <input type="checkbox" id="normal" checked />
                         </div>
                         <div class="tipo linha-do-tipo-especial">
                             <label for="especial">Especial/Urgência</label>
@@ -214,7 +215,7 @@
                                 <span>Stock&nbsp;Teórico&nbsp;Fim<br/>do Período</span>
                                 <span>Total&nbsp;dos<br/>Pedídos</span>
                                 <span>Inventário&nbsp;do<br/>Stock</span>
-                                <span>Diferença</span>
+                                <span class="diferenca">Diferença</span>
                                 <span>Quantidade&nbsp;a<br/>Requisitar</span>
                        
 
@@ -249,7 +250,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -263,7 +264,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -277,7 +278,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -291,7 +292,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -305,7 +306,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -319,7 +320,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -333,7 +334,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -347,7 +348,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -361,7 +362,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -375,7 +376,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -389,7 +390,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -403,7 +404,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -417,7 +418,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -431,7 +432,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -445,7 +446,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -459,7 +460,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -473,7 +474,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -487,7 +488,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -501,7 +502,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -515,7 +516,7 @@
                             <input type="text" />
                             <input type="text" />
                             <input type="text" readonly />
-                            <input type="text" />
+                            <input type="text" readonly />
                             <input type="text" />
                             <input type="text" />
                         </div>
@@ -537,6 +538,21 @@
                     </footer>
 
                 </div>
+
+                <aside>
+                    <div>
+                        <label for="original">Original</label>
+                        <input type="checkbox" id="original" checked />
+                    </div>
+                    <div>
+                        <label for="duplicado">Duplicado</label>
+                        <input type="checkbox" id="duplicado" />
+                    </div>
+                    <div>
+                        <label for="triplicado">Triplicado</label>
+                        <input type="checkbox" id="triplicado" />
+                    </div>
+                </aside>
             </div>
 
             <aside class="manipulacao-do-menu">    
