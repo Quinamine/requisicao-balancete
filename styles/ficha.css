@@ -334,7 +334,7 @@ div.col-nome-de-farmaco {
     border-right: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
     display: grid;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 4fr 1fr;
     padding: 0 8px;
 }
 
@@ -427,6 +427,8 @@ div.main div.body div.row {
     display: grid;
     grid-template-columns: 60px 360px 85px repeat(2, 78px) 100px repeat(2, 78px) 87px 85px repeat(2, 113px);
     grid-template-rows: 27px;
+    z-index: 1000;
+    position: relative;
 }
 
 div.body div.row input {
@@ -503,14 +505,14 @@ div.container input {
     transition: background-color 400ms ease-out;
 }
 
-.pagina-original {
+.bgc-fff {
     background-color: var(--yt);
 }
 
-.pagina-duplicada {
+.bgc-yellow {
     background-color: var(--yellow);
 }
 
-.pagina-triplicada {
+.bgc-bluelight {
     background-color: var(--azulCiano)
 }

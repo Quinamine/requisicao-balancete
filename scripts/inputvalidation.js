@@ -48,7 +48,7 @@ const inputValidation = {
 // VARIÁVEIS GLOBAIS
 let inputCels, alertaVermelho;
 window.addEventListener("load", () => {
-    inputCels = document.querySelectorAll("div.inputs-container input");
+    inputCels = document.querySelectorAll("div.body .row input:nth-child(n+3)");
     alertaVermelho = document.querySelector("div.razao-pelas-celulas-com-fundo-vermelho");
 
     inputCels.forEach( cel => {
