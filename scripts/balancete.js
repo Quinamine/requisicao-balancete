@@ -32,6 +32,11 @@ const balancete = {
 
     calcularDiferenca(inventario, stfp, diferencaOutput) {
         diferencaOutput.value = Number(inventario.value - stfp.value);
+    },
+
+    calcularQtdArequisitar(somaDasSaidas, stockFisico, qtdArequisitarOutput) {
+        qtdArequisitarOutput.value = somaDasSaidas.value * 2;
+        
     }
 }
 
@@ -66,7 +71,27 @@ window.addEventListener("load", () => {
                 balancete.calcularStockTeorico(stfp, soma_das_saidas, stfpOutput);
             } 
 
-            
+            if(input.dataset.diferenca) {
+
+                let vetor_I_e_STFP = (input.dataset.diferenca).split("-menos-");
+
+                const inventario = document.querySelector(`.${vetor_I_e_STFP[0]}`);
+                const stfp = document.querySelector(`.${vetor_I_e_STFP[1]}`);
+                const diferencaOutput = document.querySelector(`.${input.dataset.diferencaoutput}`);
+                
+                balancete.calcularDiferenca(inventario, stfp, diferencaOutput);
+            }
+
+            if(input.dataset.qtdarequisitar) {
+
+                let vetor_S_I = (input.dataset.qtdarequisitar).split("-menos-");
+
+                const soma_das_saidas = document.querySelector(`.${vetor_S_I[0]}`);
+                const inventario_do_stock = document.querySelector(`.${vetor_S_I[1]}`);
+                const qtdarequisitarOutput = document.querySelector(`.${input.dataset.qtdarequisitaroutput}`);
+                
+                balancete.calcularDiferenca(soma_das_saidas, inventario_do_stock, qtdarequisitarOutput);
+            }
         })
 
 

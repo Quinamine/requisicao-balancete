@@ -334,7 +334,7 @@ div.col-nome-de-farmaco {
     border-right: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
     display: grid;
-    grid-template-rows: 4fr 1fr;
+    grid-template-rows: 3.76fr 1fr;
     padding: 0 8px;
 }
 
