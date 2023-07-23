@@ -19,51 +19,28 @@ const menu = {
     omitirCaixaDePesquisa() {
         srcContainer.classList.remove("on");
         srcInput.value = "";
-        this.resetarFundoDoNumeroDaLinha();
+        for (const f of farmacos) {
+            f.parentElement.classList.remove("hidden");
+        }
     },
 
-    pesquisarLinha(numLinha) {
-
-        if(numLinha === "") {
-            this.resetarFundoDoNumeroDaLinha();
-            return false;
-        }
-        else if((numLinha < 1) || (numLinha > 53)) {
-            const alerta = document.querySelector("div.caixa-de-alerta.query-out-of-range");
-            alerta.querySelector("b.entered-num").textContent = numLinha;
-            alerta.classList.add("on");
-            srcInput.setAttribute("readonly", "");
-            desfoqueDoFundo.on();
-            this.resetarFundoDoNumeroDaLinha();
-        }
-
-        else {
-            let rowIndex = numLinha - 1;
-            
-            if ((rowNumbers[rowIndex].getBoundingClientRect().bottom < 0) || rowNumbers[rowIndex].getBoundingClientRect().top > window.innerHeight) {
-                if(rowIndex < 3) {
-                    const body = document.querySelector("body");
-                    body.scrollIntoView();
-                }
-                else {
-                    rowNumbers[rowIndex-3].scrollIntoView();
-                }
+    filtrarFarmaco(srcQuery) {
+        let srcQueryLower = srcQuery.toLowerCase();  
+        for (const f of farmacos) {
+            if(srcQuery === "") {
+                f.parentElement.classList.remove("hidden");
+            } else if (f.value.toLowerCase().includes(`${srcQueryLower}`)) {
+                f.parentElement.classList.remove("hidden");
+            } else {
+                f.parentElement.classList.add("hidden");
             }
-            this.resetarFundoDoNumeroDaLinha();
-            rowNumbers[rowIndex].classList.add("fundo-laranja");
-        }
-    },
-
-    resetarFundoDoNumeroDaLinha() {
-        for (const row of rowNumbers) {
-            row.classList.remove("fundo-laranja");
         }
     },
 
     // ESVAZIAR A FICHA
     esvaziamento() {
         const confirmacao = document.querySelector("div.caixa-de-confirmacao");
-        const celulas = document.querySelectorAll("div.inputs-container input");
+        const celulas = document.querySelectorAll("div.body div.row input");
         return {
             mostrarCaixaDeConfirmacao: () => {
                 let celulasPreenchidas = 0;
@@ -103,12 +80,6 @@ const menu = {
                         const dadoAdicional = document.querySelector(`#${IdDoDadoAdicional}`);
                         dadoAdicional.value = "";
                         typeof(Storage) !== "undefined" && localStorage.removeItem(`trmc-${IdDoDadoAdicional}`);
-
-                        // Eliminar o negrito destes elementos para o placeholder não ficar muito nítido
-                        if(IdDoDadoAdicional === "nome-da-us"
-                        || IdDoDadoAdicional === "nota") {
-                            dadoAdicional.classList.remove("bold");
-                        }
                     }
                 }); 
                 desfoqueDoFundo.off();
@@ -118,10 +89,6 @@ const menu = {
 
     // IMPRIMIR
     imprimirFicha() {
-        textArea.value === "" ?
-            textArea.parentElement.classList.add("no-print") :
-            textArea.parentElement.classList.remove("no-print");
-
         window.print();
     },
 
@@ -170,18 +137,13 @@ const desfoqueDoFundo = {
 
 // DECLARAÇÃO E INICIALIZAÇÃO DAS VARIÁVEIS
 let readonlyCelsDarker, readonlyCels,
-srcContainer, srcInput, rowNumbers, 
-textArea, 
-hamburguer,
-divDesfocante;
+srcContainer, srcInput, farmacos, divDesfocante;
 function init() {
     readonlyCelsDarker = document.querySelector("#readonlyinputs-darker");
     readonlyCels = document.querySelectorAll("input[readonly]");
     srcContainer = document.querySelector("div.caixa-de-pesquisa");
     srcInput = document.querySelector("div.caixa-de-pesquisa input.pesquisar-linha");
-    rowNumbers = document.querySelectorAll("div.coluna-de-enumeracao-das-linhas span")
-    textArea = document.querySelector("textarea#nota");
-    hamburguer = document.querySelector("div.hamburguer");
+    farmacos = document.querySelectorAll("div.body div.row input[type=text]");   
     divDesfocante = document.querySelector("div.desfoque");
 }
 
@@ -195,7 +157,7 @@ function eventListeners() {
     const BtnFecharCaixaDePesquisa = document.querySelector("div.caixa-de-pesquisa button.fechar");
     BtnIrPara.addEventListener("click", () => menu.mostrarCaixaDePesquisa());
     BtnFecharCaixaDePesquisa.addEventListener("click", () => menu.omitirCaixaDePesquisa());
-    srcInput.addEventListener("keyup", () => menu.pesquisarLinha(srcInput.value));
+    srcInput.addEventListener("keyup", () => menu.filtrarFarmaco(srcInput.value.trim()));
 
     // FECHAR CAIXA DE ALERTA
     const btnsFecharAlerta = document.querySelectorAll("div.caixa-de-alerta button");
@@ -211,17 +173,7 @@ function eventListeners() {
     // PROTEGER ACESSO À READONLY CELS
     readonlyCels.forEach ( cel => {
         cel.addEventListener("click", () => {
-            if(cel.matches(".nao-aplicavel")) {
-            const alerta = document.querySelector("div.caixa-de-alerta.indicador-nao-aplicavel");
-            const sexoAQueNaoSeAplica = alerta.querySelector("span.sexo-output");
-
-            alerta.classList.add("on");
-            cel.parentElement.matches(".sexo-m") ?
-                sexoAQueNaoSeAplica.textContent = "masculino" : 
-                sexoAQueNaoSeAplica.textContent = "feminino";
-            } else {
-            document.querySelector("div.caixa-de-alerta.restricao-de-acesso-celular").classList.add("on");
-            }           
+            document.querySelector("div.caixa-de-alerta.restricao-de-acesso-celular").classList.add("on");   
             desfoqueDoFundo.on();
         })
     });

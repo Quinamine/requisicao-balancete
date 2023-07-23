@@ -43,13 +43,16 @@ div.container input:focus {
     border-bottom: 2px solid var(--blue) !important;
 }
 
+div.container input[type=checkbox]:focus {
+    border-bottom: initial !important;
+}
 
 /* REQUISICAO PROPRIAMENTE DITA */
 
 div.container {
     max-width: 1336px;
     min-width: 1336px;
-    margin: 20px auto;
+    margin: 30px auto;
     border: 1px solid var(--border-color);
     border-right: none;
     padding-left: 20px;
@@ -71,8 +74,6 @@ div.container input[type=number] {
 div.container input {
     font-weight: bold;
 }
-
-
 
 /* CSS REUTILIZÁVEL */
 header div.contentor-de-inputs {
@@ -318,6 +319,10 @@ div.container div.main header {
     grid-template-columns: 60px 360px 669px repeat(2, 113px);
     margin-top: 8px;
     border-top: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--yt);
 }
 
 div.main header div.col-fnm {
@@ -423,12 +428,20 @@ div.col-qtd-autorizada {
 }
 
 /* BODY DA FICHA */
+div.main div.body {
+    min-height: 540px;
+}
+
 div.main div.body div.row {
     display: grid;
     grid-template-columns: 60px 360px 85px repeat(2, 78px) 100px repeat(2, 78px) 87px 85px repeat(2, 113px);
     grid-template-rows: 27px;
-    z-index: 1000;
+    z-index: 999;
     position: relative;
+}
+
+div.main div.body div.row.hidden {
+    display: none;
 }
 
 div.body div.row input {
@@ -471,18 +484,24 @@ div.container {
 
 div.container aside {
     position: absolute;
-    top: 280px;
-    left: -28px;
+    top: 326px;
+    left: 0px;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    height: 415px;
+    height: 470px;
+    width: 20px;
 }
 
 div.container aside div {
     transform: rotate(-90deg);
     display: flex;
     align-items: center;
-    justify-content: center;
+    max-width: 20px;
+ 
+}
+
+div.container aside label {
+    margin-right: 25px;
 }
 
 div.container aside input {
@@ -501,6 +520,7 @@ div.container aside input {
 
 /* JAVASCRIPT */
 div.container, 
+div.main header,
 div.container input {
     transition: background-color 400ms ease-out;
 }
@@ -510,9 +530,9 @@ div.container input {
 }
 
 .bgc-yellow {
-    background-color: var(--yellow);
+    background-color: var(--yellow) !important;
 }
 
 .bgc-bluelight {
-    background-color: var(--azulCiano)
+    background-color: var(--azulCiano) !important;
 }

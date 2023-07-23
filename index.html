@@ -6,15 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Requisição/Balancete</title>
         <meta name="robots" content="index, follow"/>
-        <meta name="description" content="Serviço online gratuito que auxilia na elaboração da Requisição/Balancete, através do cálculo automático da quantidade a requisitar, a partir dos dados inseridos pelo usuário (Profissional de Saúde). Tem a estrutura idêntica ao modelo da ficha de Requisição/Balancete actualmente (2023) vigente no Serviço Nacional de Saúde (SNS) em Moçambique."/>
+        <meta name="description" content="Requisição/Balancete é um serviço online gratuito que auxilia na elaboração de requisição/balancete através do cálculo automático do Stock Teórico Fim do Período (SF), Diferença entre o Stock Teórico e Stock Físico e Quantidade a Requisitar, com base nos dados inseridos pelo usuário (Profissional de Saúde). Tem a estrutura idêntica ao modelo da ficha de requisição/balancete actualmente (2023) vigente no Serviço Nacional de Saúde (SNS) em Moçambique."/>
         <meta name="keywords" content="Requisição/Balancete, Balancete, Requisição de Medicamentos e Artigos Médicos, Stock no Início de Período, Soma das Entradas, Soma das Saídas, Soma Teórico Fim do Período, Total dos Pedidos, Inventário do Stock, Diferença, Quantidade a Requisitar." />
         <meta name="author" content="Adérito Félix Quinamine" />
 
         <!-- PARTILHA NAS REDES SOCIAIS -->
-        <meta property="og:url" content="https://www.quinamine.github.io/totalizador-de-resumo-mensal-de-consultas/index.html" />
+        <meta property="og:url" content="https://www.quinamine.github.io/requisicao-balancete/index.html" />
         <meta property="og:title" content="Requisição/Balancete" />
-        <meta property="og:description" content="Serviço online gratuito que auxilia na elaboração da Requisição/Balancete, através do cálculo automático da quantidade a requisitar, a partir dos dados inseridos pelo usuário (Profissional de Saúde). Tem a estrutura idêntica ao modelo da ficha de Requisição/Balancete actualmente (2023) vigente no Serviço Nacional de Saúde (SNS) em Moçambique." />
-        <meta property="og:image" content="https://www.quinamine.github.io/totalizador-de-resumo-mensal-de-consultas/requisicao-balancete.png" />
+        <meta property="og:description" content="Requisição/Balancete é um serviço online gratuito que auxilia na elaboração de requisição/balancete através do cálculo automático do Stock Teórico Fim do Período (SF), Diferença entre o Stock Teórico e Stock Físico e Quantidade a Requisitar, com base nos dados inseridos pelo usuário (Profissional de Saúde). Tem a estrutura idêntica ao modelo da ficha de requisição/balancete actualmente (2023) vigente no Serviço Nacional de Saúde (SNS) em Moçambique." />
+        <meta property="og:image" content="https://www.quinamine.github.io/requisicao-balancete/images/requisicao-balancete.png" />
 
         <!-- DESIGN -->
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -40,12 +40,12 @@
                 </a>                                     
                 <section class="menu" role="navigation">
                     <ul>
-                        <li class="destacar-as-celulas-automaticas" title="Adicionar um fundo opaco às celulas dos totais">
+                        <li class="destacar-as-celulas-automaticas" title="Adicionar um fundo opaco às celulas das colunas de Stock Teórico Fim do Período, Diferença e Quantidade a Requisitar">
                             <input type="checkbox" id="readonlyinputs-darker"/> 
                             <label for="readonlyinputs-darker">Destacar&nbsp;o&nbsp;fundo&nbsp;das&nbsp;células&nbsp;automáticas</label>
                         </li>
-                        <li title="Migrar até uma determinada linha">
-                            <button class="ir-para">Pesquisar&nbsp;fármaco/artigo&nbsp;médico</button>
+                        <li title="Mostrar somente os fármacos filtrados">
+                            <button class="ir-para">Filtrar&nbsp;fármaco/artigo&nbsp;médico</button>
                         </li>                             
                         <li title="Limpar os dados da ficha">
                             <button class="esvaziar-ficha">Esvaziar&nbsp;a&nbsp;ficha</button>
@@ -53,13 +53,13 @@
                         <li title="Imprimir a ficha" class="impressao">
                             <button class="imprimir">Imprimir</button>
                         </li>
-                        <li title="Tutorial">
+                        <li title="Tutorial de como salvar a ficha em PDF">
                             <button class="salvar-como-pdf">
                                 Salvar&nbsp;como&nbsp;PDF <span class="question-mark">?</span>
                             </button>
                         </li>
-                        <li title="Sobre o totalizador" class="sobre">
-                            <button class="abrir-artigo-sobre">Sobre</button>
+                        <li title="Sobre o serviço Requisição/Balancete" class="sobre">
+                            <button class="abrir-artigo-sobre">Sobre o serviço</button>
                         </li>
                         <li title="Partilhar o endereço do totalizador" class="partilha">
                             <button class="partilhar">Partilhar...</button>
@@ -129,16 +129,16 @@
                             <div class="contentor-de-inputs"></div>
 
                             <div class="contentor-de-inputs col-kits-recebidos">
-                                <label for="numero-de-kits">N°&nbsp;de&nbsp;Kits<br/>Recebido:</label>
-                                <input type="number" id="numero-de-kits" />
+                                <label for="numero-de-kits-recebidos">N°&nbsp;de&nbsp;Kits<br/>Recebido:</label>
+                                <input type="number" id="numero-de-kits-recebidos" />
                             </div>
                             <div class="contentor-de-inputs col-kits-us-recebidos">
-                                <label for="kit-us">US:</label>
-                                <input type="number" id="kit-us" />
+                                <label for="kits-us-recebidos">US:</label>
+                                <input type="number" id="kits-us-recebidos" />
                             </div>
                             <div class="contentor-de-inputs col-kits-ape-recebidos">
-                                <label for="kit-ape">APE:</label>
-                                <input type="number" id="kit-ape" />
+                                <label for="kits-ape-recebidos">APE:</label>
+                                <input type="number" id="kits-ape-recebidos" />
                             </div>
                         </div>
 
@@ -179,7 +179,7 @@
                             <label for="data-de-requisicao">
                                 Data de Requisição:
                             </label>
-                            <input type="date" id="data-de-realizacao" />
+                            <input type="date" id="data-de-requisicao" />
                         </div>
                     </div>
                 </header>
@@ -267,268 +267,458 @@
                         <div class="row">
                             <input type="text" value="1-C-1" />
                             <input type="text" value="Dihidralazina 25 mg/5 mL Inj." />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l2-c1c2-menos-l2-c3" data-stfpoutput="l2-c4" data-diferenca="l2-c6-menos-l2-c4" data-diferencaoutput="l2-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l2-c1c2-menos-l2-c3" data-stfpoutput="l2-c4" data-diferenca="l2-c6-menos-l2-c4" data-diferencaoutput="l2-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l2-c3" data-stfp="l2-c1c2-menos-l2-c3" data-stfpoutput="l2-c4" data-diferenca="l2-c6-menos-l2-c4" data-diferencaoutput="l2-c7" data-qtdarequisitar="l2-c3-menos-l2-c6" data-qtdarequisitaroutput="l2-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l2-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l2-c6"  data-diferenca="l2-c6-menos-l2-c4" data-diferencaoutput="l2-c7" data-qtdarequisitar="l2-c3-menos-l2-c6" data-qtdarequisitaroutput="l2-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l2-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l2-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
                         </div>
                         <div class="row">
                             <input type="text" value="1-C-2"/>
                             <input type="text" value="Hidralazina 25 mg Comp."/>
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l3-c1c2-menos-l3-c3" data-stfpoutput="l3-c4" data-diferenca="l3-c6-menos-l3-c4" data-diferencaoutput="l3-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l3-c1c2-menos-l3-c3" data-stfpoutput="l3-c4" data-diferenca="l3-c6-menos-l3-c4" data-diferencaoutput="l3-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l3-c3" data-stfp="l3-c1c2-menos-l3-c3" data-stfpoutput="l3-c4" data-diferenca="l3-c6-menos-l3-c4" data-diferencaoutput="l3-c7" data-qtdarequisitar="l3-c3-menos-l3-c6" data-qtdarequisitaroutput="l3-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l3-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l3-c6"  data-diferenca="l3-c6-menos-l3-c4" data-diferencaoutput="l3-c7" data-qtdarequisitar="l3-c3-menos-l3-c6" data-qtdarequisitaroutput="l3-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l3-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l3-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
                         </div>
                         <div class="row">
                             <input type="text" value="1-C-4"/>
                             <input type="text" value="Metildopa 250 mg Comp."/>
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l4-c1c2-menos-l4-c3" data-stfpoutput="l4-c4" data-diferenca="l4-c6-menos-l4-c4" data-diferencaoutput="l4-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l4-c1c2-menos-l4-c3" data-stfpoutput="l4-c4" data-diferenca="l4-c6-menos-l4-c4" data-diferencaoutput="l4-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l4-c3" data-stfp="l4-c1c2-menos-l4-c3" data-stfpoutput="l4-c4" data-diferenca="l4-c6-menos-l4-c4" data-diferencaoutput="l4-c7" data-qtdarequisitar="l4-c3-menos-l4-c6" data-qtdarequisitaroutput="l4-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l4-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l4-c6"  data-diferenca="l4-c6-menos-l4-c4" data-diferencaoutput="l4-c7" data-qtdarequisitar="l4-c3-menos-l4-c6" data-qtdarequisitaroutput="l4-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l4-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l4-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
                         </div>
                         <div class="row">
                             <input type="text" value="1-E-3"/>
                             <input type="text" value="Propranolol 40 mg Comp."/>
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l5-c1c2-menos-l5-c3" data-stfpoutput="l5-c4" data-diferenca="l5-c6-menos-l5-c4" data-diferencaoutput="l5-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l5-c1c2-menos-l5-c3" data-stfpoutput="l5-c4" data-diferenca="l5-c6-menos-l5-c4" data-diferencaoutput="l5-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l5-c3" data-stfp="l5-c1c2-menos-l5-c3" data-stfpoutput="l5-c4" data-diferenca="l5-c6-menos-l5-c4" data-diferencaoutput="l5-c7" data-qtdarequisitar="l5-c3-menos-l5-c6" data-qtdarequisitaroutput="l5-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l5-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l5-c6"  data-diferenca="l5-c6-menos-l5-c4" data-diferencaoutput="l5-c7" data-qtdarequisitar="l5-c3-menos-l5-c6" data-qtdarequisitaroutput="l5-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l5-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l5-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
                         </div>
                         <div class="row">
                             <input type="text" value="1-F-1" />
                             <input type="text" value="Amlodipina 10 mg Comp." />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l6-c1c2-menos-l6-c3" data-stfpoutput="l6-c4" data-diferenca="l6-c6-menos-l6-c4" data-diferencaoutput="l6-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l6-c1c2-menos-l6-c3" data-stfpoutput="l6-c4" data-diferenca="l6-c6-menos-l6-c4" data-diferencaoutput="l6-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l6-c3" data-stfp="l6-c1c2-menos-l6-c3" data-stfpoutput="l6-c4" data-diferenca="l6-c6-menos-l6-c4" data-diferencaoutput="l6-c7" data-qtdarequisitar="l6-c3-menos-l6-c6" data-qtdarequisitaroutput="l6-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l6-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l6-c6"  data-diferenca="l6-c6-menos-l6-c4" data-diferencaoutput="l6-c7" data-qtdarequisitar="l6-c3-menos-l6-c6" data-qtdarequisitaroutput="l6-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l6-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l6-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
                         </div>
                         <div class="row">
                             <input type="text" value=" 1-F-2"/>
                             <input type="text" value="Nifedipina 30 mg Comp. de acção prolongada" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l7-c1c2-menos-l7-c3" data-stfpoutput="l7-c4" data-diferenca="l7-c6-menos-l7-c4" data-diferencaoutput="l7-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l7-c1c2-menos-l7-c3" data-stfpoutput="l7-c4" data-diferenca="l7-c6-menos-l7-c4" data-diferencaoutput="l7-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l7-c3" data-stfp="l7-c1c2-menos-l7-c3" data-stfpoutput="l7-c4" data-diferenca="l7-c6-menos-l7-c4" data-diferencaoutput="l7-c7" data-qtdarequisitar="l7-c3-menos-l7-c6" data-qtdarequisitaroutput="l7-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l7-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l7-c6"  data-diferenca="l7-c6-menos-l7-c4" data-diferencaoutput="l7-c7" data-qtdarequisitar="l7-c3-menos-l7-c6" data-qtdarequisitaroutput="l7-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l7-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l7-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
                         </div>
                         <div class="row">
                             <input type="text" value=" 1-G-2" />
                             <input type="text" value="Nitroglicerina 0,5 mg Comp." />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l8-c1c2-menos-l8-c3" data-stfpoutput="l8-c4" data-diferenca="l8-c6-menos-l8-c4" data-diferencaoutput="l8-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l8-c1c2-menos-l8-c3" data-stfpoutput="l8-c4" data-diferenca="l8-c6-menos-l8-c4" data-diferencaoutput="l8-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l8-c3" data-stfp="l8-c1c2-menos-l8-c3" data-stfpoutput="l8-c4" data-diferenca="l8-c6-menos-l8-c4" data-diferencaoutput="l8-c7" data-qtdarequisitar="l8-c3-menos-l8-c6" data-qtdarequisitaroutput="l8-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l8-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l8-c6"  data-diferenca="l8-c6-menos-l8-c4" data-diferencaoutput="l8-c7" data-qtdarequisitar="l8-c3-menos-l8-c6" data-qtdarequisitaroutput="l8-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l8-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l8-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
                         </div>
                         <div class="row">
                             <input type="text" value="1-H-1" />
                             <input type="text" value="Enalapril 5 mg Comp."/>
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l9-c1c2-menos-l9-c3" data-stfpoutput="l9-c4" data-diferenca="l9-c6-menos-l9-c4" data-diferencaoutput="l9-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l9-c1c2-menos-l9-c3" data-stfpoutput="l9-c4" data-diferenca="l9-c6-menos-l9-c4" data-diferencaoutput="l9-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l9-c3" data-stfp="l9-c1c2-menos-l9-c3" data-stfpoutput="l9-c4" data-diferenca="l9-c6-menos-l9-c4" data-diferencaoutput="l9-c7" data-qtdarequisitar="l9-c3-menos-l9-c6" data-qtdarequisitaroutput="l9-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l9-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l9-c6"  data-diferenca="l9-c6-menos-l9-c4" data-diferencaoutput="l9-c7" data-qtdarequisitar="l9-c3-menos-l9-c6" data-qtdarequisitaroutput="l9-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l9-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l9-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
                         </div>
                         <div class="row">
                             <input type="text" value="2-A-1" />
                             <input type="text" value="Hidróxido de Alumínio 500 mg Comp." />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l10-c1c2-menos-l10-c3" data-stfpoutput="l10-c4" data-diferenca="l10-c6-menos-l10-c4" data-diferencaoutput="l10-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l10-c1c2-menos-l10-c3" data-stfpoutput="l10-c4" data-diferenca="l10-c6-menos-l10-c4" data-diferencaoutput="l10-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l10-c3" data-stfp="l10-c1c2-menos-l10-c3" data-stfpoutput="l10-c4" data-diferenca="l10-c6-menos-l10-c4" data-diferencaoutput="l10-c7" data-qtdarequisitar="l10-c3-menos-l10-c6" data-qtdarequisitaroutput="l10-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l10-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l10-c6"  data-diferenca="l10-c6-menos-l10-c4" data-diferencaoutput="l10-c7" data-qtdarequisitar="l10-c3-menos-l10-c6" data-qtdarequisitaroutput="l10-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l10-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l10-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
                         </div>
                         <div class="row">
                             <input type="text" value="2-A-4" />
                             <input type="text" value="Omeprazol 20 mg Cáps."/>
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l11-c1c2-menos-l11-c3" data-stfpoutput="l11-c4" data-diferenca="l11-c6-menos-l11-c4" data-diferencaoutput="l11-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l11-c1c2-menos-l11-c3" data-stfpoutput="l11-c4" data-diferenca="l11-c6-menos-l11-c4" data-diferencaoutput="l11-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l11-c3" data-stfp="l11-c1c2-menos-l11-c3" data-stfpoutput="l11-c4" data-diferenca="l11-c6-menos-l11-c4" data-diferencaoutput="l11-c7" data-qtdarequisitar="l11-c3-menos-l11-c6" data-qtdarequisitaroutput="l11-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l11-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l11-c6"  data-diferenca="l11-c6-menos-l11-c4" data-diferencaoutput="l11-c7" data-qtdarequisitar="l11-c3-menos-l11-c6" data-qtdarequisitaroutput="l11-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l11-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l11-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
                         </div>
                         <div class="row">
                             <input type="text" value="2-A-6" />
                             <input type="text" value="Ranitidina 150 mg Comp." />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l12-c1c2-menos-l12-c3" data-stfpoutput="l12-c4" data-diferenca="l12-c6-menos-l12-c4" data-diferencaoutput="l12-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l12-c1c2-menos-l12-c3" data-stfpoutput="l12-c4" data-diferenca="l12-c6-menos-l12-c4" data-diferencaoutput="l12-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l12-c3" data-stfp="l12-c1c2-menos-l12-c3" data-stfpoutput="l12-c4" data-diferenca="l12-c6-menos-l12-c4" data-diferencaoutput="l12-c7" data-qtdarequisitar="l12-c3-menos-l12-c6" data-qtdarequisitaroutput="l12-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l12-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l12-c6"  data-diferenca="l12-c6-menos-l12-c4" data-diferencaoutput="l12-c7" data-qtdarequisitar="l12-c3-menos-l12-c6" data-qtdarequisitaroutput="l12-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l12-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l12-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
                         </div>
                         <div class="row">
                             <input type="text" value="2-A-7" />
                             <input type="text" value="Ranitidina 50 mg/2 mL Inj." />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l13-c1c2-menos-l13-c3" data-stfpoutput="l13-c4" data-diferenca="l13-c6-menos-l13-c4" data-diferencaoutput="l13-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l13-c1c2-menos-l13-c3" data-stfpoutput="l13-c4" data-diferenca="l13-c6-menos-l13-c4" data-diferencaoutput="l13-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l13-c3" data-stfp="l13-c1c2-menos-l13-c3" data-stfpoutput="l13-c4" data-diferenca="l13-c6-menos-l13-c4" data-diferencaoutput="l13-c7" data-qtdarequisitar="l13-c3-menos-l13-c6" data-qtdarequisitaroutput="l13-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l13-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l13-c6"  data-diferenca="l13-c6-menos-l13-c4" data-diferencaoutput="l13-c7" data-qtdarequisitar="l13-c3-menos-l13-c6" data-qtdarequisitaroutput="l13-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l13-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l13-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
                         </div>
                         <div class="row">
                             <input type="text" value="2-B-1" />
                             <input type="text" value="Butilescopolamina 10 mg Comp."/>
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l14-c1c2-menos-l14-c3" data-stfpoutput="l14-c4" data-diferenca="l14-c6-menos-l14-c4" data-diferencaoutput="l14-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l14-c1c2-menos-l14-c3" data-stfpoutput="l14-c4" data-diferenca="l14-c6-menos-l14-c4" data-diferencaoutput="l14-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l14-c3" data-stfp="l14-c1c2-menos-l14-c3" data-stfpoutput="l14-c4" data-diferenca="l14-c6-menos-l14-c4" data-diferencaoutput="l14-c7" data-qtdarequisitar="l14-c3-menos-l14-c6" data-qtdarequisitaroutput="l14-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l14-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l14-c6"  data-diferenca="l14-c6-menos-l14-c4" data-diferencaoutput="l14-c7" data-qtdarequisitar="l14-c3-menos-l14-c6" data-qtdarequisitaroutput="l14-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l14-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l14-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
                         </div>
                         <div class="row">
                             <input type="text" value="2-B-2" />
                             <input type="text" value="Butilescopolamina 20 mg/mL Inj." />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l15-c1c2-menos-l15-c3" data-stfpoutput="l15-c4" data-diferenca="l15-c6-menos-l15-c4" data-diferencaoutput="l15-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l15-c1c2-menos-l15-c3" data-stfpoutput="l15-c4" data-diferenca="l15-c6-menos-l15-c4" data-diferencaoutput="l15-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l15-c3" data-stfp="l15-c1c2-menos-l15-c3" data-stfpoutput="l15-c4" data-diferenca="l15-c6-menos-l15-c4" data-diferencaoutput="l15-c7" data-qtdarequisitar="l15-c3-menos-l15-c6" data-qtdarequisitaroutput="l15-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l15-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l15-c6"  data-diferenca="l15-c6-menos-l15-c4" data-diferencaoutput="l15-c7" data-qtdarequisitar="l15-c3-menos-l15-c6" data-qtdarequisitaroutput="l15-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l15-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l15-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
                         </div>
                         <div class="row">
                             <input type="text" value="2-C-1"/>
                             <input type="text" value="Metoclopramina 10 mg Inj."/>
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l16-c1c2-menos-l16-c3" data-stfpoutput="l16-c4" data-diferenca="l16-c6-menos-l16-c4" data-diferencaoutput="l16-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l16-c1c2-menos-l16-c3" data-stfpoutput="l16-c4" data-diferenca="l16-c6-menos-l16-c4" data-diferencaoutput="l16-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l16-c3" data-stfp="l16-c1c2-menos-l16-c3" data-stfpoutput="l16-c4" data-diferenca="l16-c6-menos-l16-c4" data-diferencaoutput="l16-c7" data-qtdarequisitar="l16-c3-menos-l16-c6" data-qtdarequisitaroutput="l16-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l16-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l16-c6"  data-diferenca="l16-c6-menos-l16-c4" data-diferencaoutput="l16-c7" data-qtdarequisitar="l16-c3-menos-l16-c6" data-qtdarequisitaroutput="l16-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l16-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l16-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
                         </div>
                         <div class="row">
                             <input type="text" value="2-C-2" />
                             <input type="text" value=" Metoclopramida 10 mg/2 mL Inj."/>
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l17-c1c2-menos-l17-c3" data-stfpoutput="l17-c4" data-diferenca="l17-c6-menos-l17-c4" data-diferencaoutput="l17-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l17-c1c2-menos-l17-c3" data-stfpoutput="l17-c4" data-diferenca="l17-c6-menos-l17-c4" data-diferencaoutput="l17-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l17-c3" data-stfp="l17-c1c2-menos-l17-c3" data-stfpoutput="l17-c4" data-diferenca="l17-c6-menos-l17-c4" data-diferencaoutput="l17-c7" data-qtdarequisitar="l17-c3-menos-l17-c6" data-qtdarequisitaroutput="l17-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l17-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l17-c6"  data-diferenca="l17-c6-menos-l17-c4" data-diferencaoutput="l17-c7" data-qtdarequisitar="l17-c3-menos-l17-c6" data-qtdarequisitaroutput="l17-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l17-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l17-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
                         </div>
                         <div class="row">
                             <input type="text" value="2-C-3" />
                             <input type="text" value="Metoclopramida 5 mg/5 mL Xp."/>
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l18-c1c2-menos-l18-c3" data-stfpoutput="l18-c4" data-diferenca="l18-c6-menos-l18-c4" data-diferencaoutput="l18-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l18-c1c2-menos-l18-c3" data-stfpoutput="l18-c4" data-diferenca="l18-c6-menos-l18-c4" data-diferencaoutput="l18-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l18-c3" data-stfp="l18-c1c2-menos-l18-c3" data-stfpoutput="l18-c4" data-diferenca="l18-c6-menos-l18-c4" data-diferencaoutput="l18-c7" data-qtdarequisitar="l18-c3-menos-l18-c6" data-qtdarequisitaroutput="l18-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l18-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l18-c6"  data-diferenca="l18-c6-menos-l18-c4" data-diferencaoutput="l18-c7" data-qtdarequisitar="l18-c3-menos-l18-c6" data-qtdarequisitaroutput="l18-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l18-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l18-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
                         </div>
                         <div class="row">
                             <input type="text" value="2-D-1" />
                             <input type="text" value="Bisacodil 5 mg Comp." />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l19-c1c2-menos-l19-c3" data-stfpoutput="l19-c4" data-diferenca="l19-c6-menos-l19-c4" data-diferencaoutput="l19-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l19-c1c2-menos-l19-c3" data-stfpoutput="l19-c4" data-diferenca="l19-c6-menos-l19-c4" data-diferencaoutput="l19-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l19-c3" data-stfp="l19-c1c2-menos-l19-c3" data-stfpoutput="l19-c4" data-diferenca="l19-c6-menos-l19-c4" data-diferencaoutput="l19-c7" data-qtdarequisitar="l19-c3-menos-l19-c6" data-qtdarequisitaroutput="l19-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l19-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l19-c6"  data-diferenca="l19-c6-menos-l19-c4" data-diferencaoutput="l19-c7" data-qtdarequisitar="l19-c3-menos-l19-c6" data-qtdarequisitaroutput="l19-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l19-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l19-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
                         </div>
                         <div class="row">
                             <input type="text" value="2-D-3"/>
                             <input type="text" value="Glicerina 1,5 g Sup."/>
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" readonly />
-                            <input type="text" readonly />
-                            <input type="text" />
-                            <input type="text" />
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l20-c1c2-menos-l20-c3" data-stfpoutput="l20-c4" data-diferenca="l20-c6-menos-l20-c4" data-diferencaoutput="l20-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l20-c1c2-menos-l20-c3" data-stfpoutput="l20-c4" data-diferenca="l20-c6-menos-l20-c4" data-diferencaoutput="l20-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l20-c3" data-stfp="l20-c1c2-menos-l20-c3" data-stfpoutput="l20-c4" data-diferenca="l20-c6-menos-l20-c4" data-diferencaoutput="l20-c7" data-qtdarequisitar="l20-c3-menos-l20-c6" data-qtdarequisitaroutput="l20-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l20-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l20-c6"  data-diferenca="l20-c6-menos-l20-c4" data-diferencaoutput="l20-c7" data-qtdarequisitar="l20-c3-menos-l20-c6" data-qtdarequisitaroutput="l20-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l20-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l20-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
                         </div>
                     </div>
 
@@ -566,7 +756,7 @@
                 <!-- Caixa de pesquisa "Ir para" -->
                 <div class="pesquisa">
                     <div class="caixa-de-pesquisa">
-                        <input type="number" placeholder="Introduza o número da linha" min="1" max="63" class="pesquisar-linha">    
+                        <input type="text" placeholder="Designação do fármaco/artigo médico" min="1" max="63" class="pesquisar-linha">    
                         <button class="fechar" title="Fechar">&times;</button>
                     </div>
                     
@@ -604,29 +794,74 @@
                         <h4>Dados adicionais</h4>
                         <ul class="limpadores-de-dados-adicionais">
                             <li>
-                                <input type="checkbox" id="us" checked data-for="nome-da-us" />
-                                <label for="us">Nome da US</label>
+                                <input type="checkbox" id="nome-da-us" checked data-for="us" />
+                                <label for="nome-da-us">Nome da Unidade Sanitária</label>
                             </li>
                             <li>
-                                <input type="checkbox" id="month" checked data-for="mes" />
-                                <label for="month">Mês</label>
+                                <input type="checkbox" id="nome-da-prov" checked data-for="provincia" />
+                                <label for="nome-da-prov">Província</label>
                             </li>
                             <li>
-                                <input type="checkbox" id="nome" checked data-for="nome-do-ps"/>
-                                <label for="nome">Nome do Responsável pelo preenchimento</label>
+                                <input type="checkbox" id="nome-do-distrito" checked data-for="distrito" />
+                                <label for="nome-do-distrito">Distrito</label>
                             </li>
                             <li>
-                                <input type="checkbox" id="ocupacao" checked data-for="categoria"/>
-                                <label for="ocupacao">Categoria</label>
+                                <input type="checkbox" id="nivel" checked data-for="nivel-do-dc"/>
+                                <label for="nivel">Nível de Qualificação do Responsável Clínico</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="num-de-requisicao" checked data-for="numero-de-requisicao"/>
+                                <label for="num-de-requisicao">N° de Requisição/Balancete</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="num-consultas" checked data-for="numero-de-consultas-externas"/>
+                                <label for="num-consultas">N° de Consultas Externas Realizadas</label>
                             </li>
 
                             <li>
-                                <input type="checkbox" id="date" checked data-for="data-de-elaboracao"/>
-                                <label for="date">Data</label>
+                                <input type="checkbox" id="periodo-inicial" checked data-for="periodo"/>
+                                <label for="periodo-inicial">Período (Início)</label>
                             </li>
                             <li>
-                                <input type="checkbox" id="nota-do-resumo" checked data-for="nota"/>
-                                <label for="nota-do-resumo">Nota do resumo</label>
+                                <input type="checkbox" id="periodo-final" checked data-for="ate"/>
+                                <label for="periodo-final">Período (Fim)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="num-kits-recebidos" checked data-for="numero-de-kits-recebidos"/>
+                                <label for="num-kits-recebidos">N° de Kits Recebidos</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="num-kits-us-recebidos" checked data-for="kits-us-recebidos"/>
+                                <label for="num-kits-us-recebidos">N° de Kits US Recebidos</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="num-kits-ape-recebidos" checked data-for="kits-ape-recebidos"/>
+                                <label for="num-kits-ape-recebidos">N° de Kits APE Recebidos</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="num-kits-abertos" checked data-for="numero-de-kits-abertos"/>
+                                <label for="num-kits-abertos">N° de Kits Abertos</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="num-kits-us-abertos" checked data-for="kits-us-abertos"/>
+                                <label for="num-kits-us-abertos">N° de Kits US Abertos</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="num-kits-ape-abertos" checked data-for="kits-ape-abertos"/>
+                                <label for="num-kits-ape-abertos">N° de Kits APE Abertos</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" id="data-de-elaboracao" checked data-for="data-de-requisicao"/>
+                                <label for="data-de-elaboracao">Data de Requisição</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="nome-do-elaborador" checked data-for="elaborador"/>
+                                <label for="nome-do-elaborador">Nome do Responsável pela Elaboração</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="visto-do-dc" checked data-for="visto"/>
+                                <label for="visto-do-dc">Visto do Responsável Clínico</label>
                             </li>
                         </ul>
     
@@ -659,11 +894,9 @@
                         Toda célula cujo fundo está vermelho tem um ou mais algarismos omissos por indisponibilidade de espaço na respectiva célula.
                     </p>
                     <p>
-                        As células de entrada de dados do Totalizador têm uma largura para 7 algarismos no máximo, portanto, só podem mostrar valores até <strong>9&nbsp;999&nbsp;999</strong>. A partir de 10&nbsp;000&nbsp;000, ficam visíveis somente os primeiros 7 algarismos e do 8º em diante, ficam fora da área visível da célula.
+                        As células de entrada de dados do serviço têm uma largura para 7 algarismos no máximo, portanto, só podem mostrar valores até <strong>9&nbsp;999&nbsp;999</strong>. A partir de 10&nbsp;000&nbsp;000, ficam visíveis somente os primeiros 7 algarismos e do 8º em diante, ficam fora da área visível da célula.
                     </p>
-                    <p class="destaque suposicao">
-                        Presumo que actualmente (2022) não haja uma Unidade Sanitária em Moçambique com um número de consultas externas maior que 9&nbsp;999&nbsp;999.
-                    </p>
+                 
                     <div class="seccao-de-interatividade">
                         <div>
                             <input type="checkbox" id="nao-mostrar-mais" />
@@ -676,10 +909,10 @@
                 <!-- AVISO DE USO DE COOKIES -->
                 <div class="aviso-de-uso-de-cookies">
                     <p>                    
-                        Ao utilizar o Totalizador de Resumo Mensal de Consultas, o usuário concorda com o armazenamento local de dados, a fim de melhorar a sua experiência de utilização. <button class="abrir-artigo-cookies">Saiba mais...</button>
+                        Faço uso de tecnologias de armazenamento local de dados, a fim de melhorar a sua experiência de navegação. <button class="abrir-artigo-cookies">Saiba mais...</button>
                     </p>
         
-                    <button class="aceitar-cookies">Prosseguir</button>
+                    <button class="aceitar-cookies">OK</button>
                 </div> 
             </aside>
         </main>
@@ -687,38 +920,28 @@
         <!-- Sobre e Cookies  -->
         <article >
             <section id="sobre">
-                <h1>Sobre o totalizador</h1>
+                <h1>Sobre o serviço Requisição/Balancete</h1>
                 
                 <figure>
-                    <img src="imagens/totalizador-de-resumo-mensal-de-consultas.png" alt="Totalizador de Resumo Mensal de Consultas"/>
+                    <img src="images/requisicao-balancete.png" alt="Serviço de Requisição/Balancete"/>
                 </figure>
 
-                <p> <b>O Totalizador de Resumo Mensal de Consultas</b> é um serviço online gratuito que, como o nome sugere,  <b>auxilia na elaboração do resumo mensal de consultas externas através do cálculo automático dos subtotais e totais a partir dos dados preenchidos</b> pelo usuário (Profissional de Saúde). Tem a estrutura idêntica ao modelo da ficha de resumo mensal de consultas externas actualmente (2022) vigente no Serviço Nacional de Saúde (SNS) em Moçambique.</p>
-            
-                <h2>Qual é o propósito?</h2>
-            
-                <p>O propósito é de flexibilizar a elaboração do resumo auxiliando no <b>cálculo dos subtotais e totais automaticamente</b> e de minimizar possíveis erros de soma por confusão (por exemplo, somar valores de células não correspondentes, como feminino e masculino para achar um subtotal feminino ou vice versa) <b>através do uso de um algorítimo atenciosamente programado para realizar cálculos de soma de forma correcta e com a vantagem de autopreencher as células correspondentes (subtotais e totais)</b>.</p>
-            
-                <h2>Como funciona?</h2>
-            
-                <p>O serviço espera como parâmetros os dados colhidos do(s) Livro(s) de Registo de Consultas Externas da  respectiva Unidade Sanitária durante o mês em consideração e com base nesses dados, as células correspondentes aos subtotais e totais são calculadas automaticamente e em tempo real. Após obter os totais, o usuário pode copiar os valores para a ficha original a partir da tela do seu dispositivo ou pode optar por imprimir a ficha do Totalizador para copiar a partir do papel.</p>
-            
-                <h2>O que o usuário precisa dispor?</h2>
-            
-                <p>Além de um dispositivo como computador (recomendável para uma melhor experiência) ou celular (alternativo) e outros serviços (internet) para ter acesso à plataforma, é importante que o profissional (usuário) tenha colhido os dados relativos as variáveis ou indicadores da ficha no(s) Livro(s) de  Registo de Consultas Externas da sua Unidade Sanitária. <strong>Essa responsabilidade é inteiramente do usuário, a plataforma só se limita a fazer o cálculo dos subtotais e totais.</strong></p>
-            
-                <h2>Qual é o destino dos dados que o usuário insere?</h2>
+                <p><b>Requisição/Balancete</b> é um serviço online gratuito que auxilia na elaboração de requisição/balancete, através do cálculo automático do <b>Stock Teórico Fim do Período (SF), Diferença entre o Stock Teórico e Stock Físico e Quantidade a Requisitar</b>, com base nos dados inseridos pelo usuário (Profissional de Saúde). Tem a estrutura idêntica ao modelo da ficha de requisição/balancete actualmente (2023) vigente no Serviço Nacional de Saúde (SNS) em Moçambique.</p>
+                
+                <p>O propósito é o de flexibilizar a elaboração da requisição/balancete, minimizando possíveis erros de cálculo do Stock Teórico Fim do Período e da Quantidade a requisitar, através do uso de um algorítimo atenciosamente programado para realizar cálculos de forma correcta e com a vantagem de autopreencher as células correspondentes.</p>
+
+                <h2>Destino dos dados que o usuário insere</h2>
             
                 <p>Eles são guardados no seu próprio navegador através de um recurso chamado Local Storage (Armazenamento Local). E mesmo fechando o navegador, eles permanecem no local até o usuário eliminá-los pela opção "<b>Esvaziar a ficha</b>".
         
-                <h2>Quais as vantagens de se usar o serviço?</h2>
+                <h2>Vantagens de usar o serviço</h2>
             
                 <ul>
-                    <li>Calcula e preenche automaticamente as células correspondentes aos subtotais e totais;</li>
-                    <li>É lógico (fornece resultados verdadeiros);</li>
-                    <li>Flexibiliza a elaboração do resumo;</li>
-                    <li>Salva os dados no navegador do usuário até este eliminá-los.</li>
-					<li>Pode ser impresso.</li>
+                    <li><strong>Calcula</strong> e preenche automaticamente as células correspondentes as colunas: <strong>Stock Teórico Fim do Período (SF), Diferença e Quantidade a Requisitar</strong>.</li>
+                    <li><b>É lógico</b> (fornece resultados verdadeiros);</li>
+                    <li><b>Flexibiliza a elaboração da requisição;</b></li>
+                    <li><b>Salva os dados no navegador</b> do usuário até este eliminá-los.</li>
+					<li><b>Pode ser impresso.</b></li>
                 </ul>
                 
                 <button class="fechar-artigo" title="Fechar">
@@ -778,7 +1001,7 @@
                     <dt id="tres">Salvar preferências</dt>
 
                     <dd>
-                        Por exemplo, quando o usuário marca a opção <b>“Destacar o fundo dos totais"</b>, essa escolha é salva na Web Storage para manter nas suas próximas visitas à plataforma.
+                        Por exemplo, quando o usuário marca a opção <b>“Destacar o fundo dos células automáticas"</b>, essa escolha é salva na Web Storage para manter nas suas próximas visitas à plataforma.
                     </dd>
                 </dl>
 
@@ -833,14 +1056,30 @@
             <div class="linha do-rodape">
 
                 <div class="hiperligacoes">
-                    <h4>Hiperligações para outros serviços relacionados</h4>
+                    <h4>Links para outros serviços relacionados</h4>
                     <ul>
                         <li>
-                            <a href="https://quinamine.github.io/totalizador-de-resumo-mensal-de-saaj/index.html" target="_blank">Totalizador de Resumo Mensal de SAAJ</a>
+                            <a href="https://quinamine.github.io/totalizador-de-resumo-mensal-de-consultas/index.html" target="_blank">Totalizador de Resumo Mensal de Consultas</a>
                         </li>
                         <li>
                             <a href="https://quinamine.github.io/totalizador-de-resumo-mensal-de-hiv-e-sida/index.html" target="_blank">Totalizador de Resumo Mensal de HIV/SIDA</a>
                         </li>
+                        <li>
+                            <a href="https://quinamine.github.io/totalizador-de-resumo-mensal-malaria/index.html" target="_blank">Totalizador de Resumo Mensal de Malária</a>
+                        </li>
+                        <li>
+                            <a href="https://quinamine.github.io/totalizador-de-resumo-mensal-de-prn-ii/index.html" target="_blank">Totalizador de Resumo Mensal de PRN II</a>
+                        </li>
+                        <li>
+                            <a href="https://quinamin.github.io/totalizador-de-resumo-mensal-de-prn-i/index.html" target="_blank">Totalizador de Resumo Mensal de PRN I</a>
+                        </li>
+                        <li>
+                            <a href="https://quinamine.github.io/totalizador-de-resumo-mensal-de-saaj/index.html" target="_blank">Totalizador de Resumo Mensal de SAAJ</a>
+                        </li>
+                        <li>
+                            <a href="https://quinamine.github.io/totalizador-de-resumo-mensal-de-ccd/index.html" target="_blank">Totalizador de Resumo Mensal de CCD</a>
+                        </li>
+
                         <li>
                             <a href="https://quinamine.github.io/tarv-pediatrico/index.html" target="_blank">Doseador Pediátrico de Antirretrovirais</a>
                         </li>
@@ -850,7 +1089,7 @@
                     </ul>   
                 </div>
 
-                <p>Desenvolvido com &#128153; por <a href="https://quinamine.github.io/aderito-felix-quinamine/index.html">Adérito Félix Quinamine</a> |&nbsp;&copy; 2022 - Totalizador de Resumo Mensal de Consultas</p>
+                <p>Desenvolvido com &#128153; por <a href="https://quinamine.github.io/aderito-felix-quinamine/index.html">Adérito Félix Quinamine</a> |&nbsp;&copy; 2023 - Requisição/Balancete</p>
 
                 <a href="#ficha" class="voltar">Voltar ao topo</a>
             </div>

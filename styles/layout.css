@@ -1,7 +1,7 @@
 /* FORMATAÇÕES GERAIS */
 :root {
     --primary-color: #444444;
-    --border-color: #888888;
+    --border-color: #444;
     --anchor-color: #1558bc;
     --text-color: #333333;
     --danger-color: #dd0000;
@@ -12,8 +12,8 @@
     --black-alpha-8: rgba(0, 0, 0, .8);
     --btn-bgc: var(--primary-color);
     --btn-hover-bgc: var(--text-color);
-    --footer-bgc: #dce4f4;
-    --important-text-bgc: #f4f4f4;
+    --footer-bgc: #f4f4f4;
+    --important-text-bgc: var(--footer-bgc);
     --gray: var(--border-color);
     --gray-a: #aaaaaa;
     --gray-c: #cccccc;
@@ -207,7 +207,7 @@ body > header {
 }
 
 div.linha {
-    max-width: 1300px;
+    max-width: 1336px;
     margin: 0 auto;
 }
 
@@ -271,7 +271,12 @@ section.menu li.destacar-as-celulas-automaticas {
 section.menu {
     flex: 1;
     justify-content: flex-end;
-    margin-right: -10px;
+}
+
+@media screen and (min-width: 1380px) {
+    section.menu {
+        margin-right: -10px;
+    }
 }
 
 section.menu ul li {
@@ -371,6 +376,7 @@ section.menu ul li:first-child:active {
 /* RODAPÉ */
 body > footer {
     background-color: var(--footer-bgc);
+    border-top: 1px solid var(--gray-d);
     padding: 40px 0;
 }
 

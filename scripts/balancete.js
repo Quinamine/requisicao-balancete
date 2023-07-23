@@ -8,7 +8,7 @@ const balancete = {
     },
     
     mudarCorDeFundoDaPagina(bgc) {
-        const ficha = document.querySelectorAll("div.container, div.container input");
+        const ficha = document.querySelectorAll("div.container, div.main header, div.container input");
 
         for (const f of ficha) {
             f.classList.remove("bgc-fff");
@@ -35,7 +35,7 @@ const balancete = {
     },
 
     calcularQtdArequisitar(somaDasSaidas, stockFisico, qtdArequisitarOutput) {
-        qtdArequisitarOutput.value = somaDasSaidas.value * 2;
+        qtdArequisitarOutput.value = somaDasSaidas.value * 2 - stockFisico.value;
         
     }
 }
@@ -90,10 +90,14 @@ window.addEventListener("load", () => {
                 const inventario_do_stock = document.querySelector(`.${vetor_S_I[1]}`);
                 const qtdarequisitarOutput = document.querySelector(`.${input.dataset.qtdarequisitaroutput}`);
                 
-                balancete.calcularDiferenca(soma_das_saidas, inventario_do_stock, qtdarequisitarOutput);
+                balancete.calcularQtdArequisitar(soma_das_saidas, inventario_do_stock, qtdarequisitarOutput);
             }
-        })
-
-
+        });
     });
+
+    /* TO LABEL H1 */
+    const h1 = document.querySelector("div.container > header h1");
+    h1.addEventListener("click", () => {
+        document.querySelector("input#numero-de-requisicao").focus();
+    })
 })

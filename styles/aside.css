@@ -71,10 +71,6 @@ article section.on {
     display: block;
 }
 
-article section#sobre ul {
-    font-weight: bold;
-}
-
 article section button.fechar-artigo {
     font-size: 26px;
     position: fixed;
@@ -183,7 +179,7 @@ div.caixa-de-pesquisa {
     background-color: var(--primary-color);
     position: fixed;
     top: -35px;
-    right: calc(50vw - 257px / 2);
+    right: calc(50vw - 273px / 2);
     visibility: hidden;
     transition: top 200ms linear;
     z-index: 15000;
@@ -195,10 +191,11 @@ div.caixa-de-pesquisa.on {
 }
 
 div.caixa-de-pesquisa input.pesquisar-linha { 
-    min-width: 188px;
+    min-width: 230px;
     padding: 2px 0 2px 5px;
     border: 2px solid var(--primary-color) !important;
     background-color: var(--gray-d);
+    font-weight: initial;
 }
 
 div.caixa-de-pesquisa input.pesquisar-linha:focus { 
