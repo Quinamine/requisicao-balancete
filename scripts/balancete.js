@@ -27,6 +27,7 @@ const balancete = {
         for (let i = 0; i < vetor_SI_E_S.length; i++) {
             stfp += Number(vetor_SI_E_S[i].value);
         }
+
         stfpOutput.value = stfp - somaDaSaidas.value * 2;
     },
 
@@ -35,7 +36,11 @@ const balancete = {
     },
 
     calcularQtdArequisitar(somaDasSaidas, stockFisico, qtdArequisitarOutput) {
-        qtdArequisitarOutput.value = somaDasSaidas.value * 2 - stockFisico.value;
+        let quantidade_a_requisitar = somaDasSaidas.value * 2 - stockFisico.value;
+        if(quantidade_a_requisitar < 0) {
+            quantidade_a_requisitar = 0;
+        }
+        qtdArequisitarOutput.value = quantidade_a_requisitar;
         
     }
 }
