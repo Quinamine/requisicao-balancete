@@ -62,7 +62,7 @@ article section {
         box-shadow: 0 7px 8px var(--gray-d);
     }
 
-    article section#cookies > ul li  {
+    section#cookies > ul li  {
         margin-left: 15px;
     }
 }
@@ -595,6 +595,10 @@ div.aviso-de-uso-de-cookies.on {
         right: 0;
         bottom: 0;
     }
+}
+
+div.aviso-de-uso-de-cookies p {
+    margin-bottom: 20px;
 }
 
 div.aviso-de-uso-de-cookies p button {

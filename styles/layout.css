@@ -248,7 +248,7 @@ div.linha.do-cabecalho a.logo {
 
     div.linha.do-cabecalho a.logo {
         line-height: 1.2;
-        margin-top: 5px;
+        margin-top: 10px;
         position: sticky;
         left: 0;
     }
