@@ -52,7 +52,7 @@ body {
 
 @media print {
     @page {
-        margin: 0.5cm 0.5cm 1cm 0.5cm;
+        margin: 0.5cm;
         size: landscape;
     }
 
@@ -64,6 +64,10 @@ body {
         -webkit-print-color-adjust: exact;
         visibility: hidden;
         background-color: var(--yt);
+    }
+
+    div.body div.section-break {
+        page-break-before: always;
     }
 }
 

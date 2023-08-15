@@ -28,6 +28,8 @@
         <script src="scripts/inputvalidation.js"></script>
         <script src="scripts/balancete.js"></script>
         <script src="scripts/webstorage.js"></script>
+        <script src="scripts/backup.js"></script>
+        <script src="scripts/replica.js"></script>
 
         <noscript>O seu navegador está com o JavaScript desabilitado e isso bloqueia as funcionalidades desta plataforma. Habilite-o nas configurações do navegador e recarregue a página.</noscript>
 
@@ -266,7 +268,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="1-C-1" />
-                            <input type="text" value="Dihidralazina 25 mg/5 mL Inj." />
+                            <input type="text" value="Dihidralazina 25 mg/5 ml Inj." />
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l2-c1c2-menos-l2-c3" data-stfpoutput="l2-c4" data-diferenca="l2-c6-menos-l2-c4" data-diferencaoutput="l2-c7" />
                             <!-- Soma das Entradas -->
@@ -530,7 +532,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="2-A-7" />
-                            <input type="text" value="Ranitidina 50 mg/2 mL Inj." />
+                            <input type="text" value="Ranitidina 50 mg/2 ml Inj." />
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l13-c1c2-menos-l13-c3" data-stfpoutput="l13-c4" data-diferenca="l13-c6-menos-l13-c4" data-diferencaoutput="l13-c7" />
                             <!-- Soma das Entradas -->
@@ -626,7 +628,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="2-C-2" />
-                            <input type="text" value=" Metoclopramida 10 mg/2 mL Inj."/>
+                            <input type="text" value=" Metoclopramida 10 mg/2 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l17-c1c2-menos-l17-c3" data-stfpoutput="l17-c4" data-diferenca="l17-c6-menos-l17-c4" data-diferencaoutput="l17-c7" />
                             <!-- Soma das Entradas -->
@@ -650,7 +652,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="2-C-3" />
-                            <input type="text" value="Metoclopramida 5 mg/5 mL Xp."/>
+                            <input type="text" value="Metoclopramida 5 mg/5 ml Xp."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l18-c1c2-menos-l18-c3" data-stfpoutput="l18-c4" data-diferenca="l18-c6-menos-l18-c4" data-diferencaoutput="l18-c7" />
                             <!-- Soma das Entradas -->
@@ -722,7 +724,7 @@
                         </div>
                         
                         <!-- Pagina 2 -->
-                        <div class="row">
+                        <div class="row section-break">
                             <input type="text" value="2-D-4" />
                             <input type="text" value="Glicerina 3 g Sup."/>
                             <!-- Stock no Início do Período -->
@@ -892,7 +894,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="3-A-6" />
-                            <input type="text" value="Prednisolona 50 mg/10 mL Inj."/>
+                            <input type="text" value="Prednisolona 50 mg/10 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l28-c1c2-menos-l28-c3" data-stfpoutput="l28-c4" data-diferenca="l28-c6-menos-l28-c4" data-diferencaoutput="l28-c7" />
                             <!-- Soma das Entradas -->
@@ -1202,7 +1204,9 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+
+                        <!-- Pagina 3 -->
+                        <div class="row section-break">
                             <input type="text" value="4-F-6" />
                             <input type="text" value="Levonorgestrel 30 µg Comp."/>
                             <!-- Stock no Início do Período -->
@@ -1420,7 +1424,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="5-A-2" />
-                            <input type="text" value="Aminofilina 240 mg/10 mL Inj."/>
+                            <input type="text" value="Aminofilina 240 mg/10 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l50-c1c2-menos-l50-c3" data-stfpoutput="l50-c4" data-diferenca="l50-c6-menos-l50-c4" data-diferencaoutput="l50-c7" />
                             <!-- Soma das Entradas -->
@@ -1492,7 +1496,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="5-A-10" />
-                            <input type="text" value="Salbutamol 500 µg/1 mL Inj."/>
+                            <input type="text" value="Salbutamol 500 µg/1 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l53-c1c2-menos-l53-c3" data-stfpoutput="l53-c4" data-diferenca="l53-c6-menos-l53-c4" data-diferencaoutput="l53-c7" />
                             <!-- Soma das Entradas -->
@@ -1540,7 +1544,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="5-A-12" />
-                            <input type="text" value="Salbutamol 2 mg/5 mL Xpe."/>
+                            <input type="text" value="Salbutamol 2 mg/5 ml Xpe."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l55-c1c2-menos-l55-c3" data-stfpoutput="l55-c4" data-diferenca="l55-c6-menos-l55-c4" data-diferencaoutput="l55-c7" />
                             <!-- Soma das Entradas -->
@@ -1612,7 +1616,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="6-A-4" />
-                            <input type="text" value="Gluconato de Ferro 30 mg/5 mL Xpe."/>
+                            <input type="text" value="Gluconato de Ferro 30 mg/5 ml Xpe."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l58-c1c2-menos-l58-c3" data-stfpoutput="l58-c4" data-diferenca="l58-c6-menos-l58-c4" data-diferencaoutput="l58-c7" />
                             <!-- Soma das Entradas -->
@@ -1682,7 +1686,9 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+
+                        <!-- Pagina 4 -->
+                        <div class="row section-break">
                             <input type="text" value="6-A-7" />
                             <input type="text" value="Sulfato Ferroso e Ácido Fólico 91 mg Comp."/>
                             <!-- Stock no Início do Período -->
@@ -1756,7 +1762,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="6-F-7" />
-                            <input type="text" value="Fitomenadiona (Vit. K1) 2 mg/0,2 mL Inj."/>
+                            <input type="text" value="Fitomenadiona (Vit. K1) 2 mg/0,2 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l65-c1c2-menos-l65-c3" data-stfpoutput="l65-c4" data-diferenca="l65-c6-menos-l65-c4" data-diferencaoutput="l65-c7" />
                             <!-- Soma das Entradas -->
@@ -1804,7 +1810,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="7-A-1" />
-                            <input type="text" value="Acetil Salicilato de Lisina 900 mg/5 mL Inj."/>
+                            <input type="text" value="Acetil Salicilato de Lisina 900 mg/5 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l68-c1c2-menos-l68-c3" data-stfpoutput="l68-c4" data-diferenca="l68-c6-menos-l68-c4" data-diferencaoutput="l68-c7" />
                             <!-- Soma das Entradas -->
@@ -1876,7 +1882,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="7-A-4" />
-                            <input type="text" value="Paracetamol 1 g/100 mL Inj."/>
+                            <input type="text" value="Paracetamol 1 g/100 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l71-c1c2-menos-l71-c3" data-stfpoutput="l71-c4" data-diferenca="l71-c6-menos-l71-c4" data-diferencaoutput="l71-c7" />
                             <!-- Soma das Entradas -->
@@ -1900,7 +1906,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="7-A-6" />
-                            <input type="text" value="Paracetamol 120 mg/5 mL Susp."/>
+                            <input type="text" value="Paracetamol 120 mg/5 ml Susp."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l72-c1c2-menos-l72-c3" data-stfpoutput="l72-c4" data-diferenca="l72-c6-menos-l72-c4" data-diferencaoutput="l72-c7" />
                             <!-- Soma das Entradas -->
@@ -1948,7 +1954,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="7-B-2" />
-                            <input type="text" value="Codeína 25 mg/5 mL Xpe."/>
+                            <input type="text" value="Codeína 25 mg/5 ml Xpe."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l74-c1c2-menos-l74-c3" data-stfpoutput="l74-c4" data-diferenca="l74-c6-menos-l74-c4" data-diferencaoutput="l74-c7" />
                             <!-- Soma das Entradas -->
@@ -2020,7 +2026,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="7-B-7" />
-                            <input type="text" value="Morfina 5 mg/5 mL Sol. oral"/>
+                            <input type="text" value="Morfina 5 mg/5 ml Sol. oral"/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l77-c1c2-menos-l77-c3" data-stfpoutput="l77-c4" data-diferenca="l77-c6-menos-l77-c4" data-diferencaoutput="l77-c7" />
                             <!-- Soma das Entradas -->
@@ -2044,7 +2050,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="7-B-8" />
-                            <input type="text" value="Petidina 100 mg/2 mL Inj."/>
+                            <input type="text" value="Petidina 100 mg/2 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l78-c1c2-menos-l78-c3" data-stfpoutput="l78-c4" data-diferenca="l78-c6-menos-l78-c4" data-diferencaoutput="l78-c7" />
                             <!-- Soma das Entradas -->
@@ -2116,7 +2122,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="7-B-11" />
-                            <input type="text" value="Tramadol 100 mg/2 mL Inj."/>
+                            <input type="text" value="Tramadol 100 mg/2 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l81-c1c2-menos-l81-c3" data-stfpoutput="l81-c4" data-diferenca="l81-c6-menos-l81-c4" data-diferencaoutput="l81-c7" />
                             <!-- Soma das Entradas -->
@@ -2162,7 +2168,9 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+
+                        <!-- Pagina 5 -->
+                        <div class="row section-break">
                             <input type="text" value="7-D-1" />
                             <input type="text" value="Carbamazepina 200 mg Comp."/>
                             <!-- Stock no Início do Período -->
@@ -2212,7 +2220,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="7-D-5" />
-                            <input type="text" value="Fenitoína 250 mg/5 mL Inj."/>
+                            <input type="text" value="Fenitoína 250 mg/5 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l85-c1c2-menos-l85-c3" data-stfpoutput="l85-c4" data-diferenca="l85-c6-menos-l85-c4" data-diferencaoutput="l85-c7" />
                             <!-- Soma das Entradas -->
@@ -2284,7 +2292,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="7-D-8" />
-                            <input type="text" value="Fenobarbital 200 mg/2 mL Inj."/>
+                            <input type="text" value="Fenobarbital 200 mg/2 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l88-c1c2-menos-l88-c3" data-stfpoutput="l88-c4" data-diferenca="l88-c6-menos-l88-c4" data-diferencaoutput="l88-c7" />
                             <!-- Soma das Entradas -->
@@ -2332,7 +2340,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="7-D-14" />
-                            <input type="text" value="Valproato de Sódio 200 mg/5 mL Xpe."/>
+                            <input type="text" value="Valproato de Sódio 200 mg/5 ml Xpe."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l90-c1c2-menos-l90-c3" data-stfpoutput="l90-c4" data-diferenca="l90-c6-menos-l90-c4" data-diferencaoutput="l90-c7" />
                             <!-- Soma das Entradas -->
@@ -2596,7 +2604,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="7-I-7" />
-                            <input type="text" value="Diazepam 10 mg/2 mL Inj."/>
+                            <input type="text" value="Diazepam 10 mg/2 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l101-c1c2-menos-l101-c3" data-stfpoutput="l101-c4" data-diferenca="l101-c6-menos-l101-c4" data-diferencaoutput="l101-c7" />
                             <!-- Soma das Entradas -->
@@ -2642,7 +2650,9 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+
+                        <!-- Pagina 6 -->
+                        <div class="row section-break">
                             <input type="text" value="7-J-2" />
                             <input type="text" value="Clorpromazina 100 mg Comp."/>
                             <!-- Stock no Início do Período -->
@@ -2668,7 +2678,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="7-J-3" />
-                            <input type="text" value="Clorpromazina 25 mg/2 mL Inj."/>
+                            <input type="text" value="Clorpromazina 25 mg/2 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l103-c1c2-menos-l103-c3" data-stfpoutput="l103-c4" data-diferenca="l103-c6-menos-l103-c4" data-diferencaoutput="l103-c7" />
                             <!-- Soma das Entradas -->
@@ -2716,7 +2726,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="7-J-6" />
-                            <input type="text" value="Haloperidol 5 mg/1 mL Inj."/>
+                            <input type="text" value="Haloperidol 5 mg/1 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l105-c1c2-menos-l105-c3" data-stfpoutput="l105-c4" data-diferenca="l105-c6-menos-l105-c4" data-diferencaoutput="l105-c7" />
                             <!-- Soma das Entradas -->
@@ -2764,7 +2774,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="8-A-2" />
-                            <input type="text" value="Fenoximetilpenicilina 250 mg/5 mL Susp."/>
+                            <input type="text" value="Fenoximetilpenicilina 250 mg/5 ml Susp."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l107-c1c2-menos-l107-c3" data-stfpoutput="l107-c4" data-diferenca="l107-c6-menos-l107-c4" data-diferencaoutput="l107-c7" />
                             <!-- Soma das Entradas -->
@@ -2884,7 +2894,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="8-A-8" />
-                            <input type="text" value="Amoxicilina 250 mg/5 mL Susp."/>
+                            <input type="text" value="Amoxicilina 250 mg/5 ml Susp."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l112-c1c2-menos-l112-c3" data-stfpoutput="l112-c4" data-diferenca="l112-c6-menos-l112-c4" data-diferencaoutput="l112-c7" />
                             <!-- Soma das Entradas -->
@@ -2980,7 +2990,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="8-A-12" />
-                            <input type="text" value="Amoxicilina e Ácido Clavulânico 312,5 mg/5 mL"/>
+                            <input type="text" value="Amoxicilina e Ácido Clavulânico 312,5 mg/5 ml"/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l116-c1c2-menos-l116-c3" data-stfpoutput="l116-c4" data-diferenca="l116-c6-menos-l116-c4" data-diferencaoutput="l116-c7" />
                             <!-- Soma das Entradas -->
@@ -3052,7 +3062,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="8-A-15" />
-                            <input type="text" value="Flucloxacilina 125 mg/5 mL Susp."/>
+                            <input type="text" value="Flucloxacilina 125 mg/5 ml Susp."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l119-c1c2-menos-l119-c3" data-stfpoutput="l119-c4" data-diferenca="l119-c6-menos-l119-c4" data-diferencaoutput="l119-c7" />
                             <!-- Soma das Entradas -->
@@ -3100,7 +3110,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="8-B-5" />
-                            <input type="text" value="Cefixima 100 mg/5 mL Susp."/>
+                            <input type="text" value="Cefixima 100 mg/5 ml Susp."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l121-c1c2-menos-l121-c3" data-stfpoutput="l121-c4" data-diferenca="l121-c6-menos-l121-c4" data-diferencaoutput="l121-c7" />
                             <!-- Soma das Entradas -->
@@ -3122,9 +3132,11 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+
+                        <!-- Pagina 7 -->
+                        <div class="row section-break">
                             <input type="text" value="8-B-8" />
-                            <input type="text" value="Ceftriaxona 1 g/4 mL Inj."/>
+                            <input type="text" value="Ceftriaxona 1 g/4 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l122-c1c2-menos-l122-c3" data-stfpoutput="l122-c4" data-diferenca="l122-c6-menos-l122-c4" data-diferencaoutput="l122-c7" />
                             <!-- Soma das Entradas -->
@@ -3292,7 +3304,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="8-F-2" />
-                            <input type="text" value="Azitromicina 200 mg/5 mL Susp."/>
+                            <input type="text" value="Azitromicina 200 mg/5 ml Susp."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l129-c1c2-menos-l129-c3" data-stfpoutput="l129-c4" data-diferenca="l129-c6-menos-l129-c4" data-diferencaoutput="l129-c7" />
                             <!-- Soma das Entradas -->
@@ -3364,7 +3376,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="8-F-8" />
-                            <input type="text" value="Eritromicina 250 mg/5 mL Susp."/>
+                            <input type="text" value="Eritromicina 250 mg/5 ml Susp."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l132-c1c2-menos-l132-c3" data-stfpoutput="l132-c4" data-diferenca="l132-c6-menos-l132-c4" data-diferencaoutput="l132-c7" />
                             <!-- Soma das Entradas -->
@@ -3508,7 +3520,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="8-I-2" />
-                            <input type="text" value="Cotrimoxazol 480 mg/5 mL Inj."/>
+                            <input type="text" value="Cotrimoxazol 480 mg/5 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l138-c1c2-menos-l138-c3" data-stfpoutput="l138-c4" data-diferenca="l138-c6-menos-l138-c4" data-diferencaoutput="l138-c7" />
                             <!-- Soma das Entradas -->
@@ -3532,7 +3544,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="8-I-3" />
-                            <input type="text" value="Cotrimoxazol 240 mg/5 mL Susp."/>
+                            <input type="text" value="Cotrimoxazol 240 mg/5 ml Susp."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l139-c1c2-menos-l139-c3" data-stfpoutput="l139-c4" data-diferenca="l139-c6-menos-l139-c4" data-diferencaoutput="l139-c7" />
                             <!-- Soma das Entradas -->
@@ -3580,7 +3592,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="8-K-2" />
-                            <input type="text" value="Cloranfenicol 1 g/10 mL Inj."/>
+                            <input type="text" value="Cloranfenicol 1 g/10 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l141-c1c2-menos-l141-c3" data-stfpoutput="l141-c4" data-diferenca="l141-c6-menos-l141-c4" data-diferencaoutput="l141-c7" />
                             <!-- Soma das Entradas -->
@@ -3602,9 +3614,11 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+
+                        <!-- Pagina 8 -->
+                        <div class="row section-break">
                             <input type="text" value="8-K-3" />
-                            <input type="text" value="Cloranfenicol 250 mg/5 mL Susp."/>
+                            <input type="text" value="Cloranfenicol 250 mg/5 ml Susp."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l142-c1c2-menos-l142-c3" data-stfpoutput="l142-c4" data-diferenca="l142-c6-menos-l142-c4" data-diferencaoutput="l142-c7" />
                             <!-- Soma das Entradas -->
@@ -3652,7 +3666,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="8-K-5" />
-                            <input type="text" value="Metronidazol 500 mg/100 mL Inj."/>
+                            <input type="text" value="Metronidazol 500 mg/100 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l144-c1c2-menos-l144-c3" data-stfpoutput="l144-c4" data-diferenca="l144-c6-menos-l144-c4" data-diferencaoutput="l144-c7" />
                             <!-- Soma das Entradas -->
@@ -3676,7 +3690,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="8-K-7" />
-                            <input type="text" value="Metronidazol 200 mg/5 mL Susp."/>
+                            <input type="text" value="Metronidazol 200 mg/5 ml Susp."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l145-c1c2-menos-l145-c3" data-stfpoutput="l145-c4" data-diferenca="l145-c6-menos-l145-c4" data-diferencaoutput="l145-c7" />
                             <!-- Soma das Entradas -->
@@ -3724,7 +3738,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="8-K-9" />
-                            <input type="text" value="Nitrofurantoína 25 mg/5 mL Susp."/>
+                            <input type="text" value="Nitrofurantoína 25 mg/5 ml Susp."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l147-c1c2-menos-l147-c3" data-stfpoutput="l147-c4" data-diferenca="l147-c6-menos-l147-c4" data-diferencaoutput="l147-c7" />
                             <!-- Soma das Entradas -->
@@ -3748,7 +3762,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="8-L-1" />
-                            <input type="text" value="Estreptomicina 1 g/5 mL Inj."/>
+                            <input type="text" value="Estreptomicina 1 g/5 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l148-c1c2-menos-l148-c3" data-stfpoutput="l148-c4" data-diferenca="l148-c6-menos-l148-c4" data-diferencaoutput="l148-c7" />
                             <!-- Soma das Entradas -->
@@ -4036,7 +4050,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="&minus;" />
-                            <input type="text" value="Artesunato 60 mg/6 mL Inj."/>
+                            <input type="text" value="Artesunato 60 mg/6 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l160-c1c2-menos-l160-c3" data-stfpoutput="l160-c4" data-diferenca="l160-c6-menos-l160-c4" data-diferencaoutput="l160-c7" />
                             <!-- Soma das Entradas -->
@@ -4082,7 +4096,9 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+
+                        <!-- Pagina 9 -->
+                        <div class="row section-break">
                             <input type="text" value="8-O-11" />
                             <input type="text" value="Quinina 300 mg Comp."/>
                             <!-- Stock no Início do Período -->
@@ -4108,7 +4124,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="8-O-12" />
-                            <input type="text" value="Quinina 600 mg/2 mL Inj."/>
+                            <input type="text" value="Quinina 600 mg/2 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l163-c1c2-menos-l163-c3" data-stfpoutput="l163-c4" data-diferenca="l163-c6-menos-l163-c4" data-diferencaoutput="l163-c7" />
                             <!-- Soma das Entradas -->
@@ -4372,7 +4388,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="10-A-4" />
-                            <input type="text" value="Furosemida 20 mg/2 mL Inj."/>
+                            <input type="text" value="Furosemida 20 mg/2 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l173-c1c2-menos-l173-c3" data-stfpoutput="l173-c4" data-diferenca="l173-c6-menos-l173-c4" data-diferencaoutput="l173-c7" />
                             <!-- Soma das Entradas -->
@@ -4468,7 +4484,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="10-A-8" />
-                            <input type="text" value="Manitol a 20% 12,5 g/50 mL Inj."/>
+                            <input type="text" value="Manitol a 20% 12,5 g/50 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l177-c1c2-menos-l177-c3" data-stfpoutput="l177-c4" data-diferenca="l177-c6-menos-l177-c4" data-diferencaoutput="l177-c7" />
                             <!-- Soma das Entradas -->
@@ -4562,7 +4578,9 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+
+                        <!-- Pagina 10-->
+                        <div class="row section-break">
                             <input type="text" value="11-A-19" />
                             <input type="text" value="Lactato de Ringer/Solução de Hartmann Inj."/>
                             <!-- Stock no Início do Período -->
@@ -4924,7 +4942,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="12-D-17" />
-                            <input type="text" value="Tiamina (Vitamina B1) 100 mg/2 mL Inj."/>
+                            <input type="text" value="Tiamina (Vitamina B1) 100 mg/2 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l196-c1c2-menos-l196-c3" data-stfpoutput="l196-c4" data-diferenca="l196-c6-menos-l196-c4" data-diferencaoutput="l196-c7" />
                             <!-- Soma das Entradas -->
@@ -4996,7 +5014,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="13-A-3" />
-                            <input type="text" value="Clorfenirmina 2 mg/5 mL Xpe."/>
+                            <input type="text" value="Clorfenirmina 2 mg/5 ml Xpe."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l199-c1c2-menos-l199-c3" data-stfpoutput="l199-c4" data-diferenca="l199-c6-menos-l199-c4" data-diferencaoutput="l199-c7" />
                             <!-- Soma das Entradas -->
@@ -5020,7 +5038,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="13-A-4" />
-                            <input type="text" value="Difenidramina 50 mg/5 mL Inj."/>
+                            <input type="text" value="Difenidramina 50 mg/5 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l200-c1c2-menos-l200-c3" data-stfpoutput="l200-c4" data-diferenca="l200-c6-menos-l200-c4" data-diferencaoutput="l200-c7" />
                             <!-- Soma das Entradas -->
@@ -5042,7 +5060,9 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+
+                        <!-- Pagina 11 -->
+                        <div class="row section-break">
                             <input type="text" value="13-A-8" />
                             <input type="text" value="Prometazina 10 mg Comp."/>
                             <!-- Stock no Início do Período -->
@@ -5068,7 +5088,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="13-A-10" />
-                            <input type="text" value="Prometazina 50 mg/2 mL Inj."/>
+                            <input type="text" value="Prometazina 50 mg/2 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l202-c1c2-menos-l202-c3" data-stfpoutput="l202-c4" data-diferenca="l202-c6-menos-l202-c4" data-diferencaoutput="l202-c7" />
                             <!-- Soma das Entradas -->
@@ -5116,7 +5136,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="14-A-2" />
-                            <input type="text" value="Diclofenac 75 mg/3 mL Inj."/>
+                            <input type="text" value="Diclofenac 75 mg/3 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l204-c1c2-menos-l204-c3" data-stfpoutput="l204-c4" data-diferenca="l204-c6-menos-l204-c4" data-diferencaoutput="l204-c7" />
                             <!-- Soma das Entradas -->
@@ -5164,7 +5184,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="14-A-4" />
-                            <input type="text" value="Ibuprofeno 100 mg/5 mL Susp."/>
+                            <input type="text" value="Ibuprofeno 100 mg/5 ml Susp."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l206-c1c2-menos-l206-c3" data-stfpoutput="l206-c4" data-diferenca="l206-c6-menos-l206-c4" data-diferencaoutput="l206-c7" />
                             <!-- Soma das Entradas -->
@@ -5452,7 +5472,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="15-C-15" />
-                            <input type="text" value="Hexacloreto de Benzeno 600 mg/60 mL Loção"/>
+                            <input type="text" value="Hexacloreto de Benzeno 600 mg/60 ml Loção"/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l217-c1c2-menos-l217-c3" data-stfpoutput="l217-c4" data-diferenca="l217-c6-menos-l217-c4" data-diferencaoutput="l217-c7" />
                             <!-- Soma das Entradas -->
@@ -5476,7 +5496,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="15-C-17" />
-                            <input type="text" value="IodoPovidona Sol. - Fr. 100 mL"/>
+                            <input type="text" value="IodoPovidona Sol. - Fr. 100 ml"/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l218-c1c2-menos-l218-c3" data-stfpoutput="l218-c4" data-diferenca="l218-c6-menos-l218-c4" data-diferencaoutput="l218-c7" />
                             <!-- Soma das Entradas -->
@@ -5522,7 +5542,9 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+
+                        <!-- Pagina 12 -->
+                        <div class="row section-break">
                             <input type="text" value="15-C-20" />
                             <input type="text" value="Miconazol 30 g Gel a 2%"/>
                             <!-- Stock no Início do Período -->
@@ -5788,7 +5810,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="18-C-4" />
-                            <input type="text" value="Cloreto de Etilo 100 mL de líquido volátil Spray"/>
+                            <input type="text" value="Cloreto de Etilo 100 ml de líquido volátil Spray"/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l231-c1c2-menos-l231-c3" data-stfpoutput="l231-c4" data-diferenca="l231-c6-menos-l231-c4" data-diferencaoutput="l231-c7" />
                             <!-- Soma das Entradas -->
@@ -5836,7 +5858,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="18-C-8" />
-                            <input type="text" value="Lidocaína 2 g/100 mL Gel"/>
+                            <input type="text" value="Lidocaína 2 g/100 ml Gel"/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l233-c1c2-menos-l233-c3" data-stfpoutput="l233-c4" data-diferenca="l233-c6-menos-l233-c4" data-diferencaoutput="l233-c7" />
                             <!-- Soma das Entradas -->
@@ -5884,7 +5906,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="19-A-3" />
-                            <input type="text" value="Imunoglobulina Anti-Rábica 1000 U.I/5 mL Inj."/>
+                            <input type="text" value="Imunoglobulina Anti-Rábica 1000 U.I/5 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l235-c1c2-menos-l235-c3" data-stfpoutput="l235-c4" data-diferenca="l235-c6-menos-l235-c4" data-diferencaoutput="l235-c7" />
                             <!-- Soma das Entradas -->
@@ -5908,7 +5930,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="19-A-6" />
-                            <input type="text" value="Soro Anti-Ofídico, polivalente 10 mL Inj."/>
+                            <input type="text" value="Soro Anti-Ofídico, polivalente 10 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l236-c1c2-menos-l236-c3" data-stfpoutput="l236-c4" data-diferenca="l236-c6-menos-l236-c4" data-diferencaoutput="l236-c7" />
                             <!-- Soma das Entradas -->
@@ -5932,7 +5954,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="19-B-6" />
-                            <input type="text" value="Vacina Anti-Rábica 1 mL Inj."/>
+                            <input type="text" value="Vacina Anti-Rábica 1 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l237-c1c2-menos-l237-c3" data-stfpoutput="l237-c4" data-diferenca="l237-c6-menos-l237-c4" data-diferencaoutput="l237-c7" />
                             <!-- Soma das Entradas -->
@@ -5956,7 +5978,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="20-A-1" />
-                            <input type="text" value="Água Oxigenada a 10 volumes Sol. a 3% - Fr. 500 mL"/>
+                            <input type="text" value="Água Oxigenada a 10 volumes Sol. a 3% - Fr. 500 ml"/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l238-c1c2-menos-l238-c3" data-stfpoutput="l238-c4" data-diferenca="l238-c6-menos-l238-c4" data-diferencaoutput="l238-c7" />
                             <!-- Soma das Entradas -->
@@ -5980,7 +6002,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="20-A-3" />
-                            <input type="text" value="Álcool a 70% - Fr. 1000 mL"/>
+                            <input type="text" value="Álcool a 70% - Fr. 1000 ml"/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l239-c1c2-menos-l239-c3" data-stfpoutput="l239-c4" data-diferenca="l239-c6-menos-l239-c4" data-diferencaoutput="l239-c7" />
                             <!-- Soma das Entradas -->
@@ -6002,9 +6024,11 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+
+                        <!-- Pagina 13 -->
+                        <div class="row section-break">
                             <input type="text" value="20-A-10" />
-                            <input type="text" value="Hipoclorito de Sódio Sol. - Fr. 1000 mL"/>
+                            <input type="text" value="Hipoclorito de Sódio Sol. - Fr. 1000 ml"/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l240-c1c2-menos-l240-c3" data-stfpoutput="l240-c4" data-diferenca="l240-c6-menos-l240-c4" data-diferencaoutput="l240-c7" />
                             <!-- Soma das Entradas -->
@@ -6052,7 +6076,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="21-A-4" />
-                            <input type="text" value="Carvão Activado Pó - Pacotes de 300 g"/>
+                            <input type="text" value="Carvão Activado Pó - Pacote de 300 g"/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l242-c1c2-menos-l242-c3" data-stfpoutput="l242-c4" data-diferenca="l242-c6-menos-l242-c4" data-diferencaoutput="l242-c7" />
                             <!-- Soma das Entradas -->
@@ -6076,7 +6100,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="22-A-3" />
-                            <input type="text" value="Tuberculina Purificada 2 TU 1,5 mL Inj."/>
+                            <input type="text" value="Tuberculina Purificada 2 TU 1,5 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l243-c1c2-menos-l243-c3" data-stfpoutput="l243-c4" data-diferenca="l243-c6-menos-l243-c4" data-diferencaoutput="l243-c7" />
                             <!-- Soma das Entradas -->
@@ -6100,7 +6124,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="&minus;" />
-                            <input type="text" value="ATPU (PlumpyNut) 540 kcal pasta - Saquetas"/>
+                            <input type="text" value="ATPU (PlumpyNut) 500 kcal Pasta - Saqueta"/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l244-c1c2-menos-l244-c3" data-stfpoutput="l244-c4" data-diferenca="l244-c6-menos-l244-c4" data-diferencaoutput="l244-c7" />
                             <!-- Soma das Entradas -->
@@ -6124,7 +6148,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="&minus;" />
-                            <input type="text" value="ASPU (PlumpySup) 540 kcal pasta - Saquetas"/>
+                            <input type="text" value="ASPU (PlumpySup) 500 kcal Pasta - Saqueta"/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l245-c1c2-menos-l245-c3" data-stfpoutput="l245-c4" data-diferenca="l245-c6-menos-l245-c4" data-diferencaoutput="l245-c7" />
                             <!-- Soma das Entradas -->
@@ -6146,6 +6170,824 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
+                        <div class="row">
+                            <input type="text" value="&minus;" />
+                            <input type="text" value="CSB Plus (MAE) 10 kg Farinha - Saco"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l246-c1c2-menos-l246-c3" data-stfpoutput="l246-c4" data-diferenca="l246-c6-menos-l246-c4" data-diferencaoutput="l246-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l246-c1c2-menos-l246-c3" data-stfpoutput="l246-c4" data-diferenca="l246-c6-menos-l246-c4" data-diferencaoutput="l246-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l246-c3" data-stfp="l246-c1c2-menos-l246-c3" data-stfpoutput="l246-c4" data-diferenca="l246-c6-menos-l246-c4" data-diferencaoutput="l246-c7" data-qtdarequisitar="l246-c3-menos-l246-c6" data-qtdarequisitaroutput="l246-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l246-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l246-c6"  data-diferenca="l246-c6-menos-l246-c4" data-diferencaoutput="l246-c7" data-qtdarequisitar="l246-c3-menos-l246-c6" data-qtdarequisitaroutput="l246-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l246-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l246-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>                   
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l247-c1c2-menos-l247-c3" data-stfpoutput="l247-c4" data-diferenca="l247-c6-menos-l247-c4" data-diferencaoutput="l247-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l247-c1c2-menos-l247-c3" data-stfpoutput="l247-c4" data-diferenca="l247-c6-menos-l247-c4" data-diferencaoutput="l247-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l247-c3" data-stfp="l247-c1c2-menos-l247-c3" data-stfpoutput="l247-c4" data-diferenca="l247-c6-menos-l247-c4" data-diferencaoutput="l247-c7" data-qtdarequisitar="l247-c3-menos-l247-c6" data-qtdarequisitaroutput="l247-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l247-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l247-c6"  data-diferenca="l247-c6-menos-l247-c4" data-diferencaoutput="l247-c7" data-qtdarequisitar="l247-c3-menos-l247-c6" data-qtdarequisitaroutput="l247-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l247-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l247-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l248-c1c2-menos-l248-c3" data-stfpoutput="l248-c4" data-diferenca="l248-c6-menos-l248-c4" data-diferencaoutput="l248-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l248-c1c2-menos-l248-c3" data-stfpoutput="l248-c4" data-diferenca="l248-c6-menos-l248-c4" data-diferencaoutput="l248-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l248-c3" data-stfp="l248-c1c2-menos-l248-c3" data-stfpoutput="l248-c4" data-diferenca="l248-c6-menos-l248-c4" data-diferencaoutput="l248-c7" data-qtdarequisitar="l248-c3-menos-l248-c6" data-qtdarequisitaroutput="l248-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l248-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l248-c6"  data-diferenca="l248-c6-menos-l248-c4" data-diferencaoutput="l248-c7" data-qtdarequisitar="l248-c3-menos-l248-c6" data-qtdarequisitaroutput="l248-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l248-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l248-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l249-c1c2-menos-l249-c3" data-stfpoutput="l249-c4" data-diferenca="l249-c6-menos-l249-c4" data-diferencaoutput="l249-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l249-c1c2-menos-l249-c3" data-stfpoutput="l249-c4" data-diferenca="l249-c6-menos-l249-c4" data-diferencaoutput="l249-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l249-c3" data-stfp="l249-c1c2-menos-l249-c3" data-stfpoutput="l249-c4" data-diferenca="l249-c6-menos-l249-c4" data-diferencaoutput="l249-c7" data-qtdarequisitar="l249-c3-menos-l249-c6" data-qtdarequisitaroutput="l249-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l249-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l249-c6"  data-diferenca="l249-c6-menos-l249-c4" data-diferencaoutput="l249-c7" data-qtdarequisitar="l249-c3-menos-l249-c6" data-qtdarequisitaroutput="l249-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l249-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l249-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l250-c1c2-menos-l250-c3" data-stfpoutput="l250-c4" data-diferenca="l250-c6-menos-l250-c4" data-diferencaoutput="l250-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l250-c1c2-menos-l250-c3" data-stfpoutput="l250-c4" data-diferenca="l250-c6-menos-l250-c4" data-diferencaoutput="l250-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l250-c3" data-stfp="l250-c1c2-menos-l250-c3" data-stfpoutput="l250-c4" data-diferenca="l250-c6-menos-l250-c4" data-diferencaoutput="l250-c7" data-qtdarequisitar="l250-c3-menos-l250-c6" data-qtdarequisitaroutput="l250-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l250-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l250-c6"  data-diferenca="l250-c6-menos-l250-c4" data-diferencaoutput="l250-c7" data-qtdarequisitar="l250-c3-menos-l250-c6" data-qtdarequisitaroutput="l250-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l250-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l250-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l251-c1c2-menos-l251-c3" data-stfpoutput="l251-c4" data-diferenca="l251-c6-menos-l251-c4" data-diferencaoutput="l251-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l251-c1c2-menos-l251-c3" data-stfpoutput="l251-c4" data-diferenca="l251-c6-menos-l251-c4" data-diferencaoutput="l251-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l251-c3" data-stfp="l251-c1c2-menos-l251-c3" data-stfpoutput="l251-c4" data-diferenca="l251-c6-menos-l251-c4" data-diferencaoutput="l251-c7" data-qtdarequisitar="l251-c3-menos-l251-c6" data-qtdarequisitaroutput="l251-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l251-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l251-c6"  data-diferenca="l251-c6-menos-l251-c4" data-diferencaoutput="l251-c7" data-qtdarequisitar="l251-c3-menos-l251-c6" data-qtdarequisitaroutput="l251-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l251-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l251-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l252-c1c2-menos-l252-c3" data-stfpoutput="l252-c4" data-diferenca="l252-c6-menos-l252-c4" data-diferencaoutput="l252-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l252-c1c2-menos-l252-c3" data-stfpoutput="l252-c4" data-diferenca="l252-c6-menos-l252-c4" data-diferencaoutput="l252-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l252-c3" data-stfp="l252-c1c2-menos-l252-c3" data-stfpoutput="l252-c4" data-diferenca="l252-c6-menos-l252-c4" data-diferencaoutput="l252-c7" data-qtdarequisitar="l252-c3-menos-l252-c6" data-qtdarequisitaroutput="l252-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l252-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l252-c6"  data-diferenca="l252-c6-menos-l252-c4" data-diferencaoutput="l252-c7" data-qtdarequisitar="l252-c3-menos-l252-c6" data-qtdarequisitaroutput="l252-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l252-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l252-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l253-c1c2-menos-l253-c3" data-stfpoutput="l253-c4" data-diferenca="l253-c6-menos-l253-c4" data-diferencaoutput="l253-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l253-c1c2-menos-l253-c3" data-stfpoutput="l253-c4" data-diferenca="l253-c6-menos-l253-c4" data-diferencaoutput="l253-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l253-c3" data-stfp="l253-c1c2-menos-l253-c3" data-stfpoutput="l253-c4" data-diferenca="l253-c6-menos-l253-c4" data-diferencaoutput="l253-c7" data-qtdarequisitar="l253-c3-menos-l253-c6" data-qtdarequisitaroutput="l253-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l253-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l253-c6"  data-diferenca="l253-c6-menos-l253-c4" data-diferencaoutput="l253-c7" data-qtdarequisitar="l253-c3-menos-l253-c6" data-qtdarequisitaroutput="l253-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l253-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l253-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l254-c1c2-menos-l254-c3" data-stfpoutput="l254-c4" data-diferenca="l254-c6-menos-l254-c4" data-diferencaoutput="l254-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l254-c1c2-menos-l254-c3" data-stfpoutput="l254-c4" data-diferenca="l254-c6-menos-l254-c4" data-diferencaoutput="l254-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l254-c3" data-stfp="l254-c1c2-menos-l254-c3" data-stfpoutput="l254-c4" data-diferenca="l254-c6-menos-l254-c4" data-diferencaoutput="l254-c7" data-qtdarequisitar="l254-c3-menos-l254-c6" data-qtdarequisitaroutput="l254-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l254-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l254-c6"  data-diferenca="l254-c6-menos-l254-c4" data-diferencaoutput="l254-c7" data-qtdarequisitar="l254-c3-menos-l254-c6" data-qtdarequisitaroutput="l254-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l254-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l254-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l255-c1c2-menos-l255-c3" data-stfpoutput="l255-c4" data-diferenca="l255-c6-menos-l255-c4" data-diferencaoutput="l255-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l255-c1c2-menos-l255-c3" data-stfpoutput="l255-c4" data-diferenca="l255-c6-menos-l255-c4" data-diferencaoutput="l255-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l255-c3" data-stfp="l255-c1c2-menos-l255-c3" data-stfpoutput="l255-c4" data-diferenca="l255-c6-menos-l255-c4" data-diferencaoutput="l255-c7" data-qtdarequisitar="l255-c3-menos-l255-c6" data-qtdarequisitaroutput="l255-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l255-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l255-c6"  data-diferenca="l255-c6-menos-l255-c4" data-diferencaoutput="l255-c7" data-qtdarequisitar="l255-c3-menos-l255-c6" data-qtdarequisitaroutput="l255-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l255-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l255-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l256-c1c2-menos-l256-c3" data-stfpoutput="l256-c4" data-diferenca="l256-c6-menos-l256-c4" data-diferencaoutput="l256-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l256-c1c2-menos-l256-c3" data-stfpoutput="l256-c4" data-diferenca="l256-c6-menos-l256-c4" data-diferencaoutput="l256-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l256-c3" data-stfp="l256-c1c2-menos-l256-c3" data-stfpoutput="l256-c4" data-diferenca="l256-c6-menos-l256-c4" data-diferencaoutput="l256-c7" data-qtdarequisitar="l256-c3-menos-l256-c6" data-qtdarequisitaroutput="l256-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l256-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l256-c6"  data-diferenca="l256-c6-menos-l256-c4" data-diferencaoutput="l256-c7" data-qtdarequisitar="l256-c3-menos-l256-c6" data-qtdarequisitaroutput="l256-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l256-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l256-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l257-c1c2-menos-l257-c3" data-stfpoutput="l257-c4" data-diferenca="l257-c6-menos-l257-c4" data-diferencaoutput="l257-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l257-c1c2-menos-l257-c3" data-stfpoutput="l257-c4" data-diferenca="l257-c6-menos-l257-c4" data-diferencaoutput="l257-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l257-c3" data-stfp="l257-c1c2-menos-l257-c3" data-stfpoutput="l257-c4" data-diferenca="l257-c6-menos-l257-c4" data-diferencaoutput="l257-c7" data-qtdarequisitar="l257-c3-menos-l257-c6" data-qtdarequisitaroutput="l257-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l257-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l257-c6"  data-diferenca="l257-c6-menos-l257-c4" data-diferencaoutput="l257-c7" data-qtdarequisitar="l257-c3-menos-l257-c6" data-qtdarequisitaroutput="l257-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l257-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l257-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l258-c1c2-menos-l258-c3" data-stfpoutput="l258-c4" data-diferenca="l258-c6-menos-l258-c4" data-diferencaoutput="l258-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l258-c1c2-menos-l258-c3" data-stfpoutput="l258-c4" data-diferenca="l258-c6-menos-l258-c4" data-diferencaoutput="l258-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l258-c3" data-stfp="l258-c1c2-menos-l258-c3" data-stfpoutput="l258-c4" data-diferenca="l258-c6-menos-l258-c4" data-diferencaoutput="l258-c7" data-qtdarequisitar="l258-c3-menos-l258-c6" data-qtdarequisitaroutput="l258-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l258-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l258-c6"  data-diferenca="l258-c6-menos-l258-c4" data-diferencaoutput="l258-c7" data-qtdarequisitar="l258-c3-menos-l258-c6" data-qtdarequisitaroutput="l258-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l258-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l258-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l259-c1c2-menos-l259-c3" data-stfpoutput="l259-c4" data-diferenca="l259-c6-menos-l259-c4" data-diferencaoutput="l259-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l259-c1c2-menos-l259-c3" data-stfpoutput="l259-c4" data-diferenca="l259-c6-menos-l259-c4" data-diferencaoutput="l259-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l259-c3" data-stfp="l259-c1c2-menos-l259-c3" data-stfpoutput="l259-c4" data-diferenca="l259-c6-menos-l259-c4" data-diferencaoutput="l259-c7" data-qtdarequisitar="l259-c3-menos-l259-c6" data-qtdarequisitaroutput="l259-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l259-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l259-c6"  data-diferenca="l259-c6-menos-l259-c4" data-diferencaoutput="l259-c7" data-qtdarequisitar="l259-c3-menos-l259-c6" data-qtdarequisitaroutput="l259-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l259-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l259-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>
+
+                        <!-- Pagina 14 -->
+                        <div class="row section-break">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l260-c1c2-menos-l260-c3" data-stfpoutput="l260-c4" data-diferenca="l260-c6-menos-l260-c4" data-diferencaoutput="l260-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l260-c1c2-menos-l260-c3" data-stfpoutput="l260-c4" data-diferenca="l260-c6-menos-l260-c4" data-diferencaoutput="l260-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l260-c3" data-stfp="l260-c1c2-menos-l260-c3" data-stfpoutput="l260-c4" data-diferenca="l260-c6-menos-l260-c4" data-diferencaoutput="l260-c7" data-qtdarequisitar="l260-c3-menos-l260-c6" data-qtdarequisitaroutput="l260-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l260-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l260-c6"  data-diferenca="l260-c6-menos-l260-c4" data-diferencaoutput="l260-c7" data-qtdarequisitar="l260-c3-menos-l260-c6" data-qtdarequisitaroutput="l260-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l260-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l260-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>  
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l261-c1c2-menos-l261-c3" data-stfpoutput="l261-c4" data-diferenca="l261-c6-menos-l261-c4" data-diferencaoutput="l261-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l261-c1c2-menos-l261-c3" data-stfpoutput="l261-c4" data-diferenca="l261-c6-menos-l261-c4" data-diferencaoutput="l261-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l261-c3" data-stfp="l261-c1c2-menos-l261-c3" data-stfpoutput="l261-c4" data-diferenca="l261-c6-menos-l261-c4" data-diferencaoutput="l261-c7" data-qtdarequisitar="l261-c3-menos-l261-c6" data-qtdarequisitaroutput="l261-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l261-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l261-c6"  data-diferenca="l261-c6-menos-l261-c4" data-diferencaoutput="l261-c7" data-qtdarequisitar="l261-c3-menos-l261-c6" data-qtdarequisitaroutput="l261-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l261-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l261-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>   
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l262-c1c2-menos-l262-c3" data-stfpoutput="l262-c4" data-diferenca="l262-c6-menos-l262-c4" data-diferencaoutput="l262-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l262-c1c2-menos-l262-c3" data-stfpoutput="l262-c4" data-diferenca="l262-c6-menos-l262-c4" data-diferencaoutput="l262-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l262-c3" data-stfp="l262-c1c2-menos-l262-c3" data-stfpoutput="l262-c4" data-diferenca="l262-c6-menos-l262-c4" data-diferencaoutput="l262-c7" data-qtdarequisitar="l262-c3-menos-l262-c6" data-qtdarequisitaroutput="l262-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l262-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l262-c6"  data-diferenca="l262-c6-menos-l262-c4" data-diferencaoutput="l262-c7" data-qtdarequisitar="l262-c3-menos-l262-c6" data-qtdarequisitaroutput="l262-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l262-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l262-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>   
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l263-c1c2-menos-l263-c3" data-stfpoutput="l263-c4" data-diferenca="l263-c6-menos-l263-c4" data-diferencaoutput="l263-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l263-c1c2-menos-l263-c3" data-stfpoutput="l263-c4" data-diferenca="l263-c6-menos-l263-c4" data-diferencaoutput="l263-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l263-c3" data-stfp="l263-c1c2-menos-l263-c3" data-stfpoutput="l263-c4" data-diferenca="l263-c6-menos-l263-c4" data-diferencaoutput="l263-c7" data-qtdarequisitar="l263-c3-menos-l263-c6" data-qtdarequisitaroutput="l263-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l263-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l263-c6"  data-diferenca="l263-c6-menos-l263-c4" data-diferencaoutput="l263-c7" data-qtdarequisitar="l263-c3-menos-l263-c6" data-qtdarequisitaroutput="l263-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l263-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l263-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>   
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l264-c1c2-menos-l264-c3" data-stfpoutput="l264-c4" data-diferenca="l264-c6-menos-l264-c4" data-diferencaoutput="l264-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l264-c1c2-menos-l264-c3" data-stfpoutput="l264-c4" data-diferenca="l264-c6-menos-l264-c4" data-diferencaoutput="l264-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l264-c3" data-stfp="l264-c1c2-menos-l264-c3" data-stfpoutput="l264-c4" data-diferenca="l264-c6-menos-l264-c4" data-diferencaoutput="l264-c7" data-qtdarequisitar="l264-c3-menos-l264-c6" data-qtdarequisitaroutput="l264-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l264-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l264-c6"  data-diferenca="l264-c6-menos-l264-c4" data-diferencaoutput="l264-c7" data-qtdarequisitar="l264-c3-menos-l264-c6" data-qtdarequisitaroutput="l264-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l264-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l264-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>   
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l265-c1c2-menos-l265-c3" data-stfpoutput="l265-c4" data-diferenca="l265-c6-menos-l265-c4" data-diferencaoutput="l265-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l265-c1c2-menos-l265-c3" data-stfpoutput="l265-c4" data-diferenca="l265-c6-menos-l265-c4" data-diferencaoutput="l265-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l265-c3" data-stfp="l265-c1c2-menos-l265-c3" data-stfpoutput="l265-c4" data-diferenca="l265-c6-menos-l265-c4" data-diferencaoutput="l265-c7" data-qtdarequisitar="l265-c3-menos-l265-c6" data-qtdarequisitaroutput="l265-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l265-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l265-c6"  data-diferenca="l265-c6-menos-l265-c4" data-diferencaoutput="l265-c7" data-qtdarequisitar="l265-c3-menos-l265-c6" data-qtdarequisitaroutput="l265-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l265-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l265-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>   
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l266-c1c2-menos-l266-c3" data-stfpoutput="l266-c4" data-diferenca="l266-c6-menos-l266-c4" data-diferencaoutput="l266-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l266-c1c2-menos-l266-c3" data-stfpoutput="l266-c4" data-diferenca="l266-c6-menos-l266-c4" data-diferencaoutput="l266-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l266-c3" data-stfp="l266-c1c2-menos-l266-c3" data-stfpoutput="l266-c4" data-diferenca="l266-c6-menos-l266-c4" data-diferencaoutput="l266-c7" data-qtdarequisitar="l266-c3-menos-l266-c6" data-qtdarequisitaroutput="l266-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l266-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l266-c6"  data-diferenca="l266-c6-menos-l266-c4" data-diferencaoutput="l266-c7" data-qtdarequisitar="l266-c3-menos-l266-c6" data-qtdarequisitaroutput="l266-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l266-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l266-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>   
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l267-c1c2-menos-l267-c3" data-stfpoutput="l267-c4" data-diferenca="l267-c6-menos-l267-c4" data-diferencaoutput="l267-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l267-c1c2-menos-l267-c3" data-stfpoutput="l267-c4" data-diferenca="l267-c6-menos-l267-c4" data-diferencaoutput="l267-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l267-c3" data-stfp="l267-c1c2-menos-l267-c3" data-stfpoutput="l267-c4" data-diferenca="l267-c6-menos-l267-c4" data-diferencaoutput="l267-c7" data-qtdarequisitar="l267-c3-menos-l267-c6" data-qtdarequisitaroutput="l267-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l267-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l267-c6"  data-diferenca="l267-c6-menos-l267-c4" data-diferencaoutput="l267-c7" data-qtdarequisitar="l267-c3-menos-l267-c6" data-qtdarequisitaroutput="l267-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l267-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l267-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>   
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l268-c1c2-menos-l268-c3" data-stfpoutput="l268-c4" data-diferenca="l268-c6-menos-l268-c4" data-diferencaoutput="l268-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l268-c1c2-menos-l268-c3" data-stfpoutput="l268-c4" data-diferenca="l268-c6-menos-l268-c4" data-diferencaoutput="l268-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l268-c3" data-stfp="l268-c1c2-menos-l268-c3" data-stfpoutput="l268-c4" data-diferenca="l268-c6-menos-l268-c4" data-diferencaoutput="l268-c7" data-qtdarequisitar="l268-c3-menos-l268-c6" data-qtdarequisitaroutput="l268-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l268-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l268-c6"  data-diferenca="l268-c6-menos-l268-c4" data-diferencaoutput="l268-c7" data-qtdarequisitar="l268-c3-menos-l268-c6" data-qtdarequisitaroutput="l268-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l268-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l268-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>   
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l269-c1c2-menos-l269-c3" data-stfpoutput="l269-c4" data-diferenca="l269-c6-menos-l269-c4" data-diferencaoutput="l269-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l269-c1c2-menos-l269-c3" data-stfpoutput="l269-c4" data-diferenca="l269-c6-menos-l269-c4" data-diferencaoutput="l269-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l269-c3" data-stfp="l269-c1c2-menos-l269-c3" data-stfpoutput="l269-c4" data-diferenca="l269-c6-menos-l269-c4" data-diferencaoutput="l269-c7" data-qtdarequisitar="l269-c3-menos-l269-c6" data-qtdarequisitaroutput="l269-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l269-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l269-c6"  data-diferenca="l269-c6-menos-l269-c4" data-diferencaoutput="l269-c7" data-qtdarequisitar="l269-c3-menos-l269-c6" data-qtdarequisitaroutput="l269-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l269-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l269-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>   
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l270-c1c2-menos-l270-c3" data-stfpoutput="l270-c4" data-diferenca="l270-c6-menos-l270-c4" data-diferencaoutput="l270-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l270-c1c2-menos-l270-c3" data-stfpoutput="l270-c4" data-diferenca="l270-c6-menos-l270-c4" data-diferencaoutput="l270-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l270-c3" data-stfp="l270-c1c2-menos-l270-c3" data-stfpoutput="l270-c4" data-diferenca="l270-c6-menos-l270-c4" data-diferencaoutput="l270-c7" data-qtdarequisitar="l270-c3-menos-l270-c6" data-qtdarequisitaroutput="l270-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l270-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l270-c6"  data-diferenca="l270-c6-menos-l270-c4" data-diferencaoutput="l270-c7" data-qtdarequisitar="l270-c3-menos-l270-c6" data-qtdarequisitaroutput="l270-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l270-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l270-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div> 
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l271-c1c2-menos-l271-c3" data-stfpoutput="l271-c4" data-diferenca="l271-c6-menos-l271-c4" data-diferencaoutput="l271-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l271-c1c2-menos-l271-c3" data-stfpoutput="l271-c4" data-diferenca="l271-c6-menos-l271-c4" data-diferencaoutput="l271-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l271-c3" data-stfp="l271-c1c2-menos-l271-c3" data-stfpoutput="l271-c4" data-diferenca="l271-c6-menos-l271-c4" data-diferencaoutput="l271-c7" data-qtdarequisitar="l271-c3-menos-l271-c6" data-qtdarequisitaroutput="l271-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l271-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l271-c6"  data-diferenca="l271-c6-menos-l271-c4" data-diferencaoutput="l271-c7" data-qtdarequisitar="l271-c3-menos-l271-c6" data-qtdarequisitaroutput="l271-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l271-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l271-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>   
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l272-c1c2-menos-l272-c3" data-stfpoutput="l272-c4" data-diferenca="l272-c6-menos-l272-c4" data-diferencaoutput="l272-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l272-c1c2-menos-l272-c3" data-stfpoutput="l272-c4" data-diferenca="l272-c6-menos-l272-c4" data-diferencaoutput="l272-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l272-c3" data-stfp="l272-c1c2-menos-l272-c3" data-stfpoutput="l272-c4" data-diferenca="l272-c6-menos-l272-c4" data-diferencaoutput="l272-c7" data-qtdarequisitar="l272-c3-menos-l272-c6" data-qtdarequisitaroutput="l272-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l272-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l272-c6"  data-diferenca="l272-c6-menos-l272-c4" data-diferencaoutput="l272-c7" data-qtdarequisitar="l272-c3-menos-l272-c6" data-qtdarequisitaroutput="l272-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l272-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l272-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>   
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l273-c1c2-menos-l273-c3" data-stfpoutput="l273-c4" data-diferenca="l273-c6-menos-l273-c4" data-diferencaoutput="l273-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l273-c1c2-menos-l273-c3" data-stfpoutput="l273-c4" data-diferenca="l273-c6-menos-l273-c4" data-diferencaoutput="l273-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l273-c3" data-stfp="l273-c1c2-menos-l273-c3" data-stfpoutput="l273-c4" data-diferenca="l273-c6-menos-l273-c4" data-diferencaoutput="l273-c7" data-qtdarequisitar="l273-c3-menos-l273-c6" data-qtdarequisitaroutput="l273-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l273-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l273-c6"  data-diferenca="l273-c6-menos-l273-c4" data-diferencaoutput="l273-c7" data-qtdarequisitar="l273-c3-menos-l273-c6" data-qtdarequisitaroutput="l273-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l273-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l273-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>   
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l274-c1c2-menos-l274-c3" data-stfpoutput="l274-c4" data-diferenca="l274-c6-menos-l274-c4" data-diferencaoutput="l274-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l274-c1c2-menos-l274-c3" data-stfpoutput="l274-c4" data-diferenca="l274-c6-menos-l274-c4" data-diferencaoutput="l274-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l274-c3" data-stfp="l274-c1c2-menos-l274-c3" data-stfpoutput="l274-c4" data-diferenca="l274-c6-menos-l274-c4" data-diferencaoutput="l274-c7" data-qtdarequisitar="l274-c3-menos-l274-c6" data-qtdarequisitaroutput="l274-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l274-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l274-c6"  data-diferenca="l274-c6-menos-l274-c4" data-diferencaoutput="l274-c7" data-qtdarequisitar="l274-c3-menos-l274-c6" data-qtdarequisitaroutput="l274-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l274-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l274-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>   
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l275-c1c2-menos-l275-c3" data-stfpoutput="l275-c4" data-diferenca="l275-c6-menos-l275-c4" data-diferencaoutput="l275-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l275-c1c2-menos-l275-c3" data-stfpoutput="l275-c4" data-diferenca="l275-c6-menos-l275-c4" data-diferencaoutput="l275-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l275-c3" data-stfp="l275-c1c2-menos-l275-c3" data-stfpoutput="l275-c4" data-diferenca="l275-c6-menos-l275-c4" data-diferencaoutput="l275-c7" data-qtdarequisitar="l275-c3-menos-l275-c6" data-qtdarequisitaroutput="l275-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l275-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l275-c6"  data-diferenca="l275-c6-menos-l275-c4" data-diferencaoutput="l275-c7" data-qtdarequisitar="l275-c3-menos-l275-c6" data-qtdarequisitaroutput="l275-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l275-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l275-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>   
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l276-c1c2-menos-l276-c3" data-stfpoutput="l276-c4" data-diferenca="l276-c6-menos-l276-c4" data-diferencaoutput="l276-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l276-c1c2-menos-l276-c3" data-stfpoutput="l276-c4" data-diferenca="l276-c6-menos-l276-c4" data-diferencaoutput="l276-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l276-c3" data-stfp="l276-c1c2-menos-l276-c3" data-stfpoutput="l276-c4" data-diferenca="l276-c6-menos-l276-c4" data-diferencaoutput="l276-c7" data-qtdarequisitar="l276-c3-menos-l276-c6" data-qtdarequisitaroutput="l276-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l276-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l276-c6"  data-diferenca="l276-c6-menos-l276-c4" data-diferencaoutput="l276-c7" data-qtdarequisitar="l276-c3-menos-l276-c6" data-qtdarequisitaroutput="l276-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l276-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l276-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div> 
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l277-c1c2-menos-l277-c3" data-stfpoutput="l277-c4" data-diferenca="l277-c6-menos-l277-c4" data-diferencaoutput="l277-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l277-c1c2-menos-l277-c3" data-stfpoutput="l277-c4" data-diferenca="l277-c6-menos-l277-c4" data-diferencaoutput="l277-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l277-c3" data-stfp="l277-c1c2-menos-l277-c3" data-stfpoutput="l277-c4" data-diferenca="l277-c6-menos-l277-c4" data-diferencaoutput="l277-c7" data-qtdarequisitar="l277-c3-menos-l277-c6" data-qtdarequisitaroutput="l277-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l277-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l277-c6"  data-diferenca="l277-c6-menos-l277-c4" data-diferencaoutput="l277-c7" data-qtdarequisitar="l277-c3-menos-l277-c6" data-qtdarequisitaroutput="l277-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l277-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l277-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div> 
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l278-c1c2-menos-l278-c3" data-stfpoutput="l278-c4" data-diferenca="l278-c6-menos-l278-c4" data-diferencaoutput="l278-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l278-c1c2-menos-l278-c3" data-stfpoutput="l278-c4" data-diferenca="l278-c6-menos-l278-c4" data-diferencaoutput="l278-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l278-c3" data-stfp="l278-c1c2-menos-l278-c3" data-stfpoutput="l278-c4" data-diferenca="l278-c6-menos-l278-c4" data-diferencaoutput="l278-c7" data-qtdarequisitar="l278-c3-menos-l278-c6" data-qtdarequisitaroutput="l278-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l278-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l278-c6"  data-diferenca="l278-c6-menos-l278-c4" data-diferencaoutput="l278-c7" data-qtdarequisitar="l278-c3-menos-l278-c6" data-qtdarequisitaroutput="l278-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l278-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l278-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div> 
+                        <div class="row">
+                            <input type="text" />
+                            <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
+                            <!-- Stock no Início do Período -->
+                            <input type="number" min="0" data-stfp="l279-c1c2-menos-l279-c3" data-stfpoutput="l279-c4" data-diferenca="l279-c6-menos-l279-c4" data-diferencaoutput="l279-c7" />
+                            <!-- Soma das Entradas -->
+                            <input type="number" min="0" data-stfp="l279-c1c2-menos-l279-c3" data-stfpoutput="l279-c4" data-diferenca="l279-c6-menos-l279-c4" data-diferencaoutput="l279-c7" />
+                            <!-- Soma das Saídas -->
+                            <input type="number" min="0" class="l279-c3" data-stfp="l279-c1c2-menos-l279-c3" data-stfpoutput="l279-c4" data-diferenca="l279-c6-menos-l279-c4" data-diferencaoutput="l279-c7" data-qtdarequisitar="l279-c3-menos-l279-c6" data-qtdarequisitaroutput="l279-c8" />
+                            <!-- Stock Teórico Fim do Período -->
+                            <input type="number" min="0" readonly class="l279-c4" />
+                            <!-- Total dos Pedidos -->
+                            <input type="number" min="0" /> 
+                            <!-- Inventário do Stock -->
+                            <input type="number" min="0" class="l279-c6"  data-diferenca="l279-c6-menos-l279-c4" data-diferencaoutput="l279-c7" data-qtdarequisitar="l279-c3-menos-l279-c6" data-qtdarequisitaroutput="l279-c8" />
+                            <!-- Diferença -->
+                            <input type="number" min="0" readonly class="l279-c7"/>
+                            <!-- Quantidade a requisitar -->
+                            <input type="number" min="0" readonly class="l279-c8" />
+                            <!-- Quantidade pedida -->
+                            <input type="number" min="0" />
+                            <!-- Quantidade autorizada -->
+                            <input type="number" min="0" />
+                        </div>             
                     </div>
 
                     <footer>
@@ -6320,7 +7162,7 @@
                         Toda célula cujo fundo está vermelho tem um ou mais algarismos omissos por indisponibilidade de espaço na respectiva célula.
                     </p>
                     <p>
-                        As células de entrada de dados do serviço têm uma largura para 7 algarismos no máximo, portanto, só podem mostrar valores até <strong>9&nbsp;999&nbsp;999</strong>. A partir de 10&nbsp;000&nbsp;000, ficam visíveis somente os primeiros 7 algarismos e do 8º em diante, ficam fora da área visível da célula.
+                        As células de entrada de dados do serviço <b>Requisição/Balancete</b> têm uma largura para 13 algarismos no máximo, portanto, só podem mostrar valores até <strong>999 999 999 999</strong>. A partir de 1 000 000 000 000, ficam visíveis somente os primeiros 12 algarismos e do 13º em diante, ficam parcial ou completamente fora da área visível da célula.
                     </p>
                  
                     <div class="seccao-de-interatividade">
