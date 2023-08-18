@@ -66,8 +66,16 @@ body {
         background-color: var(--yt);
     }
 
-    div.body div.section-break {
+    div.main header:nth-child(n+2) {
         page-break-before: always;
+    }
+
+    div.main footer {
+        border-bottom: 1px solid var(--border-color) !important;
+    }
+
+    div.main footer:last-child {
+        border-bottom: none !important;
     }
 }
 
