@@ -3,7 +3,7 @@
 const backup = {
     saveMainData() {
         for (let i = 0; i < mainCels.length; i++) {
-            if(window.localStorage) {
+            if(typeof Storage != "undefined") {
                 if(!mainCels[i].matches("[readonly]")){
                     localStorage.setItem(`rb-cel${i}`, `${mainCels[i].value}`);
                     mainCels[i].value = localStorage.getItem(`rb-cel${i}`);
@@ -14,7 +14,7 @@ const backup = {
 
     saveAdicionalData() {
         for (let i = 0; i < aditionalData.length; i++) {
-            if(window.localStorage) {
+            if(typeof Storage != "undefined") {
                 localStorage.setItem(`rb-${aditionalData[i].id}`, `${aditionalData[i].value}`);
                 aditionalData[i].value = localStorage.getItem(`rb-${aditionalData[i].id}`);
             }

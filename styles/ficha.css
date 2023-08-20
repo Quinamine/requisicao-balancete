@@ -325,6 +325,17 @@ div.container div.main header {
     background-color: var(--yt);
 }
 
+div.container div.main header:nth-child(n+2) {
+    display: none;
+}
+
+@media print {
+    div.container div.main header:nth-child(n+2) {
+        display: grid;
+        page-break-before: always;
+    }
+}
+
 div.main header div.col-fnm {
     border-left: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
@@ -466,8 +477,24 @@ div.main footer {
     border: 1px solid var(--border-color);
     border-bottom: none;
     min-height: 70px;
-    display: grid;
+    display: none;
     grid-template-columns: 761px 1fr;
+}
+
+div.main footer:last-child {
+    display: grid !important;
+}
+
+@media print {
+    div.main footer {
+        display: grid;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    div.main footer:last-child,
+    div.main footer.no-border-bottom-on-edge {
+        border-bottom: none;
+    }
 }
 
 div.main footer div:nth-child(2) {
@@ -535,4 +562,8 @@ div.container input {
 
 .bgc-bluelight {
     background-color: var(--azulCiano) !important;
+}
+
+.hidden {
+    display: none !important;
 }

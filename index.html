@@ -29,7 +29,7 @@
         <script src="scripts/balancete.js"></script>
         <script src="scripts/webstorage.js"></script>
         <script src="scripts/backup.js"></script>
-        <script src="scripts/replica.js"></script>
+        <script src="scripts/print.js"></script>
 
         <noscript>O seu navegador está com o JavaScript desabilitado e isso bloqueia as funcionalidades desta plataforma. Habilite-o nas configurações do navegador e recarregue a página.</noscript>
 
@@ -628,7 +628,7 @@
                         </div>
                         <div class="row">
                             <input type="text" value="2-C-2" />
-                            <input type="text" value=" Metoclopramida 10 mg/2 ml Inj."/>
+                            <input type="text" value="Metoclopramida 10 mg/2 ml Inj."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l17-c1c2-menos-l17-c3" data-stfpoutput="l17-c4" data-diferenca="l17-c6-menos-l17-c4" data-diferencaoutput="l17-c7" />
                             <!-- Soma das Entradas -->
@@ -674,7 +674,7 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+                        <div class="row edge-section-break">
                             <input type="text" value="2-D-1" />
                             <input type="text" value="Bisacodil 5 mg Comp." />
                             <!-- Stock no Início do Período -->
@@ -722,54 +722,7 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>                       
-                        <div class="row ">
-                            <input type="text" value="2-D-4" />
-                            <input type="text" value="Glicerina 3 g Sup."/>
-                            <!-- Stock no Início do Período -->
-                            <input type="number" min="0" data-stfp="l21-c1c2-menos-l21-c3" data-stfpoutput="l21-c4" data-diferenca="l21-c6-menos-l21-c4" data-diferencaoutput="l21-c7" />
-                            <!-- Soma das Entradas -->
-                            <input type="number" min="0" data-stfp="l21-c1c2-menos-l21-c3" data-stfpoutput="l21-c4" data-diferenca="l21-c6-menos-l21-c4" data-diferencaoutput="l21-c7" />
-                            <!-- Soma das Saídas -->
-                            <input type="number" min="0" class="l21-c3" data-stfp="l21-c1c2-menos-l21-c3" data-stfpoutput="l21-c4" data-diferenca="l21-c6-menos-l21-c4" data-diferencaoutput="l21-c7" data-qtdarequisitar="l21-c3-menos-l21-c6" data-qtdarequisitaroutput="l21-c8" />
-                            <!-- Stock Teórico Fim do Período -->
-                            <input type="number" min="0" readonly class="l21-c4" />
-                            <!-- Total dos Pedidos -->
-                            <input type="number" min="0" /> 
-                            <!-- Inventário do Stock -->
-                            <input type="number" min="0" class="l21-c6"  data-diferenca="l21-c6-menos-l21-c4" data-diferencaoutput="l21-c7" data-qtdarequisitar="l21-c3-menos-l21-c6" data-qtdarequisitaroutput="l21-c8" />
-                            <!-- Diferença -->
-                            <input type="number" min="0" readonly class="l21-c7"/>
-                            <!-- Quantidade a requisitar -->
-                            <input type="number" min="0" readonly class="l21-c8" />
-                            <!-- Quantidade pedida -->
-                            <input type="number" min="0" />
-                            <!-- Quantidade autorizada -->
-                            <input type="number" min="0" />
-                        </div>
-                        <div class="row">
-                            <input type="text" value="2-I-1" />
-                            <input type="text" value="Anti-hemorroidário 30 g creme"/>
-                            <!-- Stock no Início do Período -->
-                            <input type="number" min="0" data-stfp="l22-c1c2-menos-l22-c3" data-stfpoutput="l22-c4" data-diferenca="l22-c6-menos-l22-c4" data-diferencaoutput="l22-c7" />
-                            <!-- Soma das Entradas -->
-                            <input type="number" min="0" data-stfp="l22-c1c2-menos-l22-c3" data-stfpoutput="l22-c4" data-diferenca="l22-c6-menos-l22-c4" data-diferencaoutput="l22-c7" />
-                            <!-- Soma das Saídas -->
-                            <input type="number" min="0" class="l22-c3" data-stfp="l22-c1c2-menos-l22-c3" data-stfpoutput="l22-c4" data-diferenca="l22-c6-menos-l22-c4" data-diferencaoutput="l22-c7" data-qtdarequisitar="l22-c3-menos-l22-c6" data-qtdarequisitaroutput="l22-c8" />
-                            <!-- Stock Teórico Fim do Período -->
-                            <input type="number" min="0" readonly class="l22-c4" />
-                            <!-- Total dos Pedidos -->
-                            <input type="number" min="0" /> 
-                            <!-- Inventário do Stock -->
-                            <input type="number" min="0" class="l22-c6"  data-diferenca="l22-c6-menos-l22-c4" data-diferencaoutput="l22-c7" data-qtdarequisitar="l22-c3-menos-l22-c6" data-qtdarequisitaroutput="l22-c8" />
-                            <!-- Diferença -->
-                            <input type="number" min="0" readonly class="l22-c7"/>
-                            <!-- Quantidade a requisitar -->
-                            <input type="number" min="0" readonly class="l22-c8" />
-                            <!-- Quantidade pedida -->
-                            <input type="number" min="0" />
-                            <!-- Quantidade autorizada -->
-                            <input type="number" min="0" />
-                        </div>
+                        
 
                         <!-- Pagina 2 -->
                         <div class="row section-break">
@@ -1348,7 +1301,7 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+                        <div class="row edge-section-break">
                             <input type="text" value="&minus;" />
                             <input type="text" value="Preservativo Feminino"/>
                             <!-- Stock no Início do Período -->
@@ -1974,7 +1927,7 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+                        <div class="row edge-section-break">
                             <input type="text" value="7-B-3" />
                             <input type="text" value="Dextropopoxifeno 65 mg Cáps."/>
                             <!-- Stock no Início do Período -->
@@ -2600,7 +2553,7 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+                        <div class="row edge-section-break">
                             <input type="text" value="7-I-7" />
                             <input type="text" value="Diazepam 10 mg/2 ml Inj."/>
                             <!-- Stock no Início do Período -->
@@ -3226,7 +3179,7 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+                        <div class="row edge-section-break">
                             <input type="text" value="8-E-1" />
                             <input type="text" value="Clindamicina 150 mg Cáps."/>
                             <!-- Stock no Início do Período -->
@@ -3852,7 +3805,7 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+                        <div class="row edge-section-break">
                             <input type="text" value="8-N-3" />
                             <input type="text" value="Ivermectina 6 mg Comp."/>
                             <!-- Stock no Início do Período -->
@@ -4478,7 +4431,7 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+                        <div class="row edge-section-break">
                             <input type="text" value="10-A-8" />
                             <input type="text" value="Manitol a 20% 12,5 g/50 ml Inj."/>
                             <!-- Stock no Início do Período -->
@@ -5104,7 +5057,7 @@
                         </div>
 
                         <!-- Pagina 8 -->
-                        <div class="row section-break">
+                        <div class="row section-break edge-section-break">
                             <input type="text" value="14-A-1" />
                             <input type="text" value="Diclofenac 50 mg Comp."/>
                             <!-- Stock no Início do Período -->
@@ -5728,7 +5681,7 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+                        <div class="row edge-section-break">
                             <input type="text" value="17-C-5" />
                             <input type="text" value="Gentamicina Colírio a 0,3%"/>
                             <!-- Stock no Início do Período -->
@@ -6354,7 +6307,7 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>
-                        <div class="row">
+                        <div class="row edge-section-break">
                             <input type="text" />
                             <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
                             <!-- Stock no Início do Período -->
@@ -6980,8 +6933,8 @@
                             <!-- Quantidade autorizada -->
                             <input type="number" min="0" />
                         </div>  
-                        <div class="row">
-                            <input type="text" />
+                        <div class="row edge-section-break">
+                            <input type="text" value=""/>
                             <input type="text" placeholder="Adicionar fármaco/artigo médico"/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l280-c1c2-menos-l280-c3" data-stfpoutput="l280-c4" data-diferenca="l280-c6-menos-l280-c4" data-diferencaoutput="l280-c7" />
