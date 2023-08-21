@@ -69,7 +69,7 @@ const menu = {
                 for (let i = 0; i < celulas.length; i++) {
                     celulas[i].value = "";
                     celulas[i].placeholder = "";
-                    typeof(Storage) !== "undefined" && localStorage.removeItem(`reqBal${i}`);
+                    typeof(Storage) !== "undefined" && localStorage.removeItem(`rb-cel${i}`);
                     inputValidation.adicionarOuRemoverFundoVermelho(celulas[i], "-");
                 };
 
@@ -80,7 +80,7 @@ const menu = {
                         const IdDoDadoAdicional = limpador.dataset.for; 
                         const dadoAdicional = document.querySelector(`#${IdDoDadoAdicional}`);
                         dadoAdicional.value = "";
-                        typeof(Storage) !== "undefined" && localStorage.removeItem(`reqBal-${IdDoDadoAdicional}`);
+                        typeof(Storage) !== "undefined" && localStorage.removeItem(`rb-${IdDoDadoAdicional}`);
                     }
                 }); 
                 desfoqueDoFundo.off();

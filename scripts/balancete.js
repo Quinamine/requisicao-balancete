@@ -97,7 +97,7 @@ window.addEventListener("load", () => {
                 
                 balancete.calcularQtdArequisitar(soma_das_saidas, inventario_do_stock, qtdarequisitarOutput);
             }
-        });
+        }); 
     });
 
     /* TO LABEL H1 */
