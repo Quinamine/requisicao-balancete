@@ -58,6 +58,13 @@ div.container {
     padding-left: 20px;
 }
 
+@media print {
+    div.container {
+        visibility: visible;
+        margin-top: 10px;
+    }
+}
+
 div.container span {
     line-height: 1.2 !important;
 }
@@ -491,8 +498,7 @@ div.main footer:last-child {
         border-bottom: 1px solid var(--border-color);
     }
 
-    div.main footer:last-child,
-    div.main footer.no-border-bottom-on-edge {
+    div.main footer:last-child {
         border-bottom: none;
     }
 }
@@ -535,14 +541,6 @@ div.container aside input {
     width: 15px;
     height: 15px;
 
-}
-
-@media print {
-
-    div.container {
-        visibility: visible;
-        margin-top: 50px;
-    }
 }
 
 /* JAVASCRIPT */

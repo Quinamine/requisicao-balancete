@@ -55,10 +55,6 @@ body {
         margin: 0.5cm;
         size: landscape;
     }
-
-    @page :first {
-        margin-bottom: 0.5cm;
-    }
     
     body {
         -webkit-print-color-adjust: exact;
@@ -184,7 +180,6 @@ section.menu li.destacar-as-celulas-automaticas label,
 section.menu li input[type=checkbox] {
     cursor: pointer;
 }
-
 
 /* CABEÇALHO */
 body > header, 
