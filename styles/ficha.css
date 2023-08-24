@@ -91,6 +91,7 @@ header div.contentor-de-inputs {
     max-height: 27px;
     border-bottom: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
+    overflow: hidden;
 }
 
 header div.contentor-de-inputs input {
@@ -150,7 +151,7 @@ div.col-de-republica {
 div.col-de-republica span {
     display: block;
     text-transform: uppercase;
-    line-height: 1.5;
+    line-height: 1.5 !important;
 }
 
 /* COLUNA 2 */
@@ -218,6 +219,11 @@ div.linha-de-kits {
     display: grid;
     grid-template-columns: 241px 100px 156px 52px 120px;
     grid-template-areas: "numero-de-consultas numero-de-consultas kits-abertos kits-us-abertos kits-ape-abertos";
+}
+
+div.col-com-h1-provincia-num-de-kits-e-consultas 
+div.linha-de-kits input {
+    margin-left: 0;
 }
 
 div.linha-de-kits div.col-numero-de-consultas {
