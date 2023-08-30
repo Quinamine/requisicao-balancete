@@ -34,37 +34,37 @@ const backup = {
         menu.destacarFundoDeTotais());
     },
 
-    tipoDeRequisicao(tipos_de_requisicao) {
-        for (let i = 0; i < tipos_de_requisicao.length; i++) {
+    tipoOuCorDaReq(tiposOuCores, localStorageKey) {
+        for (let i = 0; i < tiposOuCores.length; i++) {
             // Resetar todos inputs checkbox do container 'col-tipo-de-requisicao'
-            tipos_de_requisicao.forEach(tipo => {
-                tipo.addEventListener("change", () => {
-                    localStorage.removeItem(`${tipos_de_requisicao[i].id}`);
+            tiposOuCores.forEach(tipoOuCor => {
+                tipoOuCor.addEventListener("change", () => {
+                    localStorage.removeItem(localStorageKey);
 
                     // Salvar o check do input activado
-                    localStorage.setItem(`${tipo.id}`, "on");
+                    localStorage.setItem(localStorageKey, `${tipoOuCor.id}`);
                 });
 
                 // Retornar o tipo activado
-                if(localStorage.getItem(tipo.id) == tipos_de_requisicao[i]) {
-                    tipos_de_requisicao[i].removeAttribute("checked");
-                    tipo.setAttribute("checked", "");
+                if(localStorage.getItem(localStorageKey) == tipoOuCor.id) {
+                    tiposOuCores[i].removeAttribute("checked");
+                    tipoOuCor.setAttribute("checked", "");
                     // Aplicar fundo se for tipo Original, Duplicado ou Triplicado
-                    balancete.mudarCorDeFundoDaPagina(tipo.id)
+                    balancete.mudarCorDeFundoDaPagina(tipoOuCor.id);
                 }
             });
         }         
     }
 }
 
-let mainCels, aditionalData, tiposDeRequisicao, tiposDeCopiaDaFicha;
+let mainCels, aditionalData, tiposDeRequisicao, coresDeFundoDaRequisicao;
 window.addEventListener("load", () => {
 
     // INICIALIZAÏÇÃO DE VARIÁVEIS
     mainCels = document.querySelectorAll("div.body .row input");
     aditionalData = document.querySelectorAll("div.container > header input[type=text], header input[type=number], footer input");
     tiposDeRequisicao = document.querySelectorAll("div.col-tipo-de-requisicao input[type=checkbox]");
-    tiposDeCopiaDaFicha = document.querySelectorAll("div.container aside input[type=checkbox]");
+    coresDeFundoDaRequisicao = document.querySelectorAll("div.container aside input[type=checkbox]");
 
     // INVOCAÇÕES
     // Backup de fármacos da lista padrão
@@ -72,12 +72,14 @@ window.addEventListener("load", () => {
         backup.mainData();
         backup.aditionalData();
         backup.destaqueDeAutoCels();
-        tiposDeRequisicao.forEach( tipo => {
-            backup.tipoDeRequisicao(tiposDeRequisicao);
-        });
-        tiposDeCopiaDaFicha.forEach( tipo => {
-            backup.tipoDeRequisicao(tiposDeCopiaDaFicha);
-        });
+
+        for(let i = 0; i < tiposDeRequisicao.length; i++) {
+            backup.tipoOuCorDaReq(tiposDeRequisicao, "tipo-de-req");
+        }
+        
+        for(let i = 0; i < coresDeFundoDaRequisicao.length; i++) {
+            backup.tipoOuCorDaReq(coresDeFundoDaRequisicao, "cor-da-ficha");
+        }
     }
     
 });

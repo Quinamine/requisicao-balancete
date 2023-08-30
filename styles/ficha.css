@@ -38,11 +38,11 @@ div.container input[type=checkbox]:focus {
 }
 
 input[readonly].bg-gray {
-    background-color: var(--gray-c);
+    background-color: var(--gray-c) !important;
 }
 
 input[type=number].fundo-vermelho {
-    background-color: var(--danger-color);
+    background-color: var(--danger-color) !important;
     color: var(--yt);
 }
 
@@ -222,7 +222,8 @@ div.linha-de-titulo input {
     width: 215px;
     text-align: center;
     color: var(--brown);
-    font: 30px bold !important;
+    font-size: 30px;
+    font-weight: bold;
     font-family: 'Times New Roman', Times, serif !important;
 }
 
@@ -561,6 +562,45 @@ div.container aside input {
     width: 15px;
     height: 15px;
 
+}
+
+/* REFERENCE ROW */
+div.reference-container {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    background-color: var(--azulCiano);
+    display: none;
+}
+
+@media screen and (max-width: 1300px) {
+    div.reference-container {
+        display: flex;
+    }
+}
+
+div.ref-col {
+    flex: 1;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 200px 1fr;
+}
+
+@media screen and (max-width: 1300px) {
+    div.ref-col {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+}
+
+div.ref-col span {
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    font-weight: bold;
 }
 
 /* JAVASCRIPT */
