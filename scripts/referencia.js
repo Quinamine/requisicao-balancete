@@ -19,7 +19,7 @@ window.addEventListener("load", () => {
 
             /* COluna */
 
-            const colunas = ["Stock no Início do Período", "Soma das Entradas", "Soma das Saídas", "SF", "Total dos Pedidos", "Inventário", "Dif", "Qtd a Requisitar", "Quantidade Pedida", "Qtd Autorizada pelo Responsável Clínico"];
+            const colunas = ["Stock no Início do Período", "Soma das Entradas", "Soma das Saídas", "SF", "Total dos Pedidos", "Inventário do Stock", "Dif", "Qtd a Requisitar", "Quantidade Pedida", "Qtd Autorizada pelo Responsável Clínico"];
 
             let colIndex;
             for (let i = 0; i < parentChildren.length; i++) { 
