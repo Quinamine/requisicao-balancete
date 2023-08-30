@@ -83,6 +83,14 @@ const menu = {
                         typeof(Storage) !== "undefined" && localStorage.removeItem(`rb-${IdDoDadoAdicional}`);
                     }
                 }); 
+
+                // Clear localStorage.tipos-de-requiscao.id
+                const tipos_de_requisicao = document.querySelectorAll("div.col-tipo-de-requisicao input[type=checkbox], div.container aside input[type=checkbox]");
+
+                for(const tipo of tipos_de_requisicao) {
+                    tipo.checked = false;
+                    localStorage.removeItem(tipo.id);
+                }
                 desfoqueDoFundo.off();
             }
         }
@@ -90,6 +98,9 @@ const menu = {
 
     // IMPRIMIR
     imprimirFicha() {
+        for (const mc of mainCels) {
+            mc.hasAttribute("placeholder") && mc.removeAttribute("placeholder");
+        }
         window.print();
     },
 
@@ -241,9 +252,9 @@ function eventListeners() {
 
     // PARTILHAR
     let conteudo = {
-        title: "Totalizador de Resumo Mensal de Consultas",
-        text: "O Totalizador de Resumo Mensal de Consultas é um serviço online gratuito que auxilia na elaboração do resumo mensal de consultas externas, através do cálculo automático dos subtotais e totais a partir dos dados preenchidos pelo usuário (Profissional de Saúde).",
-        url: "https://www.quinamine.github.io/totalizador-de-resumo-mensal-de-consultas/index.html"
+        title: "Requisição/Balancete",
+        text: "O Requisição/Balancete é um serviço online gratuito que, como o nome sugere, auxilia na elaboração de requisição/balancete através do cálculo automático do Stock Teórico Fim do Período (SF), Diferença entre o Stock Teórico e Stock Físico e Quantidade a Requisitar com base nos dados de Controlo da Ficha de Stock e Inventário preenchidos pelo usuário (Profissional de Saúde). Tem a estrutura idêntica ao modelo da ficha de requisição/balancete actualmente (2023) vigente no Serviço Nacional de Saúde (SNS) em Moçambique.",
+        url: "https://www.quinamin.github.io/requisicao-balancete/index.html"
     }
 
     const btnPartilhar = document.querySelector("button.partilhar");
@@ -251,7 +262,7 @@ function eventListeners() {
         try {
             navigator.share(conteudo)
             .then(() => {
-                console.log("Endereço do totalizador partilhado com sucesso.");
+                console.log("Endereço do serviço Requisição/Balancete partilhado com sucesso.");
             })
             .catch((erro) => {
                 console.log(`Não foi possível partilhar devido ao erro: ${erro}.`);

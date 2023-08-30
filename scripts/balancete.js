@@ -11,7 +11,6 @@ const balancete = {
         const ficha = document.querySelectorAll("div.container, div.main header, div.container input");
 
         for (const f of ficha) {
-            f.classList.remove("bgc-fff");
             f.classList.remove("bgc-yellow");
             f.classList.remove("bgc-bluelight");
 
@@ -81,7 +80,7 @@ const balancete = {
     }  
 }
 
-window.addEventListener("load", () => {
+function eventos() {
     // Mudar a cor da página de acordo com a opção selecionada (Original, Duplicado ou Triplicado);
     const bgcTargets = document.querySelectorAll("div.container aside input");
     bgcTargets.forEach( bgcTarget => {
@@ -106,4 +105,6 @@ window.addEventListener("load", () => {
     /* TO LABEL H1 */
     const h1 = document.querySelector("div.container > header h1");
     h1.addEventListener("click", () => document.querySelector("input#numero-de-requisicao").focus());
-})
+}
+
+window.addEventListener("load", () => eventos());

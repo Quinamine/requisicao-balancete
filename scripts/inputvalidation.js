@@ -1,5 +1,12 @@
 "use strict";
 
+// VARIÁVEIS GLOBAIS
+let inputCels, alertaVermelho;
+function initializeVariables() {
+    inputCels = document.querySelectorAll("div.body .row input:nth-child(n+3)");
+    alertaVermelho = document.querySelector("div.razao-pelas-celulas-com-fundo-vermelho");
+}
+
 const inputValidation = {
 
     contarAlgarismosPorCelula(){
@@ -46,12 +53,7 @@ const inputValidation = {
     }
 }
 
-// VARIÁVEIS GLOBAIS
-let inputCels, alertaVermelho;
-window.addEventListener("load", () => {
-    inputCels = document.querySelectorAll("div.body .row input:nth-child(n+3)");
-    alertaVermelho = document.querySelector("div.razao-pelas-celulas-com-fundo-vermelho");
-
+function events() {
     inputCels.forEach( cel => {
         cel.addEventListener("input", () => {
             setTimeout(() => inputValidation.contarAlgarismosPorCelula(), 250);
@@ -65,4 +67,9 @@ window.addEventListener("load", () => {
         inputValidation.omitirMotivoPelasCelulasVermelhas();
         inputValidation.salvarPreferenciaNaoMostrarMais();
     });
+}
+
+window.addEventListener("load", () => {
+    initializeVariables();
+    events();
 });

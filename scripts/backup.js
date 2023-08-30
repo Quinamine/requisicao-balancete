@@ -36,9 +36,7 @@ const backup = {
 
     tipoDeRequisicao(tipos_de_requisicao) {
         for (let i = 0; i < tipos_de_requisicao.length; i++) {
-             // Resetar todos inputs checkbox do container 'col-tipo-de-requisicao'
-             tipos_de_requisicao[i].removeAttribute("checked");
-
+            // Resetar todos inputs checkbox do container 'col-tipo-de-requisicao'
             tipos_de_requisicao.forEach(tipo => {
                 tipo.addEventListener("change", () => {
                     localStorage.removeItem(`${tipos_de_requisicao[i].id}`);
@@ -48,8 +46,11 @@ const backup = {
                 });
 
                 // Retornar o tipo activado
-                if(localStorage.getItem(tipo.id)) {
+                if(localStorage.getItem(tipo.id) == tipos_de_requisicao[i]) {
+                    tipos_de_requisicao[i].removeAttribute("checked");
                     tipo.setAttribute("checked", "");
+                    // Aplicar fundo se for tipo Original, Duplicado ou Triplicado
+                    balancete.mudarCorDeFundoDaPagina(tipo.id)
                 }
             });
         }         
