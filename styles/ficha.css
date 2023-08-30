@@ -573,6 +573,11 @@ div.reference-container {
     z-index: 1001;
     background-color: var(--azulCiano);
     display: none;
+    transition-duration: 400ms;
+}
+
+div.reference-container.hidden {
+    bottom: -40px;
 }
 
 @media screen and (max-width: 1300px) {

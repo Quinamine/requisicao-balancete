@@ -1,18 +1,23 @@
+function retornarVazio() {
+    outputRow.textContent = "";
+    outputCol.textContent = "";
+}
 
 
+let celulas, outputRow, outputCol;
 window.addEventListener("load", () => {
-    const celulas = document.querySelectorAll("div.body div.row input[type=number]");
+    celulas = document.querySelectorAll("div.body div.row input[type=number]");
+    outputRow = document.querySelector("span.output-row");
+    outputCol = document.querySelector("span.output-col");
 
     celulas.forEach(cel => {
         cel.addEventListener("focus", () => {
             const parent = cel.parentElement;
             const parentChildren = parent.querySelectorAll("input");
-            const outputRow = document.querySelector("span.output-row");
-            const outputCol = document.querySelector("span.output-col");
+            
 
             if(cel.hasAttribute("readonly")) {
-                outputRow.textContent = "";
-                outputCol.textContent = "";
+                retornarVazio();
                 return false;
             }
             outputRow.textContent = "Linha: " + parentChildren[1].value;
@@ -30,9 +35,27 @@ window.addEventListener("load", () => {
             }
 
             outputCol.textContent = "Coluna: " + colunas[colIndex - 2] ; 
-
-            
-
         })
-    })
+    });
+});
+
+
+window.addEventListener("click", (event) => {
+    if(!event.target.hasAttribute("min")) {
+        retornarVazio();
+    }
+});
+
+
+window.addEventListener("scroll", () => {
+    const container = document.querySelector("main > div.container");
+    let containerPosition = container.getBoundingClientRect().bottom;
+    const referenceContainer = document.querySelector("div.reference-container");
+
+    if(containerPosition < 0) {
+        referenceContainer.classList.add("hidden");
+    } else {
+        referenceContainer.classList.remove("hidden");
+    }
+
 })
