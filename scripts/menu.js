@@ -78,7 +78,16 @@ const menu = {
                 limpadoresDeDadosAdicionais.forEach ( limpador => {
                     if(limpador.checked) {
                         const IdDoDadoAdicional = limpador.dataset.for; 
-                        const dadoAdicional = document.querySelector(`#${IdDoDadoAdicional}`);
+                        let dadoAdicional = document.querySelector(`#${IdDoDadoAdicional}`);
+
+                        // O input "Elaborador e Visto" não têm Id para evitar replica-lo na Clonagem do Header
+                        if(IdDoDadoAdicional === "elaborador" || IdDoDadoAdicional === "visto") {
+                            dadoAdicional = document.querySelectorAll(`input.elaborador, input.visto`);
+                            for (const d of dadoAdicional) {
+                                d.value = "";
+                                localStorage.removeItem(`rb-${d.classList[0]}`);
+                            }
+                        }
                         dadoAdicional.value = "";
                         typeof(Storage) !== "undefined" && localStorage.removeItem(`rb-${IdDoDadoAdicional}`);
                     }
@@ -254,7 +263,7 @@ function eventListeners() {
     let conteudo = {
         title: "Requisição/Balancete",
         text: "O Requisição/Balancete é um serviço online gratuito que, como o nome sugere, auxilia na elaboração de requisição/balancete através do cálculo automático do Stock Teórico Fim do Período (SF), Diferença entre o Stock Teórico e Stock Físico e Quantidade a Requisitar com base nos dados de Controlo da Ficha de Stock e Inventário preenchidos pelo usuário (Profissional de Saúde). Tem a estrutura idêntica ao modelo da ficha de requisição/balancete actualmente (2023) vigente no Serviço Nacional de Saúde (SNS) em Moçambique.",
-        url: "https://www.quinamin.github.io/requisicao-balancete/index.html"
+        url: "https://quinamin.github.io/requisicao-balancete/index.html"
     }
 
     const btnPartilhar = document.querySelector("button.partilhar");

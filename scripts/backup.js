@@ -19,11 +19,22 @@ const backup = {
     aditionalData() {
         for (let i = 0; i < aditionalData.length; i++) {
             aditionalData[i].addEventListener("input", () => {
-                localStorage.setItem(`rb-${aditionalData[i].id}`,`${aditionalData[i].value}`);
+                let localStorageKey = `rb-${aditionalData[i].id}`;
+
+                // O input "Elaborador e Visto" não têm Id para evitar replica-lo na Clonagem do Header
+                if(!aditionalData[i].id) {
+                    localStorageKey = `rb-${aditionalData[i].classList[0]}`;
+                } 
+                localStorage.setItem(localStorageKey,`${aditionalData[i].value}`);     
             }); 
-            aditionalData[i].value = localStorage.getItem(`rb-${aditionalData[i].id}`);
+
+            if(aditionalData[i].id) {
+                aditionalData[i].value = localStorage.getItem(`rb-${aditionalData[i].id}`);
+            } else {
+                aditionalData[i].value = localStorage.getItem(`rb-${aditionalData[i].classList[0]}`);
+            }
         }
-    },
+    }, 
 
     destaqueDeAutoCels() {
         readonlyCelsDarker.addEventListener("change", ()=>{
@@ -48,6 +59,7 @@ const backup = {
                 // Retornar o tipo activado
                 if(localStorage.getItem(localStorageKey) == tipoOuCor.id) {
                     tiposOuCores[i].removeAttribute("checked");
+                    localStorage.removeItem(localStorageKey);
                     tipoOuCor.setAttribute("checked", "");
                     // Aplicar fundo se for tipo Original, Duplicado ou Triplicado
                     balancete.mudarCorDeFundoDaPagina(tipoOuCor.id);
@@ -62,7 +74,7 @@ window.addEventListener("load", () => {
 
     // INICIALIZAÏÇÃO DE VARIÁVEIS
     mainCels = document.querySelectorAll("div.body .row input");
-    aditionalData = document.querySelectorAll("div.container > header input[type=text], header input[type=number], footer input");
+    aditionalData = document.querySelectorAll("div.container > header input[type=text], header input[type=number], header input[type=date], footer input");
     tiposDeRequisicao = document.querySelectorAll("div.col-tipo-de-requisicao input[type=checkbox]");
     coresDeFundoDaRequisicao = document.querySelectorAll("div.container aside input[type=checkbox]");
 

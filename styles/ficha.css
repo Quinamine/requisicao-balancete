@@ -25,6 +25,10 @@ input[readonly] {
     transition: background-color 400ms ease-out;
 }
 
+input[type=checkbox], input[type=date] {
+    cursor: pointer;
+}
+
 div.container input:focus {
     border-bottom: 2px solid var(--blue);
 }
@@ -66,6 +70,7 @@ div.container {
 
 div.container span {
     line-height: 1.2 !important;
+    cursor: default;
 }
 
 div.container header {

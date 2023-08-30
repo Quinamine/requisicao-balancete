@@ -387,8 +387,10 @@ div.linha.do-rodape {
     line-height: 2;
 }
 
-div.linha.do-rodape div.hiperligacoes {
-    margin: 0 4% 0 20px;
+@media screen and (min-width: 1024px) {
+    div.linha.do-rodape div.hiperligacoes {
+        margin: 0 4% 0 20px;
+    }
 }
 
 div.linha.do-rodape div.hiperligacoes h4 {

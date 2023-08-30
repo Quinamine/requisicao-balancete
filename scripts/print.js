@@ -44,7 +44,6 @@ function cloneAndPasteFooterContent() {
     }
 }
 
-
 window.addEventListener("load", () => {
     start();
     cloneAndInsertHeader();

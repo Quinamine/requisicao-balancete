@@ -6,6 +6,10 @@ const balancete = {
         for (const c of checkboxes) {c.checked = false;}
         checkboxTarget.checked = true;
     },
+
+    relateLabelToInput(label, input) {
+        label.addEventListener("click", () => input.focus());
+    },
     
     mudarCorDeFundoDaPagina(bgc) {
         const ficha = document.querySelectorAll("div.container, div.main header, div.container input");
@@ -89,6 +93,15 @@ function eventos() {
             balancete.mudarCorDeFundoDaPagina(bgcTarget.id);
         })
     });
+
+    /* Relacionar Label com Input */
+    const label_elaborador = document.querySelector("label.for-elaborador");
+    const input_elaborador = document.querySelector("input.elaborador");
+    balancete.relateLabelToInput(label_elaborador, input_elaborador);
+
+    const label_visto = document.querySelector("label.for-visto");
+    const input_visto = document.querySelector("input.visto");
+    balancete.relateLabelToInput(label_visto, input_visto);
 
     // Invocar a função "toRadio" que activa tipo de requisição, uma de cada vez
     const tipos_de_requisicao = document.querySelectorAll("div.container div.col-tipo-de-requisicao input[type=checkbox]");

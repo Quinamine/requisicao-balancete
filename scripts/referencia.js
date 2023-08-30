@@ -1,48 +1,67 @@
-function retornarVazio() {
-    outputRow.textContent = "";
-    outputCol.textContent = "";
-}
-
+"use strict";
 
 let celulas, outputRow, outputCol;
-window.addEventListener("load", () => {
+function inicializacao() {
     celulas = document.querySelectorAll("div.body div.row input[type=number]");
     outputRow = document.querySelector("span.output-row");
     outputCol = document.querySelector("span.output-col");
+}
 
+const referencia = {
+    retornarLinha(celulaFocada) {
+        const parent = celulaFocada.parentElement;
+        const parentChildren = parent.querySelectorAll("input");
+
+        outputRow.textContent = "Linha: " + parentChildren[1].value;
+    },
+
+    retornarColuna(celulaFocada) {
+        const parent = celulaFocada.parentElement;
+        const parentChildren = parent.querySelectorAll("input");
+
+        const colunas = ["Stock no Início do Período", "Soma das Entradas", "Soma das Saídas", "SF", "Total dos Pedidos", "Inventário do Stock", "Diferença", "Quantidade a Requisitar", "Quantidade Pedida", "Qtd Autorizada pelo Responsável Clínico"];
+
+        let colIndex;
+        for (let i = 0; i < parentChildren.length; i++) { 
+
+            if(i >= 2 && celulaFocada === parentChildren[i]) {
+                colIndex = i;
+            }
+        }
+
+        outputCol.textContent = "Coluna: " + colunas[colIndex - 2] ; 
+    },
+
+    retornarVazio() {
+        outputRow.textContent = "";
+        outputCol.textContent = "";
+    }
+}
+
+function escutadores() {
     celulas.forEach(cel => {
         cel.addEventListener("focus", () => {
-            const parent = cel.parentElement;
-            const parentChildren = parent.querySelectorAll("input");
-            
-
             if(cel.hasAttribute("readonly")) {
-                retornarVazio();
+                referencia.retornarVazio();
                 return false;
             }
-            outputRow.textContent = "Linha: " + parentChildren[1].value;
-
-            /* COluna */
-
-            const colunas = ["Stock no Início do Período", "Soma das Entradas", "Soma das Saídas", "SF", "Total dos Pedidos", "Inventário do Stock", "Dif", "Qtd a Requisitar", "Quantidade Pedida", "Qtd Autorizada pelo Responsável Clínico"];
-
-            let colIndex;
-            for (let i = 0; i < parentChildren.length; i++) { 
-                
-                if(i >= 2 && cel === parentChildren[i]) {
-                    colIndex = i;
-                }
-            }
-
-            outputCol.textContent = "Coluna: " + colunas[colIndex - 2] ; 
-        })
+            
+            referencia.retornarLinha(cel);
+            referencia.retornarColuna(cel);
+        });
     });
+}
+
+window.addEventListener("load", () => {
+    inicializacao();
+    escutadores();
+    
 });
 
 
 window.addEventListener("click", (event) => {
     if(!event.target.hasAttribute("min")) {
-        retornarVazio();
+        referencia.retornarVazio();
     }
 });
 
@@ -52,10 +71,13 @@ window.addEventListener("scroll", () => {
     let containerPosition = container.getBoundingClientRect().bottom;
     const referenceContainer = document.querySelector("div.reference-container");
 
-    if(containerPosition < 0) {
-        referenceContainer.classList.add("hidden");
-    } else {
-        referenceContainer.classList.remove("hidden");
+    try {
+        if(containerPosition < 0) {
+            referenceContainer.classList.add("hidden");
+        } else {
+            referenceContainer.classList.remove("hidden");
+        }
+    } catch(e) {
+        console.log("")
     }
-
 })
