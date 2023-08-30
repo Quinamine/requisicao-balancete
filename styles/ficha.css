@@ -20,30 +20,31 @@ input[type=number] {
     padding: 0;
 }
 
+input[type=text], input[type=date],
+input[readonly] {
+    font-weight: bold;
+}
+
 input[readonly] {
     cursor: default;
     transition: background-color 400ms ease-out;
 }
 
-div.container input:focus {
-    border-bottom: 2px solid var(--blue);
-}
-
-div.container input[readonly]:focus {
-    border-bottom: 1px solid var(--border-color);
-}
-
-div.container input[type=checkbox]:focus {
-    border-bottom: initial;
-}
-
 input[readonly].bg-gray {
-    background-color: var(--gray-c);
+    background-color: var(--gray-c) !important;
 }
 
 input[type=number].fundo-vermelho {
-    background-color: var(--danger-color);
+    background-color: var(--danger-color) !important;
     color: var(--yt);
+}
+
+div.container input:focus {
+    border-bottom: 2px solid var(--blue) !important;
+}
+
+div.container input[type=checkbox]:focus {
+    border-bottom: initial !important;
 }
 
 /* REQUISICAO PROPRIAMENTE DITA */
@@ -82,52 +83,14 @@ div.container input {
 }
 
 /* CSS REUTILIZÁVEL */
-div.linha-de-kits div.col-kits-abertos,
-div.main header div.col-fnm,
-div.body div.row input:first-child  {
-    border-left: 1px solid var(--border-color);
-}
-
-header div.contentor-de-inputs,
-div.col-de-emblema-us-distrito-nivel 
-div.linha-de-emblema-e-republica,
-div.container header 
-div.col-com-h1-provincia-num-de-kits-e-consultas,
-div.linha-de-kits div.col-kits-recebidos label,
-div.linha-de-kits div.col-kits-abertos label,
-div.container header div.col-tipo-de-requisicao,
-div.main header div.col-fnm,
-div.main header div.col-nome-de-farmaco,
-div.linha-com-titulo-requisicao,
-div.linha-de-controlo,
-div.linha-de-controlo span:first-child,
-div.linha-com-subtitulos-de-controlo span,
-div.col-qtd-pedida, div.col-qtd-autorizada,
-div.body div.row input  {
-    border-right: 1px solid var(--border-color);
-}
-
-header div.contentor-de-inputs,
-div.col-de-emblema-us-distrito-nivel 
-div.linha-de-emblema-e-republica,
-div.col-com-h1-provincia-num-de-kits-e-consultas 
-div.linha-de-titulo,
-div.container header div.col-tipo-de-requisicao,
-div.main header div.col-fnm,
-div.main header div.col-nome-de-farmaco,
-div.linha-com-titulo-requisicao,
-div.linha-de-controlo,
-div.col-qtd-pedida, div.col-qtd-autorizada,
-div.body div.row input  {
-    border-bottom: 1px solid var(--border-color);
-}
-
 header div.contentor-de-inputs {
     padding-left: 8px;
     display: flex;
     align-items: center;
     min-height: 27px;
     max-height: 27px;
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
     overflow: hidden;
 }
 
@@ -166,6 +129,8 @@ div.linha-de-emblema-e-republica {
     grid-template-columns: 75px 1fr;
     grid-template-rows: 85px;
     align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
 }
 
 div.linha-de-emblema-e-republica figure {
@@ -194,6 +159,7 @@ div.container header
 div.col-com-h1-provincia-num-de-kits-e-consultas {
     display: grid;
     grid-template-rows: 86px 27px;
+    border-right: 1px solid var(--border-color);
 }
 
 /* COL 2 - LINHA DE TITULO */
@@ -202,6 +168,7 @@ div.linha-de-titulo {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 1px solid var(--border-color);
     height: 86px;
 }
 
@@ -273,14 +240,17 @@ div.contentor-de-inputs.col-kits-abertos {
 
 div.linha-de-kits div.col-kits-recebidos label {
     padding-right: 7px;
+    border-right: 1px solid var(--border-color);
 }
 
 div.linha-de-kits div.col-kits-abertos {
     grid-area: kits-abertos;
+    border-left: 1px solid var(--border-color);
     margin-left: -1px;
 }
 
 div.linha-de-kits div.col-kits-abertos label {
+    border-right: 1px solid var(--border-color);
     padding-right: 8px;
 }
 
@@ -326,6 +296,8 @@ div.col-tipo-de-requisicao {
     flex-direction: column;
     justify-content: space-around;
     padding: 0 8px;
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 div.col-tipo-de-requisicao div {
@@ -358,7 +330,7 @@ input[type=checkbox] {
 div.container div.main header {
     display: grid;
     grid-template-columns: 60px 360px 669px repeat(2, 113px);
-    margin: 5px 0 3px 0;
+    margin-top: 8px;
     border-top: 1px solid var(--border-color);
     position: sticky;
     top: 0;
@@ -370,22 +342,17 @@ div.container div.main header:nth-child(n+2) {
     display: none;
 }
 
-div.main div.body div.row:first-child {
-    border-top: 1px solid var(--border-color);
-}
-
 @media print {
     div.container div.main header:nth-child(n+2) {
         display: grid;
         page-break-before: always;
     }
-
-    div.main div.page-break {
-        border-top: 1px solid var(--border-color);
-    }
 }
 
 div.main header div.col-fnm {
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -393,6 +360,8 @@ div.main header div.col-fnm {
 
 div.main header 
 div.col-nome-de-farmaco {
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     display: grid;
     grid-template-rows: 3.76fr 1fr;
     padding: 0 8px;
@@ -436,6 +405,8 @@ div.linha-de-controlo span {
 }
 
 div.linha-com-titulo-requisicao {
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -444,12 +415,19 @@ div.linha-com-titulo-requisicao {
 div.linha-de-controlo {
     display: grid;
     grid-template-columns: 419px 1fr;
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+}
+
+div.linha-de-controlo span:first-child {
+    border-right: 1px solid var(--border-color);
 }
 
 div.linha-com-subtitulos-de-controlo span {
     text-align: center;
     display: flex;
     justify-content: center;
+    border-right: 1px solid var(--border-color);
 }
 
 div.linha-com-subtitulos-de-controlo span.diferenca {
@@ -469,6 +447,8 @@ div.linha-com-subtitulos-de-controlo span:last-child {
 div.col-qtd-pedida,
 div.col-qtd-autorizada {
     text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
 }
 
 /* BODY DA FICHA */
@@ -489,7 +469,13 @@ div.main div.body div.row.hidden {
 }
 
 div.body div.row input {
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     text-align: center;
+}
+
+div.body div.row input:first-child {
+    border-left: 1px solid var(--border-color);
 }
 
 div.body div.row input:nth-child(2) {
@@ -499,11 +485,11 @@ div.body div.row input:nth-child(2) {
 
 /* Rodapé da ficha */
 div.main footer {
-    margin-top: 5px;
+    margin-top: 8px;
     padding: 8px;
     border: 1px solid var(--border-color);
     border-bottom: none;
-    min-height: 60px;
+    min-height: 70px;
     display: none;
     grid-template-columns: 761px 1fr;
 }
@@ -568,6 +554,10 @@ div.container,
 div.main header,
 div.container input {
     transition: background-color 400ms ease-out;
+}
+
+.bgc-fff {
+    background-color: var(--yt);
 }
 
 .bgc-yellow {
