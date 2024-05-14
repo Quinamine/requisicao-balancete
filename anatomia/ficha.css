@@ -1,0 +1,293 @@
+﻿.ficha {
+    width: var(--layout-width);
+    margin: 30px auto;
+    padding-left: 20px;
+    position: relative;
+}
+
+@media print {
+    .ficha {
+        margin-top: 10px;
+    }
+}
+
+.ficha span {
+    line-height: 1.2;
+    cursor: default
+}
+
+.ficha__header {
+    display: grid;
+    grid-template-columns: 30px 390px 669px 226px
+}
+
+.ficha__header__col-cmam {
+    background-color: var(--fullblack);
+}
+
+.ficha__header__col-cmam span {
+    color: var(--yt);
+    transform: rotate(-90deg);
+    display: inline-block;
+    text-wrap: nowrap
+}
+
+.ficha__linha-de-emblema {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    grid-template-rows: 85px;
+    align-items: center
+}
+
+.ficha__emblema {
+    display: block;
+    margin: auto;
+    width: 80px
+}
+
+.ficha__box-descricao-de-emblema {
+    margin-top: 6px
+}
+
+.ficha__box-descricao-de-emblema span {
+    display: block;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+.ficha__header__container-de-input,
+.container-vazia {
+    display: flex;
+    align-items: center;
+    min-height: 27px;
+    max-height: 27px;
+    overflow: hidden;
+}
+
+.ficha__header__container--padding-l {
+    padding-left: 4px;
+}
+
+.ficha__header__container-de-input input {
+    flex: 1;
+    margin-left: 2px;
+    display: block;
+    min-height: 24px;
+    overflow: hidden;
+}
+
+.ficha__header__container-de-input input[type=number] {
+    margin: 0;
+}
+
+.ficha__col-com-titulo {
+    display: grid;
+    grid-template-rows: 86px 27px
+}
+
+.col-com-titulo-requisicao__linha-do-titulo {
+    height: 86px
+}
+
+.ficha__titulo-requisicao {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.ficha__header__campo-para-num-de-req {
+    min-height: 25px;
+    margin-left: 12px;
+    display: inline-block;
+    width: 190px;
+    text-align: center;
+    color: var(--brown);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Times New Roman',Times,serif!important
+}
+
+.col-com-titulo-requisicao__linha-de-provincia {
+    display: grid;
+    grid-template-columns: 241px 100px 208px 35px 85px;
+}
+
+
+.col-com-titulo-requisicao__linha-de-kits {
+    display: grid;
+    grid-template-columns: 241px 100px 78px 78px 30px 22px 35px 80px;
+}
+
+.ficha__header__col-tipo-de-requisicao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 8px;
+}
+
+.ficha__col-tipo-de-requisicao__subcol {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.col-tipo-de-requisicao__input-data-de-requisicao {
+    flex: 1;
+    margin-left: 4px
+}
+
+
+.ficha__main__header {
+    display: grid;
+    grid-template-columns: 60px 360px 669px repeat(2,113px);
+    margin: 5px 0 3px;
+}
+
+
+@media screen {
+    .ficha__main__header {
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+        background-color: var(--yt)
+    }
+
+    .ficha__main__header--2 {
+        display: grid;
+        page-break-before: always
+    }
+}
+
+.ficha__header__col-designacao {
+    display: grid;
+    grid-template-rows: 3.76fr 1fr;
+    padding: 0 8px
+}
+
+.ficha__col-designacao__container-de-nome-dosagem-e-forma {
+    display: flex;
+    justify-content: space-between
+}
+
+.ficha__col-com-titulo-req-do-nivel-prov-e-distrital {
+    display: grid;
+    grid-template-rows: repeat(2,27px) 64px
+}
+
+.ficha__linha-controlo-da-ficha-de-stock-e-inventario {
+    display: grid;
+    grid-template-columns: 419px 1fr
+}
+
+.controlo-de-stock-e-inventario__linha-com-subtitulos {
+    display: grid;
+    grid-template-columns: 85px repeat(2,78px) 100px repeat(2,78px) 87px 85px
+}
+
+
+.controlo-de-stock-e-inventario__col-subtitulo {
+    display: grid;
+    grid-template-rows: 39px 1fr;
+    text-align: center;
+}
+
+.controlo-de-stock-e-inventario__subtitulo-nao-abreviado {
+    display: flex;
+    justify-content: center;
+    padding-top: 4.5px;
+}
+
+.controlo-de-stock-e-inventario__subtitulo-nao-abreviado.--rowspan-2 {
+    grid-row: 1/3;
+}
+
+.ficha__col-qtd-autorizada {
+    text-align: center;
+}
+
+.ficha__linha-de-inputs {
+    display: grid;
+    grid-template-columns: 60px 360px 85px repeat(2,78px) 100px repeat(2,78px) 87px 85px repeat(2,113px);
+    grid-template-rows: 27px;
+    z-index: 999;
+    position: relative
+}
+
+.ficha__linha-de-inputs input {
+    border-left: 1px solid var(--cor-de-borda);
+    border-top: 1px solid var(--cor-de-borda);
+    text-align: center;
+    font-weight: 700;
+}
+
+.ficha__linha-de-inputs input:last-child {
+    border-right: 1px solid var(--cor-de-borda);
+}
+
+.ficha__linha-de-inputs input:nth-child(2) {
+    padding: 0 8px;
+    text-align: left;
+}
+
+.ficha__linha-de-inputs input:nth-child(7):focus {
+    border-bottom: 2px solid var(--blue);
+}
+
+.ficha__rodape {
+    margin-top: 5px;
+    padding: 8px;
+    min-height: 60px;
+    display: grid;
+    grid-template-columns: 761px 1fr
+}
+
+.ficha__rodape input {
+    min-width: 200px
+}
+
+.ficha__rodape__col-de-visto {
+    padding-left: 8px;
+}
+
+@media print {
+
+
+    div.main div.page-break {
+        border-top: 1px solid var(--border-color)
+    }
+
+    div.main footer {
+        display: grid;
+        border-bottom: 1px solid var(--border-color)
+    }
+
+    div.main footer:last-child {
+        border-bottom: none
+    }
+}
+
+.ficha__aside-modificadores-de-cor-da-ficha {
+    position: absolute;
+    top: 326px;
+    left: 0;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    height: 470px;
+    width: 20px
+}
+
+.ficha__aside-modificadores-de-cor-da-ficha div {
+    transform: rotate(-90deg);
+    display: flex;
+    align-items: center;
+    max-width: 20px
+}
+
+.ficha__aside-modificadores-de-cor-da-ficha label {
+    margin-right: 25px
+}
+
+.ficha__aside-modificadores-de-cor-da-ficha input {
+    width: 15px;
+    height: 15px
+}
