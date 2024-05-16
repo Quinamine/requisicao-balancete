@@ -11,6 +11,23 @@
     }
 }
 
+.ficha--duplicado {
+    background-color: var(--cor-de-duplicado);
+}
+
+.ficha--triplicado {
+    background-color: var(--cor-de-triplicado);
+}
+
+.ficha--duplicado *,
+.ficha--triplicado * {
+    background-color: inherit !important;
+}
+
+.ficha--duplicado * {
+    border-color: var(--gray--4) !important;
+}
+
 .ficha span {
     line-height: 1.2;
     cursor: default
@@ -22,7 +39,7 @@
 }
 
 .ficha__header__col-cmam {
-    background-color: var(--fullblack);
+    background-color: var(--fullblack) !important;
 }
 
 .ficha__header__col-cmam span {
@@ -65,7 +82,7 @@
 }
 
 .ficha__header__container--padding-l {
-    padding-left: 4px;
+    padding-left: 8px;
 }
 
 .ficha__header__container-de-input input {
@@ -78,6 +95,13 @@
 
 .ficha__header__container-de-input input[type=number] {
     margin: 0;
+}
+
+[data-stfp]:focus,
+[data-diferenca]:focus,
+.celula-total-dos-pedidos:focus,
+.input-nao-celular:focus {
+    border-bottom: 2px solid var(--blue);
 }
 
 .ficha__col-com-titulo {
@@ -115,7 +139,7 @@
 
 .col-com-titulo-requisicao__linha-de-kits {
     display: grid;
-    grid-template-columns: 241px 100px 78px 78px 30px 22px 35px 80px;
+    grid-template-columns: 241px 100px 78px 78px 30px 22px 35px 85px;
 }
 
 .ficha__header__col-tipo-de-requisicao {
@@ -148,7 +172,7 @@
     .ficha__main__header {
         position: sticky;
         top: 0;
-        z-index: 9999;
+        z-index: 222;
         background-color: var(--yt)
     }
 
@@ -209,8 +233,9 @@
     display: grid;
     grid-template-columns: 60px 360px 85px repeat(2,78px) 100px repeat(2,78px) 87px 85px repeat(2,113px);
     grid-template-rows: 27px;
-    z-index: 999;
-    position: relative
+    z-index: 111;
+    position: relative;
+
 }
 
 .ficha__linha-de-inputs input {
@@ -229,10 +254,6 @@
     text-align: left;
 }
 
-.ficha__linha-de-inputs input:nth-child(7):focus {
-    border-bottom: 2px solid var(--blue);
-}
-
 .ficha__rodape {
     margin-top: 5px;
     padding: 8px;
@@ -243,6 +264,12 @@
 
 .ficha__rodape input {
     min-width: 200px
+}
+
+@media print {
+    .ficha__rodape input {
+        border: none;
+    }
 }
 
 .ficha__rodape__col-de-visto {
@@ -273,7 +300,8 @@
     display: grid;
     grid-template-rows: repeat(3,1fr);
     height: 470px;
-    width: 20px
+    width: 20px;
+    overflow: hidden;
 }
 
 .ficha__aside-modificadores-de-cor-da-ficha div {

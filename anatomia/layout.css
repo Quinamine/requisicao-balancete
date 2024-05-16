@@ -8,6 +8,8 @@
     --cor-do-rodape: #f4f4f4;
     --cor-de-risco: #dd0000;
     --cor-de-risco-alfa-8: rgba(238, 0, 0, .8);
+    --cor-de-duplicado: yellow;
+    --cor-de-triplicado: #e0edf3;
     --fullblack: #000000;
     --black--alpha-5: rgba(0, 0, 0, .5);
     --black--alpha-8: rgba(0, 0, 0, .8);
@@ -191,6 +193,7 @@ body.--overflow-h {
 .header__menu__label {
     padding: 7.5px 12px 7.5px 0;
     font-size: 12px;
+    min-height: 44px;
 }
 
 .header__menu__btn {
@@ -199,6 +202,7 @@ body.--overflow-h {
     background-color: inherit;
     color: var(--cor-de-texto);
     font-size: 12px;
+    min-height: 44px;
 }
 
 
@@ -221,10 +225,6 @@ main {
     }
 }
 
-input[data-stfp]:focus,
-.input-nao-celular:focus {
-    border-bottom: 2px solid var(--blue);
-}
 /* Campo de Nota */
 .main__container-de-campo-de-nota {
     margin-bottom: 20px;
@@ -353,12 +353,12 @@ input[data-stfp]:focus,
     left: 0;
     width: 100%;
     background-color: var(--reference-bgc);
-    z-index: 222;
+    z-index: 666;
 }
 
 .reference-row {
     display: grid;
-    grid-template-columns: 53px 320px 68px 100px 33px 35px;
+    grid-template-columns: 36px 320px 68px 200px;
     align-items: center;
     min-height: 28px;
     font-size: 12px;
@@ -381,7 +381,7 @@ input[data-stfp]:focus,
 
 @media screen and (max-width: 630px) {
     .reference-row {
-        grid-template-columns: 1fr 85px 35px;
+        grid-template-columns: 1fr 200px;
         grid-column-gap: 3px;
         padding-left: 0;
         padding-right: 0;
@@ -468,7 +468,8 @@ input[data-stfp]:focus,
     padding: 0 10px;
     position: fixed;
     top: 56px;
-    right: 2px;
+    right: 3px;
+    z-index: 1000;
     background-color: transparent;
 }
 
@@ -511,6 +512,7 @@ input[data-stfp]:focus,
         top: 0;
         background-color: var(--yt);
         width: 100%;
+        z-index: 999;
     }
 
     .artigo--ajuda details {
@@ -667,7 +669,7 @@ details mark {
     position: fixed;
     right: calc(50vw - (var(--layout-width) + 15px) / 2);
     bottom: -164px;
-    z-index: 333;
+    z-index: 999;
     visibility: hidden;
     transition: bottom 150ms;
 }
@@ -697,14 +699,8 @@ details mark {
     visibility: visible
 }
 
-@media print {
-    .dialog-box-default.--open {
-        visibility: hidden;
-    }
-}
-
 .dialog-box-default--small.--open {
-    bottom: calc(50vh - 142px / 2);
+    bottom: calc(50vh - 170px / 2);
 }
 
 .dialog-box-default__title {
@@ -751,13 +747,13 @@ details mark {
 .dialog-box-ir-para {
     justify-content: space-between;
     padding: 4px;
-    background-color: var(--cor-primaria);
+    background-color: var(--gray--4);
     position: fixed;
     top: -35px;
-    right: calc(50vw - 234px / 2);
+    right: calc(50vw - 264px / 2);
     visibility: hidden;
     transition: top .2s linear;
-    z-index: 222;
+    z-index: 666;
 }
 
 .dialog-box-ir-para.--open {
@@ -766,9 +762,9 @@ details mark {
 }
 
 .dialog-box-ir-para__input-linha {
-    min-width: 188px;
+    width: 230px;
     padding: 2px 0 2px 5px;
-    border: 2px solid var(--cor-primaria);
+    border: 2px solid var(--gray--4);
     background-color: var(--gray--d);
     text-align: left;
     font-size: 12px;
