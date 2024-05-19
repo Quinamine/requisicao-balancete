@@ -21,11 +21,11 @@
 
 .ficha--duplicado *,
 .ficha--triplicado * {
-    background-color: inherit !important;
+    background-color: inherit;
 }
 
 .ficha--duplicado * {
-    border-color: var(--gray--4) !important;
+    border-color: var(--gray--4);
 }
 
 .ficha span {
@@ -155,9 +155,13 @@
     align-items: center
 }
 
+.ficha__col-tipo-de-requisicao__subcol--min-height {
+    min-height: 18px;
+}
+
 .col-tipo-de-requisicao__input-data-de-requisicao {
     flex: 1;
-    margin-left: 4px
+    margin-left: 4px;
 }
 
 
@@ -167,13 +171,17 @@
     margin: 5px 0 3px;
 }
 
-
 @media screen {
     .ficha__main__header {
         position: sticky;
         top: 0;
         z-index: 222;
         background-color: var(--yt)
+    }
+
+    .ficha--duplicado .ficha__main__header,
+    .ficha--triplicado .ficha__main__header {
+        background-color: inherit;
     }
 
     .ficha__main__header--2 {
@@ -229,20 +237,31 @@
     text-align: center;
 }
 
+.ficha__main__body {
+    min-height: 540px;
+}
+
 .ficha__linha-de-inputs {
     display: grid;
     grid-template-columns: 60px 360px 85px repeat(2,78px) 100px repeat(2,78px) 87px 85px repeat(2,113px);
     grid-template-rows: 27px;
     z-index: 111;
     position: relative;
+}
 
+.ficha__linha-de-inputs.--hide {
+    display: none;
 }
 
 .ficha__linha-de-inputs input {
     border-left: 1px solid var(--cor-de-borda);
-    border-top: 1px solid var(--cor-de-borda);
+    border-bottom: 1px solid var(--cor-de-borda);
     text-align: center;
     font-weight: 700;
+}
+
+.ficha__linha-de-inputs:first-child input {
+    border-top: 1px solid var(--cor-de-borda);
 }
 
 .ficha__linha-de-inputs input:last-child {
@@ -252,6 +271,18 @@
 .ficha__linha-de-inputs input:nth-child(2) {
     padding: 0 8px;
     text-align: left;
+}
+
+.msg-nothing-found-to-filtrar-medicamentos {
+    color: var(--gray--5);
+    position: absolute;
+    top: 12px;
+    z-index: 333;
+    left: calc(50vw - 302.17px / 2);
+}
+
+.ficha__main__body {
+    position: relative;
 }
 
 .ficha__rodape {
@@ -312,7 +343,8 @@
 }
 
 .ficha__aside-modificadores-de-cor-da-ficha label {
-    margin-right: 25px
+    margin-right: 25px;
+    cursor: pointer;
 }
 
 .ficha__aside-modificadores-de-cor-da-ficha input {

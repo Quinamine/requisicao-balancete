@@ -70,6 +70,10 @@ input[type=number] {
     padding: 1px;
 }
 
+input[type=checkbox] {
+    cursor: pointer;
+}
+
 button {
     border: none;
     outline: 0;
@@ -91,7 +95,7 @@ img {
 }
 
 ::selection {
-    background-color: var(--cor-primaria);
-    color: var(--yt)
+    background-color: var(--gray--light);
+    color: var(--fullblack)
 }
 

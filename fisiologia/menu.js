@@ -1,11 +1,19 @@
 "use strict"
+
+function formatarString(str) {
+
+        str = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        str = str.replaceAll(/\W/g, "").toLowerCase();
+
+        return str
+}
 const menu = {
     realcarTotaisSe(condicao) {
         const totais = document.querySelectorAll("[readonly]");
         for (const t of totais) {
             if(condicao) {
                 t.classList.add("--realcar-totais");
-                localStorage.setItem(`${keyPrefix}-realcarTotais`, "true");
+                localStorage.setItem(`${keyPrefix}-realcarTotais`, true);
             } else {
                 t.classList.remove("--realcar-totais");
                 localStorage.removeItem(`${keyPrefix}-realcarTotais`);
@@ -13,55 +21,65 @@ const menu = {
         }
     },
 
-    irParaLinha() {
+    filtrarFarmaco() {
         return {
             dialogBox: document.querySelector(".dialog-box-ir-para"),
             inputNumLinha: document.querySelector(".dialog-box-ir-para__input-linha"),
             numerosDeLinha: document.querySelectorAll(".ficha__num-de-linha"),
+            body: document.querySelector("body"),
 
             abrirDialogBox() { 
-                menu.irParaLinha().dialogBox.classList.add("--open");
-                menu.irParaLinha().inputNumLinha.value = "";
-                menu.irParaLinha().inputNumLinha.focus();
+                menu.filtrarFarmaco().dialogBox.classList.add("--open");
+                menu.filtrarFarmaco().inputNumLinha.value = "";
+                menu.filtrarFarmaco().inputNumLinha.focus();
             },
 
             fecharDialogBox() {
-                menu.irParaLinha().dialogBox.classList.remove("--open");
-                menu.irParaLinha().removeLnHighlight();
+                menu.filtrarFarmaco().dialogBox.classList.remove("--open");
+                menu.filtrarFarmaco().filtrar("")
+
             },
 
-            goToLn(numLinha) {
-                if(numLinha < 1 || numLinha > 53) {
-                    const lnNoFound = "Nenhuma linha corresponde ao número digitado."
-                    alertarSobre(lnNoFound);
-                    this.removeLnHighlight();
-
-                } else {
-                    numLinha = Number(numLinha) - 1;
-
-                    this.highlightLnFound(this.numerosDeLinha[numLinha]);
-
-                    if(window.innerWidth > 1304) {
-                        numLinha -= 3;
-                     }
-                   
-                    numLinha > 3 ? 
-                        this.numerosDeLinha[numLinha].scrollIntoView() 
-                        : document.body.scrollIntoView();
-                    
+            filtrar(query) {
+                let queryFormatada = formatarString(query);
+                if(queryFormatada.includes("coartem")) queryFormatada = "artemeter";
+                
+                const farmacos = document.querySelectorAll(".ficha__linha-de-inputs input:nth-child(2)");
+                for (let farmaco of farmacos) {
+                    formatarString(farmaco.value).includes(queryFormatada) ?
+                        farmaco.parentElement.classList.remove("--hide") :
+                        farmaco.parentElement.classList.add("--hide");
                 }
-            },
 
-            highlightLnFound(lnFound) {
-                this.removeLnHighlight();
-                lnFound.classList.add("--highlight");
-            },
-
-            removeLnHighlight() {
-                for(const num of this.numerosDeLinha) {
-                    num.classList.remove("--highlight");
+                let resultadosEncontrados = 0;
+                const linhasDeFarmaco = document.querySelectorAll(".ficha__linha-de-inputs");
+                for (const linha of linhasDeFarmaco) {
+                    if(!linha.matches(".--hide")) {
+                        resultadosEncontrados++;
+                    } 
                 }
+
+                resultadosEncontrados === 0 ? 
+                this.showNothingFoundMsg() : 
+                this.hideNothingFoundMsg();
+            },
+
+            showNothingFoundMsg() {
+                const msgNothingFound = document.querySelector(".msg-nothing-found-to-filtrar-medicamentos");
+                msgNothingFound.textContent = "Nenhum medicamento/artigo médico corresponde à pesquisa."
+                msgNothingFound.classList.remove("--display-none");
+                this.body.scrollIntoView();
+                this.body.classList.add("--overflow-h");
+            },
+
+            hideNothingFoundMsg() {
+                const msgNothingFound = document.querySelector(".msg-nothing-found-to-filtrar-medicamentos");
+                msgNothingFound.classList.add("--display-none");
+                this.body.classList.remove("--overflow-h");
             }
+           
+
+        
         }
     },
 
@@ -69,7 +87,7 @@ const menu = {
         return {  
             dialogBox: document.querySelector(".dialog-box-esvaziar-ficha"),
             abrirDialogBox() { 
-                const inputsDaFicha = document.querySelectorAll(".ficha input");
+                const inputsDaFicha = document.querySelectorAll(".ficha__main__body input, .input-nao-celular");
 
                 let inputFilled = 0;
                 for(const input of inputsDaFicha) {
@@ -93,21 +111,29 @@ const menu = {
             },
 
             confirmar() {
-                const inputsCelulares  = document.querySelectorAll(".ficha__linha-de-inputs input");
+                let inputsCelulares  = document.querySelectorAll(".ficha__linha-de-inputs input");
                 const checkboxesParaInputsNaoCelulares = document.querySelectorAll("[data-for]");
-       
-                for (let i = 0; i < inputsCelulares.length; i++) {
-                    inputsCelulares[i].value = "";
-                    localStorage.removeItem(`${keyPrefix}-input${i}`);
-                }
 
+                let excluirMedicamentos = false;
                 for (const cb of checkboxesParaInputsNaoCelulares) {                    
                     if(cb.checked) {
                         let idDeInputNaoCelular = cb.dataset.for
-                        let inputNaoCelular = document.getElementById(`${idDeInputNaoCelular}`);
-                        inputNaoCelular.value = "";
-                        localStorage.removeItem(`${keyPrefix}-${inputNaoCelular.id}`);
+                        if(idDeInputNaoCelular === "lista-de-med") excluirMedicamentos = true;
+                        else {
+                            let inputNaoCelular = document.getElementById(`${idDeInputNaoCelular}`);
+                            inputNaoCelular.value = "";
+                            localStorage.removeItem(`${keyPrefix}-${inputNaoCelular.id}`);
+                        }
                     }
+                }
+
+                if(!excluirMedicamentos) {
+                    inputsCelulares = document.querySelectorAll(".ficha__linha-de-inputs input:nth-child(n+3)");
+                }
+
+                for (let i = 0; i < inputsCelulares.length; i++) {
+                    inputsCelulares[i].value = "";
+                    localStorage.removeItem(`${keyPrefix}-input${i}`);
                 }
                 menu.esvaziarFicha().fecharDialogBox();
             }
@@ -165,16 +191,14 @@ function eventos() {
 
     // IR PARA LINHA
     const btnAbrirIrPara = document.querySelector(".header__menu__btn--ir-para");
-    btnAbrirIrPara.addEventListener("click", menu.irParaLinha().abrirDialogBox);
+    btnAbrirIrPara.addEventListener("click", menu.filtrarFarmaco().abrirDialogBox);
 
-    const btnFecharIrPara = document.querySelector(".dialog-box-ir-para__btn-fechar");
-    btnFecharIrPara.addEventListener("click", menu.irParaLinha().fecharDialogBox);
+    const btnFecharIrPara = document.querySelector(".dialog-box-ir-para__btn--fechar");
+    btnFecharIrPara.addEventListener("click", menu.filtrarFarmaco().fecharDialogBox);
 
     const inputNumLinha = document.querySelector(".dialog-box-ir-para__input-linha");
     inputNumLinha.addEventListener("input", () => {
-        inputNumLinha.value !== "" ? 
-            menu.irParaLinha().goToLn(inputNumLinha.value) 
-            : menu.irParaLinha().removeLnHighlight();
+        menu.filtrarFarmaco().filtrar(inputNumLinha.value)
     });
 
     // Fechar dialog-boxes-default

@@ -36,8 +36,11 @@ function destacarCelulasSaturadas() {
     let celulasSaturadas = 0;
     for(const c of celulas) {
         c.classList.remove("celula-saturada");
-        if(c.value.length > 12) {
+        if(c.clientWidth < 100 && c.value.length > 12) {
             c.classList.add("celula-saturada");
+            celulasSaturadas++;
+        } else if (c.clientWidth > 100 && c.value.length > 16) {
+            c.classList.add("celula-saturada")
             celulasSaturadas++;
         }
     }
@@ -108,7 +111,7 @@ window.addEventListener("load", () => {
     }));
 
     const inputsCelulares = document.querySelectorAll(".ficha__linha-de-inputs input:nth-child(n+3)");
-    inputsCelulares.forEach (gi => gi.addEventListener("input", destacarCelulasSaturadas));
+    inputsCelulares.forEach (inputCelular => inputCelular.addEventListener("input", destacarCelulasSaturadas));
     destacarCelulasSaturadas();
 
     
