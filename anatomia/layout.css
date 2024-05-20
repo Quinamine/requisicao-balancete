@@ -363,7 +363,7 @@ main {
 
 .reference-row {
     display: grid;
-    grid-template-columns: 36px 320px 68px 200px;
+    grid-template-columns: 36px 357px 45px 252px;
     align-items: center;
     min-height: 28px;
     font-size: 12px;
@@ -386,7 +386,7 @@ main {
 
 @media screen and (max-width: 630px) {
     .reference-row {
-        grid-template-columns: 1fr 200px;
+        grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 3px;
         padding-left: 0;
         padding-right: 0;
@@ -394,10 +394,6 @@ main {
 
     .reference-row__output {
         margin: 0px;
-    }
-
-    .reference-row__output--indicador {
-        padding-left: 15px;
     }
     
     .reference-row__label {

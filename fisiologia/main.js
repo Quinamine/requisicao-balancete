@@ -138,12 +138,14 @@ const balancete = {
         for (const footer of footersClones) {
             footer.parentElement.removeChild(footer);    
         }
-    
+  
         for (let header of headersClones) {
             let footerClone = footerOriginal.cloneNode(!0);
             footerClone.classList.add("ficha__rodape--clone");
-            header.insertAdjacentElement("beforeBegin", footerClone)
+            header.insertAdjacentElement("beforeBegin", footerClone);
         }
+        
+
     }
 }
 

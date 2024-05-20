@@ -86,7 +86,7 @@
     overflow: hidden;
 }
 
-.ficha__header__container--padding-l {
+.ficha__header__container-de-input--padding-l {
     padding-left: 8px;
 }
 
@@ -266,8 +266,10 @@
     } 
 }
 
-.ficha__linha-de-inputs.--hide {
-    display: none;
+@media screen {
+    .ficha__linha-de-inputs.--hide {
+        display: none;
+    }
 }
 
 .ficha__linha-de-inputs input {
@@ -296,6 +298,12 @@
     top: 12px;
     z-index: 333;
     left: calc(50vw - 302.17px / 2);
+}
+
+@media print {
+    .msg-nothing-found-to-filtrar-medicamentos {
+        display: none;
+    }
 }
 
 .ficha__main__body {
