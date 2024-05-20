@@ -5,14 +5,14 @@ const backup = {
         const inputsCelulares = document.querySelectorAll(".ficha__linha-de-inputs input");
 
         for (let i = 0; i < inputsCelulares.length; i++) {
-            inputsCelulares[i].type === "text" && localStorage.setItem(`${keyPrefix}-input${i}`, inputsCelulares[i].value);
-            
-
             inputsCelulares[i].addEventListener("input", () => {
                 localStorage.setItem(`${keyPrefix}-input${i}`, inputsCelulares[i].value);
             });
         
-            inputsCelulares[i].value = localStorage.getItem(`${keyPrefix}-input${i}`);
+            let inputIsSavedOnStorage = localStorage.getItem(`${keyPrefix}-input${i}`);
+            if(inputIsSavedOnStorage) {
+                inputsCelulares[i].value = localStorage.getItem(`${keyPrefix}-input${i}`);
+            } 
         }
         
     },
@@ -23,15 +23,43 @@ const backup = {
             extraInput.addEventListener("input", () => localStorage.setItem(`${keyPrefix}-${extraInput.id}`, extraInput.value));
             extraInput.value = localStorage.getItem(`${keyPrefix}-${extraInput.id}`);
         });
+    },
+
+    saveCheckboxOption(checkboxes, key) {
+        
+        for(const checkbox of checkboxes) {
+            checkbox.addEventListener("change", () => localStorage.setItem(`${key}`, checkbox.id));
+
+            let checkboxSavedOnStorage = localStorage.getItem(`${key}`);
+            if(checkboxSavedOnStorage) {
+                checkbox.checked = false;
+                if(checkbox.id === checkboxSavedOnStorage) {
+                    checkbox.checked = true;
+                }
+            }
+            
+        }
     }
 }
 
 const balancete = {
-    toRadioCheckboxes(checkboxes, checkboxTarget) {
-        for (const c of checkboxes) {
-            c.checked = false;
-        }
-        checkboxTarget.checked = true;
+    toRadioCheckboxes(checkboxes) {
+        checkboxes.forEach (checkbox => {
+            checkbox.addEventListener("change", () => {
+                for (const c of checkboxes) c.checked = false;
+                checkbox.checked = true;
+            });
+        });
+    },
+
+    simularDuplicadoOuTriplicado(checkbox) {
+
+        const ficha = document.querySelector(".ficha");
+        let copia = checkbox.dataset.copiadaficha;
+
+        ficha.classList.remove("ficha--duplicado");
+        ficha.classList.remove("ficha--triplicado");
+        ficha.classList.add(`${copia}`);
     },
 
     filtrarEtotalizarCelulas(inputTarget) {
@@ -86,35 +114,61 @@ const balancete = {
         }
     },
 
-  
+    clonarHeaderDaFichaParaTodasPaginas() {
+        const headerOriginal = document.querySelector(".ficha__main__header");
+        const firstLinesOfEachPage = document.querySelectorAll(".ficha__linha-de-inputs--1a-da-pagina");
+
+        let headersClones = document.querySelectorAll(".ficha__main__header--clone");
+        for (const header of headersClones) {
+            header.parentElement.removeChild(header);
+        }
+
+        for (let firstLine of firstLinesOfEachPage) {
+            let headerClone = headerOriginal.cloneNode(!0);
+            headerClone.classList.add("ficha__main__header--clone");
+            firstLine.insertAdjacentElement("beforeBegin", headerClone)
+        }
+    },
+
+    clonarFooterDaFichaParaTodasPaginas() {
+        const footerOriginal = document.querySelector(".ficha__rodape");
+        const headersClones = document.querySelectorAll(".ficha__main__header--clone");
+
+        let footersClones = document.querySelectorAll(".ficha__rodape--clone");
+        for (const footer of footersClones) {
+            footer.parentElement.removeChild(footer);    
+        }
     
+        for (let header of headersClones) {
+            let footerClone = footerOriginal.cloneNode(!0);
+            footerClone.classList.add("ficha__rodape--clone");
+            header.insertAdjacentElement("beforeBegin", footerClone)
+        }
+    }
 }
 
 
-function escutarEventos() {
+function escutarEventos() { 
     // Tipo de Requisição
     const checkboxesTipoDeReq = document.querySelectorAll(".input-tipo-de-requisicao");
-    checkboxesTipoDeReq.forEach( checkbox => {
-        checkbox.addEventListener("change", () => {
-            balancete.toRadioCheckboxes(checkboxesTipoDeReq, checkbox);
-        });
-    });
+    balancete.toRadioCheckboxes(checkboxesTipoDeReq);
+    let key = "rb-tipo-de-req"
+    backup.saveCheckboxOption(checkboxesTipoDeReq, key);
 
     // Cor da Requisição 
     const checkboxesBgcModifiers = document.querySelectorAll(".checkbox-modificador-de-cor-da-ficha");
-    const ficha = document.querySelector(".ficha");
+    balancete.toRadioCheckboxes(checkboxesBgcModifiers);
+    key = "rb-copia-de-req"
+    backup.saveCheckboxOption(checkboxesBgcModifiers, key);
+
     checkboxesBgcModifiers.forEach( checkbox => {
         checkbox.addEventListener("change", () => {
-            balancete.toRadioCheckboxes(checkboxesBgcModifiers, checkbox);
-    
-            let copiaDaFicha = checkbox.dataset.copiadaficha;
-            ficha.classList.remove("ficha--duplicado");
-            ficha.classList.remove("ficha--triplicado");
-            ficha.classList.add(`${copiaDaFicha}`);
-           
+            balancete.simularDuplicadoOuTriplicado(checkbox);
         });
-    });
 
+        checkbox.checked && balancete.simularDuplicadoOuTriplicado(checkbox);
+    });
+   
     // Balancete propriamente dito
     const inputsCelulares = document.querySelectorAll(".ficha__linha-de-inputs input");
     inputsCelulares.forEach (inputCelular => {

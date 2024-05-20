@@ -290,6 +290,12 @@ main {
     margin-bottom: 40px;
 }
 
+@media screen and (min-width: 1336px) {
+    .footer__nav {
+        padding-left: 30px;
+    }
+}
+
 .footer__nav__title {
     font-size: 16px;
     line-height: 1.5;

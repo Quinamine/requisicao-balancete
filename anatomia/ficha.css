@@ -25,7 +25,7 @@
 }
 
 .ficha--duplicado * {
-    border-color: var(--gray--4);
+    border-color: var(--gray--4) !important;
 }
 
 .ficha span {
@@ -47,6 +47,11 @@
     transform: rotate(-90deg);
     display: inline-block;
     text-wrap: nowrap
+}
+
+.ficha__header--display-grid {
+    display: grid;
+    grid-template-rows: 86px repeat(3, 27px);
 }
 
 .ficha__linha-de-emblema {
@@ -183,10 +188,16 @@
     .ficha--triplicado .ficha__main__header {
         background-color: inherit;
     }
+}
 
-    .ficha__main__header--2 {
+.ficha__main__header--clone {
+    display: none;
+}
+
+@media print {
+    .ficha__main__header--clone {
         display: grid;
-        page-break-before: always
+        page-break-before: always;
     }
 }
 
@@ -249,6 +260,12 @@
     position: relative;
 }
 
+@media print {
+    .ficha__linha-de-inputs--1a-da-pagina {
+        border-top: 1px solid var(--cor-de-borda);
+    } 
+}
+
 .ficha__linha-de-inputs.--hide {
     display: none;
 }
@@ -293,6 +310,17 @@
     grid-template-columns: 761px 1fr
 }
 
+.ficha__rodape--clone {
+    border-bottom: 1px solid var(--cor-de-borda);
+    display: none;
+}
+
+@media print {
+    .ficha__rodape--clone {
+        display: grid;
+    }
+}
+
 .ficha__rodape input {
     min-width: 200px
 }
@@ -305,23 +333,6 @@
 
 .ficha__rodape__col-de-visto {
     padding-left: 8px;
-}
-
-@media print {
-
-
-    div.main div.page-break {
-        border-top: 1px solid var(--border-color)
-    }
-
-    div.main footer {
-        display: grid;
-        border-bottom: 1px solid var(--border-color)
-    }
-
-    div.main footer:last-child {
-        border-bottom: none
-    }
 }
 
 .ficha__aside-modificadores-de-cor-da-ficha {

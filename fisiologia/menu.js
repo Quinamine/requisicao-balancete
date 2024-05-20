@@ -141,6 +141,8 @@ const menu = {
     },
 
     imprimirFicha() {
+        balancete.clonarHeaderDaFichaParaTodasPaginas();
+        balancete.clonarFooterDaFichaParaTodasPaginas();
         window.print()
     },
 
