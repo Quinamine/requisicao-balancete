@@ -25,6 +25,7 @@
     --blue--light: #2573b5;
     --purple: rgb(116, 116, 235);
     --orange: #faa032;
+    --greenyellow:greenyellow;
     --brown: brown;
     --reference-bgc: var(--black--alpha-8);
 
@@ -390,6 +391,10 @@ main {
         grid-column-gap: 3px;
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .reference-row__output--indicador {
+        padding-left: 6px;
     }
 
     .reference-row__output {

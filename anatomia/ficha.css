@@ -102,11 +102,14 @@
     margin: 0;
 }
 
-[data-stfp]:focus,
-[data-diferenca]:focus,
-.celula-total-dos-pedidos:focus,
-.input-nao-celular:focus {
+.ficha input:focus {
     border-bottom: 2px solid var(--blue);
+    background-color: var(--greenyellow);
+}
+
+.ficha input[readonly]:focus {
+    border-bottom: 1px solid var(--cor-de-borda);
+    background-color: initial;
 }
 
 .ficha__col-com-titulo {

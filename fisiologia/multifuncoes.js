@@ -30,7 +30,7 @@ function alertarSobre(msg) {
     dialogBoxDefault.classList.add("--open");
 }
 
-function destacarCelulasSaturadas() {
+function destacarCelulasComConteudoOmisso() {
     const celulas = document.querySelectorAll(".ficha__linha-de-inputs input:nth-child(n+3)");
 
     let celulasSaturadas = 0;
@@ -75,11 +75,11 @@ const aqd = {
     }
 }
 
-function actualizarAno() {
+function actualizarAnoDeCopyright() {
     const tempo = new Date();
     let anoActual = tempo.getFullYear();
 
-    if(anoActual < 2022) anoActual = 2022;
+    if(anoActual < 2023) anoActual = 2023;
 
     const currentYearOutput = document.querySelector(".footer__current-year");
     currentYearOutput.textContent = anoActual;
@@ -111,8 +111,8 @@ window.addEventListener("load", () => {
     }));
 
     const inputsCelulares = document.querySelectorAll(".ficha__linha-de-inputs input:nth-child(n+3)");
-    inputsCelulares.forEach (inputCelular => inputCelular.addEventListener("input", destacarCelulasSaturadas));
-    destacarCelulasSaturadas();
+    inputsCelulares.forEach (inputCelular => inputCelular.addEventListener("input", destacarCelulasComConteudoOmisso));
+    destacarCelulasComConteudoOmisso();
 
     
     aqd.mostrarAviso();
@@ -120,7 +120,7 @@ window.addEventListener("load", () => {
     dialogBoxAQD__btn.addEventListener("click", aqd.salvarCiencia);
 
     /* Actualizar o ano */
-    actualizarAno();
+    actualizarAnoDeCopyright();
     formatarNumeros();
 
     // Animar Janela Aberta
