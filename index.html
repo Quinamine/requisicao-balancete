@@ -1,38 +1,39 @@
-<!doctypehtml>
+<!doctype html>
 <html dir=ltr lang=pt-MZ id="root">
-    <meta charset=UTF-8>
-    <meta content="IE=edge" http-equiv=X-UA-Compatible>
-    <meta content="width=device-width,initial-scale=1" name=viewport>
-    <title>Requisição/Balancete</title>
-    <meta content="index, follow" name=robots>
-    <meta content="Serviço online gratuito que auxilia na elaboração, como o nome sugere, da requisição/balancete, por meio do cálculo automático do Stock Teórico Fim do Período, Diferença entre o stock teórico e stock físico e Quantidade a Requisitar com base nos dados de controlo da ficha de stock e inventário preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de requisição/balancete actualmente vigente no Serviço Nacional de Saúde em Moçambique." name=description>
-    <meta content="Requisição/Balancete, Balancete, Requisição de Medicamentos e Artigos Médicos, Stock no Início de Período, Soma das Entradas, Soma das Saídas, Soma Teórico Fim do Período, Total dos Pedidos, Inventário do Stock, Diferença, Quantidade a Requisitar." name=keywords>
-    <meta content="Adérito Félix Quinamine" name=author>
-    <meta content=https://quinamin.github.io/requisicao-balancete/index.html property=og:url>
-    <meta content="Requisição/Balancete" property=og:title>
-    <meta content="Serviço online gratuito que auxilia na elaboração, como o nome sugere, da requisição/balancete, por meio do cálculo automático do Stock Teórico Fim do Período, Diferença entre o stock teórico e stock físico e Quantidade a Requisitar com base nos dados de controlo da ficha de stock e inventário preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de requisição/balancete actualmente vigente no Serviço Nacional de Saúde em Moçambique." property=og:description>
-    <meta content=https://quinamin.github.io/requisicao-balancete/imagens/requisicao-balancete.png property=og:image>
-    <link href=favicon.ico rel="shortcut icon" type=image/x-icon>
-    <link href=anatomia/reset.css rel=stylesheet>
-    <link href=anatomia/layout.css rel=stylesheet>
-    <link href=anatomia/ficha.css rel=stylesheet>
-    <script src="fisiologia/menu.js"></script>
-    <script src="fisiologia/main.js"></script>
-    <script src="fisiologia/multifuncoes.js"></script>
-    <script src="fisiologia/db.js"></script>
-    <script src="fisiologia/referencia.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F06HER5SBY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-F06HER5SBY');
-    </script>
-    <noscript>O seu navegador está com o JavaScript desabilitado e isso bloqueia as funcionalidades do serviço. Habilite-o nas configurações do navegador e recarregue a página.</noscript>
-
+    <head>
+        <meta charset=UTF-8>
+        <meta content="IE=edge" http-equiv=X-UA-Compatible>
+        <meta content="width=device-width,initial-scale=1" name=viewport>
+        <title>Requisição/Balancete</title>
+        <meta content="index, follow" name=robots>
+        <meta content="Serviço online gratuito que auxilia na elaboração, como o nome sugere, da requisição/balancete, por meio do cálculo automático do Stock Teórico Fim do Período, Diferença entre o stock teórico e stock físico e Quantidade a Requisitar com base nos dados de controlo da ficha de stock e inventário preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de requisição/balancete actualmente vigente no Serviço Nacional de Saúde em Moçambique." name=description>
+        <meta content="Requisição/Balancete, Balancete, Requisição de Medicamentos e Artigos Médicos, Stock no Início de Período, Soma das Entradas, Soma das Saídas, Soma Teórico Fim do Período, Total dos Pedidos, Inventário do Stock, Diferença, Quantidade a Requisitar." name=keywords>
+        <meta content="Adérito Félix Quinamine" name=author>
+        <meta content=https://quinamin.github.io/requisicao-balancete/index.html property=og:url>
+        <meta content="Requisição/Balancete" property=og:title>
+        <meta content="Serviço online gratuito que auxilia na elaboração, como o nome sugere, da requisição/balancete, por meio do cálculo automático do Stock Teórico Fim do Período, Diferença entre o stock teórico e stock físico e Quantidade a Requisitar com base nos dados de controlo da ficha de stock e inventário preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de requisição/balancete actualmente vigente no Serviço Nacional de Saúde em Moçambique." property=og:description>
+        <meta content=https://quinamin.github.io/requisicao-balancete/imagens/requisicao-balancete.png property=og:image>
+        <link href=favicon.ico rel="shortcut icon" type=image/x-icon>
+        <link href=anatomia/reset.css rel=stylesheet>
+        <link href=anatomia/layout.css rel=stylesheet>
+        <link href=anatomia/ficha.css rel=stylesheet>
+        <script src="fisiologia/menu.js"></script>
+        <script src="fisiologia/main.js"></script>
+        <script src="fisiologia/multifuncoes.js"></script>
+        <script src="fisiologia/db.js"></script>
+        <script src="fisiologia/referencia.js"></script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-F06HER5SBY"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-F06HER5SBY');
+        </script>
+        <noscript>O seu navegador está com o JavaScript desabilitado e isso bloqueia as funcionalidades do serviço. Habilite-o nas configurações do navegador e recarregue a página.</noscript>
+    </head>
     <body ontouchstart="">
         <header class="header --no-print">
             <div class="layout-row layout-row--header">
@@ -7486,7 +7487,7 @@
                     <summary >Filtrar medicamentos</summary>
                     <p>Abre um campo no qual pode digitar o nome de um medicamento para destacá-lo e omitir os que não correspondem ao nome ou caracteres digitados. Esta funcionalidade facilita o preenchimento da requisição de acordo com a sequência da pilha das fichas de stock e não seguindo rigorosamente a sequência da lista dos medicamentos.</p>
 
-                    <figure class="details__moldura details__moldura--esvaziar-ficha">
+                    <figure class="details__moldura details__moldura--margin-l">
                         <img src="imagens/filtrar-medicamentos.png" alt="Ilustração de 'Filtrar fármaco' com Hidróxdo de Alumínio">
 
                         <figcaption class="details__moldura__legenda">Imagem ilustrativa da funcionalidade <b>Filtrar medicamentos</b> com Hidróxido de Alumínio como exemplo.</figcaption>
@@ -7498,7 +7499,7 @@
                     
                     <p class="artigo__p--destaque">Na sessão "Incluindo" da caixa de diálogo de confirmação, pode desmarcar campos (Província, Distrito, Unidade Sanitária, etc.) que não deseja excluir. Por padrão, as "checkboxes" dos campos estão marcadas com o sinal de "✔", indicando desse modo que o conteúdo contido neles será eliminado, mas caso queira manter a informação de um campo específico, basta desmarcá-lo clicando directamente sobre a ckeckbox ou sobre a sua descrição.</p> 
 
-                    <figure class="details__moldura details__moldura--esvaziar-ficha">
+                    <figure class="details__moldura details__moldura--margin-l">
                         <img src="imagens/caixa-de-dialogo-para-esvaziamento-da-ficha.png" alt="Caixa de diálogo para esvaziamento da ficha">
 
                         <figcaption class="details__moldura__legenda"><b>Legenda:</b> Caixa de diálogo para esvaziamento da ficha. Neste caso, os campos de <b>Lista de Medicamentos, Unidade Sanitária, Distrito e Província</b> seriam preservados (por ter suas checkboxes desmarcadas). Todos os outros cujas "checkboxes" estão marcadas seriam esvaziados.</figcaption>
@@ -7550,7 +7551,7 @@
                     <p>Na margem esquerda da ficha, logo abaixo e à esquerda do 2<sup>o</sup> cabeçalho, encontram-se as opções <b>Original, Duplicado e Triplicado</b>.</p>
 
                     <p>Por padrão, está selecionada a opção Original. Mudando a seleção para <b>Duplicado</b>, a ficha muda de cor de fundo para <b>amarelo</b> (simulando um duplicado) e clicando sobre a opção <b>Triplicado</b>, o fundo muda para <b>azul claro</b> (simulando um triplicado), cores essas que em impressões coloridas, aproximam-se mais do aspecto de duplicado e triplicado.</p>
-                    <figure class="details__moldura details__moldura--display-grid">
+                    <figure class="details__moldura details__moldura--margin-l details__moldura--display-grid">
                         <img src="imagens/simulacao-de-duplicado.png" alt="Simulação de Duplicado" />
                         <img src="imagens/simulacao-de-triplicado.png" alt="Simulação de Triplicado" />
 
@@ -7561,7 +7562,7 @@
                     <summary>Algumas células mudaram de cor de fundo para vermelho</summary>
                     <p>As células das secções <b>Controlo da Ficha de Stock e Controlo de Inventário</b> têm um tamanho para conter visivelmente 12 algarismos no máximo, isto é, mostram valores até, no máximo, <span class="number-format">999999999999</span> e as células das colunas <b>Quantidade Pedida e Qtd. Autorizada pelo Responsável Clínico</b> podem mostrar números com até 16 algarismos. Quando uma célula recebe um número com mais de 12 ou 16 algarismos, dá um alerta ficando vermelha e eventualmente mostrando esta mensagem de texto para alertá-lo sobre a omissão dos algarismos e o real motivo.</p>
 
-                    <p class="artigo__p artigo__p--destaque">Para um país como Moçambique, onde o número de habitantes é de pouco mais de 30 milhões (<a href="https://energypedia.info/wiki/Moçambique:_Informação_sobre_o_País" target="_blank">dados demográficos de 2019</a>), podemos presumir que nenhuma Unidade Sanitária actualmente tem um número mensal de dados de algum indicador, de qualquer que seja a sua natureza, acima de <span class="number-format">999999999999</span>.</p>
+                    <p class="artigo__p--destaque">Para um país como Moçambique, onde o número de habitantes é de pouco mais de 30 milhões (<a href="https://energypedia.info/wiki/Moçambique:_Informação_sobre_o_País" target="_blank">dados demográficos de 2019</a>), podemos presumir que nenhuma Unidade Sanitária actualmente tem um número mensal de dados de algum indicador, de qualquer que seja a sua natureza, acima de <span class="number-format">999999999999</span>.</p>
                 </details>
                 <button class="artigo__btn-fechar artigo__btn-fechar--ajuda" title="Fechar">&times;</button>
             </article>
@@ -7574,6 +7575,8 @@
                     <ul>
                         <li>
                             <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-tuberculose/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de Tuberculose</a>
+                        <li>
+                            <a href=https://quinamine.github.io/totalizador-de-mapa-resumo-mensal-de-caixa/index.html target=_blank class="footer__nav__link">Totalizador de Mapa Resumo Mensal de Caixa</a>
                         <li>
                             <a href=https://quinamine.github.io/totalizador-de-resumo-trimestral-de-apss-e-pp/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Trimestral de APSS/PP</a>
                         <li>
