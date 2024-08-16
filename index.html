@@ -6,12 +6,12 @@
         <meta content="width=device-width,initial-scale=1" name=viewport>
         <title>Requisição/Balancete</title>
         <meta content="index, follow" name=robots>
-        <meta content="Serviço online gratuito que auxilia na elaboração, como o nome sugere, da requisição/balancete, por meio do cálculo automático do Stock Teórico Fim do Período, Diferença entre o stock teórico e stock físico e Quantidade a Requisitar com base nos dados de controlo da ficha de stock e inventário preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de requisição/balancete actualmente vigente no Serviço Nacional de Saúde em Moçambique." name=description>
+        <meta content="Calcula automaticamente o Stock Teórico Fim do Período, Diferença entre stock teórico e stock físico e Quantidade a Requisitar com base nos dados de controlo da ficha de stock e inventário preenchidos pelo usuário. Foi desenvolvido de acordo com o modelo da ficha de requisição/balancete actualmente vigente no Serviço Nacional de Saúde em Moçambique." name=description>
         <meta content="Requisição/Balancete, Balancete, Requisição de Medicamentos e Artigos Médicos, Stock no Início de Período, Soma das Entradas, Soma das Saídas, Soma Teórico Fim do Período, Total dos Pedidos, Inventário do Stock, Diferença, Quantidade a Requisitar." name=keywords>
         <meta content="Adérito Félix Quinamine" name=author>
         <meta content=https://quinamin.github.io/requisicao-balancete/index.html property=og:url>
         <meta content="Requisição/Balancete" property=og:title>
-        <meta content="Serviço online gratuito que auxilia na elaboração, como o nome sugere, da requisição/balancete, por meio do cálculo automático do Stock Teórico Fim do Período, Diferença entre o stock teórico e stock físico e Quantidade a Requisitar com base nos dados de controlo da ficha de stock e inventário preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de requisição/balancete actualmente vigente no Serviço Nacional de Saúde em Moçambique." property=og:description>
+        <meta content="Calcula automaticamente o Stock Teórico Fim do Período, Diferença entre stock teórico e stock físico e Quantidade a Requisitar com base nos dados de controlo da ficha de stock e inventário preenchidos pelo usuário. Foi desenvolvido de acordo com o modelo da ficha de requisição/balancete actualmente vigente no Serviço Nacional de Saúde em Moçambique." property=og:description>
         <meta content=https://quinamin.github.io/requisicao-balancete/imagens/requisicao-balancete.png property=og:image>
         <link href=favicon.ico rel="shortcut icon" type=image/x-icon>
         <link href=anatomia/reset.css rel=stylesheet>
@@ -7461,7 +7461,7 @@
 
                 <h3 class="artigo__titulo artigo__titulo--nivel-2">Qual é o destino dos dados que eu insiro?</h3>
 
-                <p>São guardados localmente (no navegador que estiver a usar), por meio de um recurso chamado <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API" target="_blank">Web Storage</a> e você tem total controle sobre esses, podendo mantê-los ou apagá-los por meio da opção "<b>Esvaziar ficha</b>" no menu do totalizador ou esvaziando o histórico (inclusíve os cookies) do seu navegador.</p>
+                <p>São guardados no seu celular ou computador, por meio de um recurso chamado <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API" target="_blank">Web Storage</a> e você tem total controle sobre os dados, podendo mantê-los ou apagá-los por meio da opção "<b>Esvaziar ficha</b>" no menu do totalizador ou excluindo os dados de navegação (histórico) do navegador.</p>
 
                 <h3 class="artigo__titulo artigo__titulo--nivel-2">Vantagens do totalizador</h3>
 
@@ -7481,7 +7481,7 @@
 
                 <details>
                     <summary>Realçar totais</summary>
-                    <p>Adiciona um fundo cinzento às células de <b>Stock Teórico Fim do Período, Diferença e Quantidade a Requisitar</b>. Essas têm o acesso interdito e a funcionalidade de realçá-las, permite distingui-las facilmente de outras células. Muito útil em celulares.</p>
+                    <p>Adiciona um fundo cinzento às células de <b>Stock Teórico Fim do Período, Diferença e Quantidade a Requisitar</b>. Essas têm o acesso interdito e a funcionalidade de realçá-las, permite distinguí-las facilmente das outras células. Muito útil em celulares.</p>
                 </details>
                 <details>
                     <summary >Filtrar medicamentos</summary>
@@ -7495,10 +7495,7 @@
                 </details>
                 <details>
                     <summary>Esvaziar ficha</summary>
-                    <p>Comando para limpar a ficha após a confirmação da acção na caixa de diálogo que abre.</p>
-                    
-                    <p class="artigo__p--destaque">Na sessão "Incluindo" da caixa de diálogo de confirmação, pode desmarcar campos (Província, Distrito, Unidade Sanitária, etc.) que não deseja excluir. Por padrão, as "checkboxes" dos campos estão marcadas com o sinal de "✔", indicando desse modo que o conteúdo contido neles será eliminado, mas caso queira manter a informação de um campo específico, basta desmarcá-lo clicando directamente sobre a ckeckbox ou sobre a sua descrição.</p> 
-
+                    <p>Comando para limpar parcial ou totalmente a ficha após confirmação da acção na caixa de diálogo subsequente.</p>
                     <figure class="details__moldura details__moldura--margin-l">
                         <img src="imagens/caixa-de-dialogo-para-esvaziamento-da-ficha.png" alt="Caixa de diálogo para esvaziamento da ficha">
 
@@ -7560,7 +7557,7 @@
                 </details>
                 <details class="artigo__details-motivo-de-red-cells">
                     <summary>Algumas células mudaram de cor de fundo para vermelho</summary>
-                    <p>As células das secções <b>Controlo da Ficha de Stock e Controlo de Inventário</b> têm um tamanho para conter visivelmente 12 algarismos no máximo, isto é, mostram valores até, no máximo, <span class="number-format">999999999999</span> e as células das colunas <b>Quantidade Pedida e Qtd. Autorizada pelo Responsável Clínico</b> podem mostrar números com até 16 algarismos. Quando uma célula recebe um número com mais de 12 ou 16 algarismos, dá um alerta ficando vermelha e eventualmente mostrando esta mensagem de texto para alertá-lo sobre a omissão dos algarismos e o real motivo.</p>
+                    <p>As células das secções <b>Controlo da Ficha de Stock e Controlo de Inventário</b> têm um tamanho para conter visivelmente 12 algarismos no máximo, isto é, mostram valores até, no máximo, <span class="number-format">999999999999</span> e as células das colunas <b>Quantidade Pedida e Qtd. Autorizada pelo Responsável Clínico</b> podem mostrar números com até 16 algarismos. Quando uma célula recebe um número com mais de 12 ou 16 algarismos, dá um alerta ficando vermelha e depois abrindo esta mensagem de texto para alertá-lo sobre a omissão dos algarismos e o real motivo.</p>
 
                     <p class="artigo__p--destaque">Para um país como Moçambique, onde o número de habitantes é de pouco mais de 30 milhões (<a href="https://energypedia.info/wiki/Moçambique:_Informação_sobre_o_País" target="_blank">dados demográficos de 2019</a>), podemos presumir que nenhuma Unidade Sanitária actualmente tem um número mensal de dados de algum indicador, de qualquer que seja a sua natureza, acima de <span class="number-format">999999999999</span>.</p>
                 </details>
@@ -7575,30 +7572,46 @@
                     <ul>
                         <li>
                             <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-tuberculose/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de Tuberculose</a>
+                        </li>
                         <li>
                             <a href=https://quinamine.github.io/totalizador-de-mapa-resumo-mensal-de-caixa/index.html target=_blank class="footer__nav__link">Totalizador de Mapa Resumo Mensal de Caixa</a>
+                        </li>
                         <li>
                             <a href=https://quinamine.github.io/totalizador-de-resumo-trimestral-de-apss-e-pp/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Trimestral de APSS/PP</a>
+                        </li>
                         <li>
                             <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-consultas/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de Consultas</a>
+                        </li>
                         <li>
                             <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-hiv-e-sida/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de HIV/SIDA</a>
+                        </li>
                         <li>
                             <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-malaria/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de Malária</a>
+                        </li>
                         <li>
                             <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-prn-ii/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de PRN II</a>
+                        </li>
                         <li>
                             <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-prn-i/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de PRN I</a>
+                        </li>
                         <li>
                             <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-saaj/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de SAAJ</a>
+                        </li>
                         <li>
                             <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-ccd/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de CCD</a>
+                        </li>
                         <li>
                             <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-ats/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de ATS</a>
+                        </li>
                         <li>
                             <a href=https://quinamine.github.io/calculadora-de-doses-pediatricas/index.html target=_blank class="footer__nav__link">Calculadora de Doses Pediátricas</a>
+                        </li>
                         <li>
-                            <a href=https://quinamine.github.io/tarv-pediatrico/index.html target=_blank class="footer__nav__link">Doseador de Antirretrovirais</a>
+                            <a href=https://quinamine.github.io/tarv-pediatrico/index.html target=_blank class="footer__nav__link">Tarv Pediátrico</a>
+                        </li>
+                        <li>
+                            <a href=https://quinamine.github.io/tat-pediatrico/index.html target=_blank class="footer__nav__link">TAT Pediátrico</a>
+                        </li>
                     </ul>
                 </nav>
                 <p class="footer__p footer__p--created-by">
@@ -7607,7 +7620,7 @@
                 </p>
                 <a href=#root class=footer__link-back-to-top>Rolar para o topo</a>
             </div>
-            <p class="footer__p footer__p--available-since">Disponível desde <time datetime="2023-08-30">30/08/2023</time>. Última actualização: Maio/2024.</p>
+            <p class="footer__p footer__p--available-since">Disponível desde <time datetime="2023-08-30">30/08/2023</time>. Última actualização: Agosto/2024.</p>
         </footer>
         <div class="desfoque"></div>
     </body>

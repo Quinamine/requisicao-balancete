@@ -22,7 +22,7 @@ O **Requisição/Balancete** é um serviço online gratuito que auxilia na elabo
 
 ## Qual é o destino dos dados que eu insiro?
 
-São guardados localmente (no navegador que estiver a usar), por meio de um recurso chamado [Web Storage](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API) e você tem total controle sobre esses, podendo mantê-los ou apagá-los por meio da opção "Esvaziar ficha" no menu do totalizador ou esvaziando o histórico (inclusíve os cookies) do seu navegador.
+São guardados no seu celular ou computador, por meio de um recurso chamado [Web Storage](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API) e você tem total controle sobre os dados, podendo mantê-los ou apagá-los por meio da opção "Esvaziar ficha" no menu do totalizador ou excluindo os dados de navegação (histórico) do navegador.
 
 
 ## Vantagens do totalizador

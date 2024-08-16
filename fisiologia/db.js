@@ -813,31 +813,25 @@ const moz = {
         }
     }
 }
-
 function formatarString(str) {
     str = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     str = str.replaceAll(/\W/g, "").toLowerCase();
     return str;
 }
-
 function notEmpty(...inputs) {
     let filledInput = 0;
     for (const input of inputs) {
         input.value !== "" && filledInput++;
     }
-
     if(filledInput >= inputs.length) return true
     else return false;
 }
-
 function listarProvincias() {
     const provDataList = document.getElementById("datalist-provincias");
     for (const prov of moz.provincias) {
         provDataList.innerHTML += `<option value="${prov}"></option>`;
     }
-    
 }
-
 function listarDistritos() {
     const distDatalist = document.getElementById("datalist-distritos");
     const inputProv = document.getElementById("input-provincia");
@@ -852,9 +846,7 @@ function listarDistritos() {
             }
         }
     }
- 
 }
-
 function listarUSs() {
     const usDataList = document.getElementById("datalist-us");
     const inputDistrito = document.getElementById("input-distrito");
@@ -872,7 +864,6 @@ function listarUSs() {
         }
     }
 }
-
 window.addEventListener("load", () => {
     listarProvincias();
     listarDistritos();
