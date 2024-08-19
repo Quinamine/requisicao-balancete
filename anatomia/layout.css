@@ -521,7 +521,7 @@ details[open] .details__summary {
     font-size: 12px;
     margin-top: 15px;
 }
-.etails__moldura--display-grid figcaption {
+.details__moldura--display-grid figcaption {
     grid-row: 2;
     grid-column: 1 / 3;
 }
