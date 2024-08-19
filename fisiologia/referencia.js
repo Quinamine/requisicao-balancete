@@ -3,8 +3,8 @@
 const referencia = {
     retornarIndicadorEcoluna(inputTarget) {
         const colunas = ["FNM", "Designação", "Stock no Início do Período", "Soma das Entradas", "Soma das Saídas", "Stock Teórico Fim do Período", "Total dos Pedidos", "Inventário do Stock", "Diferença", "Quantidade a Requisitar", "Quantidade Pedida", "Qtd Autorizada pelo Responsável Clínico"];
-        const indicadorOutput = document.querySelector(".reference-row__output--indicador");
-        const colunaOutput = document.querySelector(".reference-row__output--coluna");
+        const indicadorOutput = document.querySelector(".reference__output--indicador");
+        const colunaOutput = document.querySelector(".reference__output--coluna");
 
         const inputTargetAndSiblings = inputTarget.parentElement.children;
 
@@ -24,7 +24,7 @@ const referencia = {
     },
 
     retornarVazio() {
-        const outputs = document.querySelectorAll(".reference-row__output");
+        const outputs = document.querySelectorAll(".reference__output");
         for (const o of outputs) o.value = "";
     }
 }

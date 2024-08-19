@@ -34,41 +34,41 @@
         </script>
         <noscript>O seu navegador está com o JavaScript desabilitado e isso bloqueia as funcionalidades do serviço. Habilite-o nas configurações do navegador e recarregue a página.</noscript>
     </head>
-    <body ontouchstart="">
+    <body id="body" ontouchstart="">
         <header class="header --no-print">
-            <div class="layout-row layout-row--header">
-                <a href=index.html class=header__logo>
+            <div class="layout-row layout-row--of-header">
+                <a href=index.html id="logo">
                     Requisição/Balancete
                 </a>
                 <div role="navigation" class="header__menu --display-flex-y-center">
                     <ul class="header__menu__ul --display-flex-y-center">
-                        <li class="header__menu__li header__menu__li--realcar-totais header__menu__li--first-child">
-                            <input type=checkbox id="checkbox-realcar-totais" class="header__menu__checkbox header__child--cursor">
-                            <label for="checkbox-realcar-totais" class="header__menu__label --display-flex-y-center header__child--cursor">
+                        <li class="header__menu__li header__menu__li--realcar-totais">
+                            <input type=checkbox id="checkbox-realcar-totais" class="header__menu__checkbox --cursor-pointer">
+                            <label for="checkbox-realcar-totais" class="header__menu__label --display-flex-y-center --cursor-pointer">
                                 Realçar&nbsp;totais
                             </label>
                         <li class="header__menu__li">
-                            <button class="header__menu__btn header__menu__btn--ir-para">Filtrar&nbsp;medicamentos</button>
+                            <button class="header__menu__btn header__menu__btn--ir-para">Filtrar&nbsp;medicamento</button>
                         <li class="header__menu__li">
                             <button class="header__menu__btn header__menu__btn--esvaziar-ficha">Esvaziar ficha</button>
                         <li class="header__menu__li">
                             <button class="header__menu__btn header__menu__btn--imprimir">
-                                <span class="header__menu__item--desktop header__child--cursor">Imprimir</span>
-                                <span class="header__menu__item--mobile header__child--cursor">Salvar&nbsp;como&nbsp;PDF</span>
+                                <span class="header__menu__item--hide-on-mobile --cursor-pointer">Imprimir</span>
+                                <span class="header__menu__item--hide-on-desktop --cursor-pointer">Salvar&nbsp;como&nbsp;PDF</span>
                             </button>
-                        <li class="header__menu__li header__menu__item--desktop">
+                        <li class="header__menu__li header__menu__item--hide-on-mobile">
                             <button class="header__menu__btn header__menu__btn--sobre">Sobre</button>
                         <li class="header__menu__li">
                             <button class="header__menu__btn header__menu__btn--ajuda">
                                 Ajuda
                             </button>
-                        <li class="header__menu__li header__menu__item--mobile">
+                        <li class="header__menu__li header__menu__item--hide-on-desktop">
                             <button class="header__menu__btn header__menu__btn--partilhar">Partilhar...</button>
                     </ul>
                 </div>
             </div>
         </header>
-        <main>
+        <main id="main">
             <div class="ficha --border-t --border-b --border-l">
                 <header class="ficha__header  --border-b">
                     <div class="ficha__header__col-cmam --display-flex-xy-center">
@@ -5003,7 +5003,7 @@
                         </div>
                         <div class="ficha__linha-de-inputs">
                             <input type="text" placeholder="FNM" value="13-A-2" />
-                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Clorfenirmina 4 mg Comp."/>
+                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Clorfeniramina 4 mg Comp."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l198-c1c2-menos-l198-c3" data-stfpoutput="l198-c4" data-diferenca="l198-c6-menos-l198-c4" data-diferencaoutput="l198-c7" />
                             <!-- Soma das Entradas -->
@@ -5027,7 +5027,7 @@
                         </div>
                         <div class="ficha__linha-de-inputs">
                             <input type="text" placeholder="FNM" value="13-A-3" />
-                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Clorfenirmina 2 mg/5 ml Xpe."/>
+                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Clorfeniramina 2 mg/5 ml Xpe."/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l199-c1c2-menos-l199-c3" data-stfpoutput="l199-c4" data-diferenca="l199-c6-menos-l199-c4" data-diferencaoutput="l199-c7" />
                             <!-- Soma das Entradas -->
@@ -6713,7 +6713,7 @@
                         </div>   
                         <div class="ficha__linha-de-inputs">
                             <input type="text" placeholder="FNM" value="&minus;" />
-                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Luvas de Lavandaria Tamanho S"/>
+                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Luvas de Lavandaria"/>
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l268-c1c2-menos-l268-c3" data-stfpoutput="l268-c4" data-diferenca="l268-c6-menos-l268-c4" data-diferencaoutput="l268-c7" />
                             <!-- Soma das Entradas -->
@@ -6736,8 +6736,8 @@
                             <input type="number" min="0" />
                         </div>   
                         <div class="ficha__linha-de-inputs">
-                            <input type="text" placeholder="FNM" value="&minus;" />
-                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Luvas de Lavandaria Tamanho M"/>
+                            <input type="text" placeholder="FNM"  value="&minus;"/>
+                            <input type="text" placeholder="Adicionar medicamento/artigo médico"  value="Luvas de Limpeza" />
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l269-c1c2-menos-l269-c3" data-stfpoutput="l269-c4" data-diferenca="l269-c6-menos-l269-c4" data-diferencaoutput="l269-c7" />
                             <!-- Soma das Entradas -->
@@ -6761,7 +6761,7 @@
                         </div>   
                         <div class="ficha__linha-de-inputs">
                             <input type="text" placeholder="FNM" value="&minus;" />
-                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Luvas de Lavandaria Tamanho L"/>
+                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Máscaras cirúrgicas" />
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l270-c1c2-menos-l270-c3" data-stfpoutput="l270-c4" data-diferenca="l270-c6-menos-l270-c4" data-diferencaoutput="l270-c7" />
                             <!-- Soma das Entradas -->
@@ -6785,7 +6785,7 @@
                         </div> 
                         <div class="ficha__linha-de-inputs">
                             <input type="text" placeholder="FNM" value="&minus;" />
-                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Luvas de Limpeza Tamanho S"/>
+                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Máscaras N95" />
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l271-c1c2-menos-l271-c3" data-stfpoutput="l271-c4" data-diferenca="l271-c6-menos-l271-c4" data-diferencaoutput="l271-c7" />
                             <!-- Soma das Entradas -->
@@ -6809,7 +6809,7 @@
                         </div>   
                         <div class="ficha__linha-de-inputs">
                             <input type="text" placeholder="FNM" value="&minus;" />
-                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Luvas de Limpeza Tamanho M"/>
+                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Barrete" />
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l272-c1c2-menos-l272-c3" data-stfpoutput="l272-c4" data-diferenca="l272-c6-menos-l272-c4" data-diferencaoutput="l272-c7" />
                             <!-- Soma das Entradas -->
@@ -6833,7 +6833,7 @@
                         </div>   
                         <div class="ficha__linha-de-inputs">
                             <input type="text" placeholder="FNM" value="&minus;" />
-                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Luvas de Limpeza Tamanho L"/>
+                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Aventais Plásticos" />
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l273-c1c2-menos-l273-c3" data-stfpoutput="l273-c4" data-diferenca="l273-c6-menos-l273-c4" data-diferencaoutput="l273-c7" />
                             <!-- Soma das Entradas -->
@@ -6856,8 +6856,8 @@
                             <input type="number" min="0" />
                         </div>   
                         <div class="ficha__linha-de-inputs">
-                            <input type="text" placeholder="FNM" value="&minus;" />
-                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Máscaras cirúrgicas"/>
+                            <input type="text" placeholder="FNM" />
+                            <input type="text" placeholder="Adicionar medicamento/artigo médico" />
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l274-c1c2-menos-l274-c3" data-stfpoutput="l274-c4" data-diferenca="l274-c6-menos-l274-c4" data-diferencaoutput="l274-c7" />
                             <!-- Soma das Entradas -->
@@ -6880,8 +6880,8 @@
                             <input type="number" min="0" />
                         </div>   
                         <div class="ficha__linha-de-inputs">
-                            <input type="text" placeholder="FNM" value="&minus;" />
-                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Máscaras N95"/>
+                            <input type="text" placeholder="FNM" />
+                            <input type="text" placeholder="Adicionar medicamento/artigo médico" />
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l275-c1c2-menos-l275-c3" data-stfpoutput="l275-c4" data-diferenca="l275-c6-menos-l275-c4" data-diferencaoutput="l275-c7" />
                             <!-- Soma das Entradas -->
@@ -6904,8 +6904,8 @@
                             <input type="number" min="0" />
                         </div>   
                         <div class="ficha__linha-de-inputs">
-                            <input type="text" placeholder="FNM" value="&minus;" />
-                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Barrete"/>
+                            <input type="text" placeholder="FNM" />
+                            <input type="text" placeholder="Adicionar medicamento/artigo médico" />
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l276-c1c2-menos-l276-c3" data-stfpoutput="l276-c4" data-diferenca="l276-c6-menos-l276-c4" data-diferencaoutput="l276-c7" />
                             <!-- Soma das Entradas -->
@@ -6928,8 +6928,8 @@
                             <input type="number" min="0" />
                         </div> 
                         <div class="ficha__linha-de-inputs">
-                            <input type="text" placeholder="FNM" value="&minus;" />
-                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Planito"/>
+                            <input type="text" placeholder="FNM" />
+                            <input type="text" placeholder="Adicionar medicamento/artigo médico" />
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l277-c1c2-menos-l277-c3" data-stfpoutput="l277-c4" data-diferenca="l277-c6-menos-l277-c4" data-diferencaoutput="l277-c7" />
                             <!-- Soma das Entradas -->
@@ -6952,8 +6952,8 @@
                             <input type="number" min="0" />
                         </div> 
                         <div class="ficha__linha-de-inputs">
-                            <input type="text" placeholder="FNM" value="&minus;" />
-                            <input type="text" placeholder="Adicionar medicamento/artigo médico" value="Aventais Plásticos"/>
+                            <input type="text" placeholder="FNM" />
+                            <input type="text" placeholder="Adicionar medicamento/artigo médico" />
                             <!-- Stock no Início do Período -->
                             <input type="number" min="0" data-stfp="l278-c1c2-menos-l278-c3" data-stfpoutput="l278-c4" data-diferenca="l278-c6-menos-l278-c4" data-diferencaoutput="l278-c7" />
                             <!-- Soma das Entradas -->
@@ -7318,13 +7318,13 @@
                 </aside>
             </div>
 
-            <div class="reference-container --no-print">
-                <div class="layout-row reference-row">
-                    <span class="reference-row__label">Linha:</span> 
-                    <output class="reference-row__output reference-row__output--indicador --display-flex-y-center"></output>
+            <div class="reference --no-print">
+                <div class="layout-row layout-row--of-reference">
+                    <span class="reference__label">Linha:</span> 
+                    <output class="reference__output reference__output--indicador --display-flex-y-center"></output>
 
-                    <span class="reference-row__label">Coluna:</span> 
-                    <output class="reference-row__output reference-row__output--coluna --display-flex-y-center"></output>
+                    <span class="reference__label">Coluna:</span> 
+                    <output class="reference__output reference__output--coluna --display-flex-y-center"></output>
                 </div>
             </div>
         </main>
@@ -7428,16 +7428,16 @@
                 </ul>
                 <div class=dialog-box-esvaziar-ficha__btns-container>
                     <button class="dialog-box-esvaziar-ficha__btn dialog-box-esvaziar-ficha__btn--cancelar">Cancelar</button>
-                    <button class="dialog-box-esvaziar-ficha__btn dialog-box-esvaziar-ficha__btn--confirmar">Confirmar</button>
+                    <button class="dialog-box-esvaziar-ficha__btn dialog-box-esvaziar-ficha__btn--confirmar">Esvaziar</button>
                 </div>
             </div>
         </section>
 
-        <section class="sessao-de-artigos --no-print">
+        <section class="seccao-de-artigos --no-print">
             <article id="sobre" class="artigo artigo--sobre layout-row layout-row--artigo-sobre" >
                 <h2 class="artigo__titulo artigo__titulo--nivel-1">Visão geral sobre o requisição/balancete</h2>
                 <figure>
-                    <img alt="Requisição/Balancete" src=imagens/requisicao-balancete.png class="artigo__img artigo__img--sobre-o-tot">
+                    <img alt="Requisição/Balancete" src=imagens/requisicao-balancete.png class="artigo__img artigo__img--center">
                 </figure>
                 
                 <p>
@@ -7473,18 +7473,18 @@
                     <li>Pode ser impresso, inclusíve como uma simples ficha de requisição/balancete;</li>
                     <li>Pode ser guardado como PDF.</li>
                 </ul>
-                <button class="artigo__btn-fechar artigo__btn-fechar--sobre" title="Fechar">&times;</button>
+                <button class="artigo__btn-x artigo__btn-x--fechar-sobre" title="Fechar">&times;</button>
             </article>
 
-            <article class="artigo artigo--ajuda layout-row layout-row--artigo-ajuda">
+            <article class="artigo artigo--ajuda layout-row layout-row--no-padding">
                 <h2 class="artigo__titulo artigo__titulo--nivel-1 artigo__titulo--ajuda-e-procedimentos">Ajuda e Procedimentos</h2>
 
-                <details>
-                    <summary>Realçar totais</summary>
-                    <p>Adiciona um fundo cinzento às células de <b>Stock Teórico Fim do Período, Diferença e Quantidade a Requisitar</b>. Essas têm o acesso interdito e a funcionalidade de realçá-las, permite distinguí-las facilmente das outras células. Muito útil em celulares.</p>
+                <details class="artigo__details">
+                    <summary class="details__summary">Realçar totais</summary>
+                    <p>Adiciona cor de fundo cinzenta às células de <b>Stock Teórico Fim do Período, Diferença e Quantidade a Requisitar</b>. Essas têm o acesso interdito e a funcionalidade de realçá-las, permite distinguí-las facilmente das outras células. Muito útil em celulares.</p>
                 </details>
-                <details>
-                    <summary >Filtrar medicamentos</summary>
+                <details class="artigo__details">
+                     <summary class="details__summary">Filtrar medicamento</summary>
                     <p>Abre um campo no qual pode digitar o nome de um medicamento para destacá-lo e omitir os que não correspondem ao nome ou caracteres digitados. Esta funcionalidade facilita o preenchimento da requisição de acordo com a sequência da pilha das fichas de stock e não seguindo rigorosamente a sequência da lista dos medicamentos.</p>
 
                     <figure class="details__moldura details__moldura--margin-l">
@@ -7493,8 +7493,8 @@
                         <figcaption class="details__moldura__legenda">Imagem ilustrativa da funcionalidade <b>Filtrar medicamentos</b> com Hidróxido de Alumínio como exemplo.</figcaption>
                     </figure>
                 </details>
-                <details>
-                    <summary>Esvaziar ficha</summary>
+                <details class="artigo__details">
+                    <summary class="details__summary">Esvaziar ficha</summary>
                     <p>Comando para limpar parcial ou totalmente a ficha após confirmação da acção na caixa de diálogo subsequente.</p>
                     <figure class="details__moldura details__moldura--margin-l">
                         <img src="imagens/caixa-de-dialogo-para-esvaziamento-da-ficha.png" alt="Caixa de diálogo para esvaziamento da ficha">
@@ -7502,26 +7502,26 @@
                         <figcaption class="details__moldura__legenda"><b>Legenda:</b> Caixa de diálogo para esvaziamento da ficha. Neste caso, os campos de <b>Lista de Medicamentos, Unidade Sanitária, Distrito e Província</b> seriam preservados (por ter suas checkboxes desmarcadas). Todos os outros cujas "checkboxes" estão marcadas seriam esvaziados.</figcaption>
                     </figure>
                 </details>
-                <details class="details-salvar-ficha-como-pdf">
-                    <summary>Salvar ficha como PDF</summary>
+                <details class="artigo__details artigo__details--salvar-ficha-como-pdf">
+                    <summary class="details__summary">Salvar ficha como PDF</summary>
                     <h3 class="artigo__titulo artigo__titulo--nivel-2 artigo__titulo--cor-discreta">No computador:</h3>
                     <ol class="artigo__lista artigo__lista--ol">
                         <li>
-                            Clique na opção <mark>Imprimir</mark> no menu do totalizador.
+                            Clique na opção <mark class="details__mark">Imprimir</mark> no menu do totalizador.
                         <li>
-                            Na janela que abrirá, no campo de <mark>Impressora</mark> ou <mark>Destino</mark>
-                            selecione a opção <mark>Salvar&nbsp;como&nbsp;PDF</mark>.
+                            Na janela que abrirá, no campo de <mark class="details__mark">Impressora</mark> ou <mark class="details__mark">Destino</mark>
+                            selecione a opção <mark class="details__mark">Salvar&nbsp;como&nbsp;PDF</mark>.
                         <li >
-                            Por fim, clique em <mark>Salvar</mark> e escolha um destino no seu computador.
+                            Por fim, clique em <mark class="details__mark">Salvar</mark> e escolha um destino no seu computador.
                     </ol>
 
                     <h3 class="artigo__titulo artigo__titulo--nivel-2 artigo__titulo--cor-discreta">No celular / tablet:</h3>
                     <ol class="artigo__lista artigo__lista--ol">
                         <li>
-                            Toque na opção <mark>Salvar como PDF</mark> no cabeçalho do totalizador.
+                            Toque na opção <mark class="details__mark">Salvar como PDF</mark> no cabeçalho do totalizador.
                         </li>
                         <li>
-                            Na janela seguinte, logo abaixo do rótulo <mark>Tamanho do papel</mark>, toque na seta em forma de <mark>V</mark> para expandir as configurações.
+                            Na janela seguinte, logo abaixo do rótulo <mark class="details__mark">Tamanho do papel</mark>, toque na seta em forma de <mark class="details__mark">V</mark> para expandir as configurações.
                         </li>
 
                         <figure class="details__moldura">
@@ -7529,7 +7529,7 @@
                         </figure>
                            
                         <li>
-                            No campo de <mark>Tamanho do papel</mark>, mantenha <mark>ISO A4</mark> e no de <mark>Orientação</mark>, selecione <mark>Panorama</mark> ou <mark>Paisagem</mark>.
+                            No campo de <mark class="details__mark">Tamanho do papel</mark>, mantenha <mark class="details__mark">ISO A4</mark> e no de <mark class="details__mark">Orientação</mark>, selecione <mark class="details__mark">Panorama</mark> ou <mark class="details__mark">Paisagem</mark>.
                         </li>
 
                         <figure class="details__moldura">
@@ -7543,8 +7543,8 @@
                         </figure>
                     </ol>
                 </details>
-                <details>
-                    <summary>Simular cópia (duplicado ou triplicado) da ficha</summary>
+                <details class="artigo__details">
+                    <summary class="details__summary">Simular cópia (duplicado ou triplicado) da ficha</summary>
                     <p>Na margem esquerda da ficha, logo abaixo e à esquerda do 2<sup>o</sup> cabeçalho, encontram-se as opções <b>Original, Duplicado e Triplicado</b>.</p>
 
                     <p>Por padrão, está selecionada a opção Original. Mudando a seleção para <b>Duplicado</b>, a ficha muda de cor de fundo para <b>amarelo</b> (simulando um duplicado) e clicando sobre a opção <b>Triplicado</b>, o fundo muda para <b>azul claro</b> (simulando um triplicado), cores essas que em impressões coloridas, aproximam-se mais do aspecto de duplicado e triplicado.</p>
@@ -7555,13 +7555,15 @@
                         <figcaption class="details__moldura__legenda">Simulação de <b>Duplicado</b> (à esquerda) e de <b>Triplicado</b> (à direita).</figcaption>
                     </figure>
                 </details>
-                <details class="artigo__details-motivo-de-red-cells">
-                    <summary>Algumas células mudaram de cor de fundo para vermelho</summary>
+                <details class="artigo__details artigo__details--border-b artigo__details--motivo-de-celulas-vermelhas">
+                    <summary class="details__summary">Algumas células mudaram de cor de fundo para vermelho</summary>
                     <p>As células das secções <b>Controlo da Ficha de Stock e Controlo de Inventário</b> têm um tamanho para conter visivelmente 12 algarismos no máximo, isto é, mostram valores até, no máximo, <span class="number-format">999999999999</span> e as células das colunas <b>Quantidade Pedida e Qtd. Autorizada pelo Responsável Clínico</b> podem mostrar números com até 16 algarismos. Quando uma célula recebe um número com mais de 12 ou 16 algarismos, dá um alerta ficando vermelha e depois abrindo esta mensagem de texto para alertá-lo sobre a omissão dos algarismos e o real motivo.</p>
 
                     <p class="artigo__p--destaque">Para um país como Moçambique, onde o número de habitantes é de pouco mais de 30 milhões (<a href="https://energypedia.info/wiki/Moçambique:_Informação_sobre_o_País" target="_blank">dados demográficos de 2019</a>), podemos presumir que nenhuma Unidade Sanitária actualmente tem um número mensal de dados de algum indicador, de qualquer que seja a sua natureza, acima de <span class="number-format">999999999999</span>.</p>
                 </details>
-                <button class="artigo__btn-fechar artigo__btn-fechar--ajuda" title="Fechar">&times;</button>
+
+                <p class="artigo-ajuda__p--contactar-suporte">Se os tópicos acima não cobrem a sua dúvida. Pode ainda solicitar suporte por <a href="mailto:quinamine.aderitofelix@gmail.com?subject=Totalizador+de+Resumo+Mensal+de+Consultas">Email</a> ou <a href="https://wa.me/258846709901/?text=Olá%2C+Quinamine!+Sobre+o+*Requisição%2FBalancete*%2C+tenho+a+seguinte+dúvida%3A">WhatsApp</a>.</p>
+                <button class="artigo__btn-x artigo__btn-x--fechar-ajuda" title="Fechar">&times;</button>
             </article>
         </section>
 
@@ -7618,7 +7620,7 @@
                     Criado com atenção e 💙 por <a href=https://quinamine.github.io/aderito-felix-quinamine/index.html title="Acessar biografia &raquo;">Adérito Félix Quinamine</a>
                     | © <span class="footer__current-year"></span> - Requisição/Balancete
                 </p>
-                <a href=#root class=footer__link-back-to-top>Rolar para o topo</a>
+                <a href=#root class=footer__link--back-to-top>Rolar para o topo</a>
             </div>
             <p class="footer__p footer__p--available-since">Disponível desde <time datetime="2023-08-30">30/08/2023</time>. Última actualização: Agosto/2024.</p>
         </footer>

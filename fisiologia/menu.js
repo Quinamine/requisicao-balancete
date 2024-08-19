@@ -5,10 +5,10 @@ const menu = {
         const totais = document.querySelectorAll("[readonly]");
         for (const t of totais) {
             if(condicao) {
-                t.classList.add("--realcar-totais");
+                t.classList.add("input--realcar-totais");
                 localStorage.setItem(`${keyPrefix}-realcarTotais`, true);
             } else {
-                t.classList.remove("--realcar-totais");
+                t.classList.remove("input--realcar-totais");
                 localStorage.removeItem(`${keyPrefix}-realcarTotais`);
             }
         }
@@ -62,13 +62,13 @@ const menu = {
                 msgNothingFound.textContent = "Nenhum medicamento/artigo médico corresponde à pesquisa."
                 msgNothingFound.classList.remove("--display-none");
                 this.body.scrollIntoView();
-                this.body.classList.add("--overflow-h");
+                this.body.classList.add("body--overflow-h");
             },
 
             hideNothingFoundMsg() {
                 const msgNothingFound = document.querySelector(".msg-nothing-found-to-filtrar-medicamentos");
                 msgNothingFound.classList.add("--display-none");
-                this.body.classList.remove("--overflow-h");
+                this.body.classList.remove("body--overflow-h");
             }
            
 
@@ -88,7 +88,7 @@ const menu = {
                 }
 
                 if(inputFilled === 0) {
-                    const noInputFilledMsg = "A ficha encontra-se vazia actualmente."
+                    const noInputFilledMsg = "A ficha já se encontra vazia."
                     alertarSobre(noInputFilledMsg);
                     return false;
                 } 
@@ -100,7 +100,6 @@ const menu = {
             fecharDialogBox() {
                 menu.esvaziarFicha().dialogBox.classList.remove("--open");
                 desfoqueDoFundo("focar");
-                removerDestaqueDeRedCells();
             },
 
             confirmar() {
@@ -129,6 +128,7 @@ const menu = {
                     localStorage.removeItem(`${keyPrefix}-input${i}`);
                 }
                 menu.esvaziarFicha().fecharDialogBox();
+                removerDestaqueDeRedCells();
             }
         }
     },
@@ -148,7 +148,7 @@ const menu = {
         artigoSobre.classList.add("--open") : 
         artigoAjuda.classList.add("--open");
 
-        body.classList.add("--overflow-h");
+        body.classList.add("body--overflow-h");
         desfoqueDoFundo("desfocar");
     },
 
@@ -167,7 +167,7 @@ const menu = {
             artigoAjuda.classList.remove("--open");
         }
 
-        body.classList.remove("--overflow-h");
+        body.classList.remove("body--overflow-h");
         desfoqueDoFundo("focar");
     }
 }
@@ -224,7 +224,7 @@ function eventos() {
     const btnAbrirSobre = document.querySelector(".header__menu__btn--sobre");
     btnAbrirSobre.addEventListener("click", () => menu.abrirArtigo("sobre"));
 
-    const btnFecharSobre = document.querySelector(".artigo__btn-fechar--sobre")
+    const btnFecharSobre = document.querySelector(".artigo__btn-x--fechar-sobre")
     btnFecharSobre.addEventListener("click", () => menu.fecharArtigo("sobre"));
 
     window.addEventListener("resize", () => {
@@ -237,18 +237,18 @@ function eventos() {
         if(itsMobile && articleIsOpen) {
             desfoqueDoFundo("focar");
             location.href = `index.html#${artigoSobre.id}`;
-            body.classList.remove("--overflow-h");
+            body.classList.remove("body--overflow-h");
             
         } else if(!itsMobile && articleIsOpen) {
             desfoqueDoFundo("desfocar");
-            body.classList.add("--overflow-h");
+            body.classList.add("body--overflow-h");
         }       
     });
 
     const btnAbrirAjuda = document.querySelector(".header__menu__btn--ajuda");
     btnAbrirAjuda.addEventListener("click", () => menu.abrirArtigo("ajuda"));
 
-    const btnFecharAjuda = document.querySelector(".artigo__btn-fechar--ajuda")
+    const btnFecharAjuda = document.querySelector(".artigo__btn-x--fechar-ajuda")
     btnFecharAjuda.addEventListener("click", () => menu.fecharArtigo("ajuda"));
 
     // PARTILHAR 

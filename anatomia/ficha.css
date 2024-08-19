@@ -91,6 +91,16 @@
     border-bottom: 1px solid var(--cor-de-borda);
     background-color: initial;
 }
+@media screen {
+    .input--realcar-totais:focus,
+    .input--realcar-totais {
+        background-color: var(--gray--c) !important;
+    }
+}
+.input--bg-color-danger {
+    background-color: var(--cor-de-risco) !important;;
+    color: var(--yt)
+}
 .ficha__col-com-titulo {
     display: grid;
     grid-template-rows: 86px 27px
