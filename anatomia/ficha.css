@@ -86,6 +86,7 @@
 .ficha input:focus {
     border-bottom: 2px solid var(--blue);
     background-color: var(--greenyellow);
+    color: var(--cor-de-texto);
 }
 .ficha input[readonly]:focus {
     border-bottom: 1px solid var(--cor-de-borda);
@@ -94,7 +95,7 @@
 @media screen {
     .input--realcar-totais:focus,
     .input--realcar-totais {
-        background-color: var(--gray--c) !important;
+        background-color: var(--cor-de-realce-de-totais) !important;
     }
 }
 .input--bg-color-danger {
