@@ -1,1 +1,226 @@
-"use strict";const menu={realcarTotaisSe(e){let a=document.querySelectorAll("[readonly]");for(let r of a)e?(r.classList.add("input--realcar-totais"),localStorage.setItem(`${keyPrefix}-realcarTotais`,!0)):(r.classList.remove("input--realcar-totais"),localStorage.removeItem(`${keyPrefix}-realcarTotais`))},filtrarFarmaco:()=>({dialogBox:document.querySelector(".dialog-box-ir-para"),inputNumLinha:document.querySelector(".dialog-box-ir-para__input-linha"),numerosDeLinha:document.querySelectorAll(".ficha__num-de-linha"),body:document.querySelector("body"),abrirDialogBox(){menu.filtrarFarmaco().dialogBox.classList.add("--open"),menu.filtrarFarmaco().inputNumLinha.value="",menu.filtrarFarmaco().inputNumLinha.focus()},fecharDialogBox(){menu.filtrarFarmaco().dialogBox.classList.remove("--open"),menu.filtrarFarmaco().filtrar("")},filtrar(e){let a=formatarString(e);a.includes("coartem")&&(a="artemeter");let r=document.querySelectorAll(".ficha__linha-de-inputs input:nth-child(2)");for(let t of r)formatarString(t.value).includes(a)?t.parentElement.classList.remove("--hide"):t.parentElement.classList.add("--hide");let o=0,i=document.querySelectorAll(".ficha__linha-de-inputs");for(let l of i)!l.matches(".--hide")&&o++;0===o?this.showNothingFoundMsg():this.hideNothingFoundMsg()},showNothingFoundMsg(){let e=document.querySelector(".msg-nothing-found-to-filtrar-medicamentos");e.textContent="Nenhum medicamento/artigo m\xe9dico corresponde \xe0 pesquisa.",e.classList.remove("--display-none"),this.body.scrollIntoView(),this.body.classList.add("body--overflow-h")},hideNothingFoundMsg(){let e=document.querySelector(".msg-nothing-found-to-filtrar-medicamentos");e.classList.add("--display-none"),this.body.classList.remove("body--overflow-h")}}),esvaziarFicha:()=>({dialogBox:document.querySelector(".dialog-box-esvaziar-ficha"),abrirDialogBox(){let e=document.querySelectorAll(".ficha__main__body input, .input-nao-celular"),a=0;for(let r of e)r.value.length>0&&a++;if(0===a)return alertarSobre("A ficha j\xe1 se encontra vazia."),!1;menu.esvaziarFicha().dialogBox.classList.add("--open"),desfoqueDoFundo("desfocar")},fecharDialogBox(){menu.esvaziarFicha().dialogBox.classList.remove("--open"),desfoqueDoFundo("focar")},confirmar(){let e=document.querySelectorAll(".ficha__linha-de-inputs input"),a=document.querySelectorAll("[data-for]"),r=!1;for(let t of a)if(t.checked){let o=t.dataset.for;if("lista-de-med"===o)r=!0;else{let i=document.getElementById(`${o}`);i.value="",localStorage.removeItem(`${keyPrefix}-${i.id}`)}}r||(e=document.querySelectorAll(".ficha__linha-de-inputs input:nth-child(n+3)"));for(let l=0;l<e.length;l++)e[l].value="",localStorage.removeItem(`${keyPrefix}-input${l}`);menu.esvaziarFicha().fecharDialogBox(),removerDestaqueDeRedCells()}}),imprimirFicha(){balancete.clonarHeaderDaFichaParaTodasPaginas(),balancete.clonarFooterDaFichaParaTodasPaginas(),window.print()},abrirArtigo(e){let a=document.querySelector(".artigo--sobre"),r=document.querySelector(".artigo--ajuda"),t=document.querySelector("body");"sobre"===e?a.classList.add("--open"):r.classList.add("--open"),t.classList.add("body--overflow-h"),desfoqueDoFundo("desfocar")},fecharArtigo(e){let a=document.querySelector(".artigo--sobre"),r=document.querySelector(".artigo--ajuda"),t=document.querySelector("body");if("sobre"===e&&a.classList.remove("--open"),"ajuda"===e){let o=document.getElementsByTagName("details");for(let i of o)i.removeAttribute("open");r.classList.remove("--open")}t.classList.remove("body--overflow-h"),desfoqueDoFundo("focar")}};function eventos(){let e=document.getElementById("checkbox-realcar-totais"),a=e;a.addEventListener("change",()=>a.checked?menu.realcarTotaisSe(1):menu.realcarTotaisSe(0)),localStorage.getItem(`${keyPrefix}-realcarTotais`)&&(e.setAttribute("checked","checked"),menu.realcarTotaisSe(1));let r=document.querySelector(".header__menu__btn--ir-para");r.addEventListener("click",menu.filtrarFarmaco().abrirDialogBox);let t=document.querySelector(".dialog-box-ir-para__btn--fechar");t.addEventListener("click",menu.filtrarFarmaco().fecharDialogBox);let o=document.querySelector(".dialog-box-ir-para__input-linha");o.addEventListener("input",()=>{menu.filtrarFarmaco().filtrar(o.value)});let i=document.querySelectorAll(".dialog-box-default__btn");i.forEach(e=>{e.addEventListener("click",()=>{e.parentElement.parentElement.classList.remove("--open"),clearInterval(btnAutoCloseLoop)})});let l=document.querySelector(".header__menu__btn--esvaziar-ficha");l.addEventListener("click",menu.esvaziarFicha().abrirDialogBox);let n=document.querySelector(".dialog-box-esvaziar-ficha__btn--cancelar");n.addEventListener("click",menu.esvaziarFicha().fecharDialogBox);let c=document.querySelector(".dialog-box-esvaziar-ficha__btn--confirmar");c.addEventListener("click",menu.esvaziarFicha().confirmar);let s=document.querySelector(".header__menu__btn--imprimir");s.addEventListener("click",menu.imprimirFicha);let d=document.querySelector(".header__menu__btn--sobre");d.addEventListener("click",()=>menu.abrirArtigo("sobre"));let u=document.querySelector(".artigo__btn-x--fechar-sobre");u.addEventListener("click",()=>menu.fecharArtigo("sobre")),window.addEventListener("resize",()=>{let e=document.querySelector(".artigo--sobre"),a=window.innerWidth<1024,r=e.matches(".--open"),t=document.querySelector("body");a&&r?(desfoqueDoFundo("focar"),location.href=`index.html#${e.id}`,t.classList.remove("body--overflow-h")):!a&&r&&(desfoqueDoFundo("desfocar"),t.classList.add("body--overflow-h"))});let m=document.querySelector(".header__menu__btn--ajuda");m.addEventListener("click",()=>menu.abrirArtigo("ajuda"));let h=document.querySelector(".artigo__btn-x--fechar-ajuda");h.addEventListener("click",()=>menu.fecharArtigo("ajuda"));let f={title:"Requisi\xe7\xe3o/Balancete",text:"Calcula automaticamente o Stock Te\xf3rico Fim do Per\xedodo, Diferen\xe7a entre stock te\xf3rico e stock f\xedsico e Quantidade a Requisitar com base nos dados de controlo da ficha de stock e invent\xe1rio preenchidos pelo usu\xe1rio. Foi desenvolvido de acordo com o modelo da ficha de requisi\xe7\xe3o/balancete actualmente vigente no Servi\xe7o Nacional de Sa\xfade em Mo\xe7ambique.",url:"https://quinamine.github.io/requisicao-balancete/index.html"},v=document.querySelector(".header__menu__btn--partilhar");v.addEventListener("click",()=>{try{navigator.share(f).then(()=>console.log("Requisi\xe7\xe3o/Balancete partilhado com sucesso.")).catch(e=>console.log(`N\xe3o foi possivel partilhar o servi\xe7o devido ao erro: ${e}.`))}catch(e){console.log("O seu navegador n\xe3o tem suporte ao m\xe9todo 'navigator.share()'.")}})}window.addEventListener("load",eventos),window.addEventListener("keydown",e=>{e.ctrlKey&&80===e.keyCode&&(e.preventDefault(),menu.imprimirFicha())});
+"use strict"
+const menu = {
+    realcarTotaisSe(condicao) {
+        const totais = document.querySelectorAll("[readonly]");
+        for (const t of totais) {
+            if(condicao) {
+                t.classList.add("input--realcar-totais");
+                localStorage.setItem(`${keyPrefix}-realcarTotais`, true);
+            } else {
+                t.classList.remove("input--realcar-totais");
+                localStorage.removeItem(`${keyPrefix}-realcarTotais`);
+            }
+        }
+    },
+    filtrarFarmaco() {
+        return {
+            dialogBox: document.querySelector(".dialog-box-ir-para"),
+            inputNumLinha: document.querySelector(".dialog-box-ir-para__input-linha"),
+            numerosDeLinha: document.querySelectorAll(".ficha__num-de-linha"),
+            body: document.querySelector("body"),
+            abrirDialogBox() { 
+                menu.filtrarFarmaco().dialogBox.classList.add("--open");
+                menu.filtrarFarmaco().inputNumLinha.value = "";
+                menu.filtrarFarmaco().inputNumLinha.focus();
+            },
+            fecharDialogBox() {
+                menu.filtrarFarmaco().dialogBox.classList.remove("--open");
+                menu.filtrarFarmaco().filtrar("")
+            },
+            filtrar(query) {
+                let queryFormatada = formatarString(query);
+                if(queryFormatada.includes("coartem")) queryFormatada = "artemeter";
+                const farmacos = document.querySelectorAll(".ficha__linha-de-inputs input:nth-child(2)");
+                for (let farmaco of farmacos) {
+                    formatarString(farmaco.value).includes(queryFormatada) ? farmaco.parentElement.classList.remove("--hide") 
+                    : farmaco.parentElement.classList.add("--hide");
+                }
+                let resultadosEncontrados = 0;
+                const linhasDeFarmaco = document.querySelectorAll(".ficha__linha-de-inputs");
+                for (const linha of linhasDeFarmaco) {
+                    if(!linha.matches(".--hide")) {
+                        resultadosEncontrados++;
+                    } 
+                }
+                resultadosEncontrados === 0 ? 
+                this.showNothingFoundMsg() : 
+                this.hideNothingFoundMsg();
+            },
+            showNothingFoundMsg() {
+                const msgNothingFound = document.querySelector(".msg-nothing-found-to-filtrar-medicamentos");
+                msgNothingFound.textContent = "Nenhum medicamento/artigo médico corresponde à pesquisa."
+                msgNothingFound.classList.remove("--display-none");
+                this.body.scrollIntoView();
+                this.body.classList.add("body--overflow-h");
+            },
+            hideNothingFoundMsg() {
+                const msgNothingFound = document.querySelector(".msg-nothing-found-to-filtrar-medicamentos");
+                msgNothingFound.classList.add("--display-none");
+                this.body.classList.remove("body--overflow-h");
+            }
+        }
+    },
+    esvaziarFicha() {
+        return {  
+            dialogBox: document.querySelector(".dialog-box-esvaziar-ficha"),
+            abrirDialogBox() { 
+                const inputsDaFicha = document.querySelectorAll(".ficha__main__body input, .input-nao-celular");
+                let inputFilled = 0;
+                for(const input of inputsDaFicha) {
+                    input.value.length > 0 && inputFilled++;
+                }
+                if(inputFilled === 0) {
+                    const noInputFilledMsg = "A ficha já se encontra vazia."
+                    alertarSobre(noInputFilledMsg);
+                    return false;
+                } 
+                menu.esvaziarFicha().dialogBox.classList.add("--open");
+                desfoqueDoFundo("desfocar");
+            },
+            fecharDialogBox() {
+                menu.esvaziarFicha().dialogBox.classList.remove("--open");
+                desfoqueDoFundo("focar");
+            },
+            confirmar() {
+                let inputsCelulares  = document.querySelectorAll(".ficha__linha-de-inputs input");
+                const checkboxesParaInputsNaoCelulares = document.querySelectorAll("[data-for]");
+                let excluirMedicamentos = false;
+                for (const cb of checkboxesParaInputsNaoCelulares) {                    
+                    if(cb.checked) {
+                        let idDeInputNaoCelular = cb.dataset.for
+                        if(idDeInputNaoCelular === "lista-de-med") excluirMedicamentos = true;
+                        else {
+                            let inputNaoCelular = document.getElementById(`${idDeInputNaoCelular}`);
+                            inputNaoCelular.value = "";
+                            localStorage.removeItem(`${keyPrefix}-${inputNaoCelular.id}`);
+                        }
+                    }
+                }
+                if(!excluirMedicamentos) {
+                    inputsCelulares = document.querySelectorAll(".ficha__linha-de-inputs input:nth-child(n+3)");
+                }
+                for (let i = 0; i < inputsCelulares.length; i++) {
+                    inputsCelulares[i].value = "";
+                    localStorage.removeItem(`${keyPrefix}-input${i}`);
+                }
+                menu.esvaziarFicha().fecharDialogBox();
+                removerDestaqueDeRedCells();
+            }
+        }
+    },
+    imprimirFicha() {
+        balancete.clonarHeaderDaFichaParaTodasPaginas();
+        balancete.clonarFooterDaFichaParaTodasPaginas();
+        window.print()
+    },
+    abrirArtigo(artigo) {
+        const artigoSobre = document.querySelector(".artigo--sobre");
+        const artigoAjuda = document.querySelector(".artigo--ajuda");
+        const body = document.querySelector("body");
+        artigo === "sobre" ? artigoSobre.classList.add("--open") 
+        : artigoAjuda.classList.add("--open");
+        body.classList.add("body--overflow-h");
+        desfoqueDoFundo("desfocar");
+    },
+    fecharArtigo(artigo) {
+        const artigoSobre = document.querySelector(".artigo--sobre");
+        const artigoAjuda = document.querySelector(".artigo--ajuda");
+        const body = document.querySelector("body");
+        artigo === "sobre" && artigoSobre.classList.remove("--open");
+        if(artigo === "ajuda") {
+            const details = document.getElementsByTagName("details");
+            for (const d of details) {
+                d.removeAttribute("open");
+            }
+            artigoAjuda.classList.remove("--open");
+        }
+        body.classList.remove("body--overflow-h");
+        desfoqueDoFundo("focar");
+    }
+}
+function eventos() {
+    // REALCAR TOTAIS
+    const checkboxRealcarTotais = document.getElementById("checkbox-realcar-totais");
+    const cRt = checkboxRealcarTotais;
+    cRt.addEventListener("change", () => cRt.checked ? menu.realcarTotaisSe(1) : menu.realcarTotaisSe(0));
+    // Realcar totais no load do windows 
+    if(localStorage.getItem(`${keyPrefix}-realcarTotais`)) {
+        checkboxRealcarTotais.setAttribute("checked", "checked");
+        menu.realcarTotaisSe(1);
+    }
+    // IR PARA LINHA
+    const btnAbrirIrPara = document.querySelector(".header__menu__btn--ir-para");
+    btnAbrirIrPara.addEventListener("click", menu.filtrarFarmaco().abrirDialogBox);
+    const btnFecharIrPara = document.querySelector(".dialog-box-ir-para__btn--fechar");
+    btnFecharIrPara.addEventListener("click", menu.filtrarFarmaco().fecharDialogBox);
+    const inputNumLinha = document.querySelector(".dialog-box-ir-para__input-linha");
+    inputNumLinha.addEventListener("input", () => {
+        menu.filtrarFarmaco().filtrar(inputNumLinha.value)
+    });
+    // Fechar dialog-boxes-default
+    const btnsFecharDialogBox = document.querySelectorAll(".dialog-box-default__btn");
+    btnsFecharDialogBox.forEach( btn => {
+        btn.addEventListener("click", () => {
+            let btnParent = btn.parentElement;
+            btnParent.parentElement.classList.remove("--open");
+            clearInterval(btnAutoCloseLoop);
+        });
+    });
+    // ESVAZIAR FICHA 
+    const btnEsvaziarFicha = document.querySelector(".header__menu__btn--esvaziar-ficha");
+    btnEsvaziarFicha.addEventListener("click", menu.esvaziarFicha().abrirDialogBox);
+    const btnCancelar = document.querySelector(".dialog-box-esvaziar-ficha__btn--cancelar");
+    btnCancelar.addEventListener("click", menu.esvaziarFicha().fecharDialogBox);
+    const btnConfirmar = document.querySelector(".dialog-box-esvaziar-ficha__btn--confirmar");
+    btnConfirmar.addEventListener("click", menu.esvaziarFicha().confirmar);
+    // IMPRIMIR 
+    const btnImprimir = document.querySelector(".header__menu__btn--imprimir");
+    btnImprimir.addEventListener("click", menu.imprimirFicha);
+    // Artigos
+    const btnAbrirSobre = document.querySelector(".header__menu__btn--sobre");
+    btnAbrirSobre.addEventListener("click", () => menu.abrirArtigo("sobre"));
+    const btnFecharSobre = document.querySelector(".artigo__btn-x--fechar-sobre")
+    btnFecharSobre.addEventListener("click", () => menu.fecharArtigo("sobre"));
+    window.addEventListener("resize", () => {
+        const artigoSobre = document.querySelector(".artigo--sobre");
+        const itsMobile = window.innerWidth < 1024;
+        const articleIsOpen = artigoSobre.matches(".--open");
+        const body = document.querySelector("body");
+        if(itsMobile && articleIsOpen) {
+            desfoqueDoFundo("focar");
+            location.href = `index.html#${artigoSobre.id}`;
+            body.classList.remove("body--overflow-h");
+            
+        } else if(!itsMobile && articleIsOpen) {
+            desfoqueDoFundo("desfocar");
+            body.classList.add("body--overflow-h");
+        }       
+    });
+    const btnAbrirAjuda = document.querySelector(".header__menu__btn--ajuda");
+    btnAbrirAjuda.addEventListener("click", () => menu.abrirArtigo("ajuda"));
+    const btnFecharAjuda = document.querySelector(".artigo__btn-x--fechar-ajuda")
+    btnFecharAjuda.addEventListener("click", () => menu.fecharArtigo("ajuda"));
+    // PARTILHAR 
+    const data = {
+        title: "Requisição/Balancete",
+        text: "Calcula automaticamente o Stock Teórico Fim do Período, Diferença entre stock teórico e stock físico e Quantidade a Requisitar com base nos dados de controlo da ficha de stock e inventário preenchidos pelo usuário. Foi desenvolvido de acordo com o modelo da ficha de requisição/balancete actualmente vigente no Serviço Nacional de Saúde em Moçambique.",
+        url: "https://quinamine.github.io/requisicao-balancete/index.html"
+    }
+    const btnPartilhar = document.querySelector(".header__menu__btn--partilhar");
+    btnPartilhar.addEventListener("click", () => {
+        try {
+            navigator.share(data).then(()=>console.log("Requisição/Balancete partilhado com sucesso."))
+            .catch(e=> console.log(`Não foi possivel partilhar o serviço devido ao erro: ${e}.`))
+        } catch (e) {
+            console.log("O seu navegador não tem suporte ao método 'navigator.share()'.")
+        }
+    });
+}
+window.addEventListener("load", eventos);
+window.addEventListener("keydown", event => {
+    // CONTROL = 17 && p = 80
+    if(event.ctrlKey && event.keyCode === 80) {
+        event.preventDefault();
+        menu.imprimirFicha();
+    }
+});

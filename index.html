@@ -36,34 +36,35 @@
     </head>
     <body id="body" ontouchstart="">
         <header class="header --no-print">
-            <div class="layout-row layout-row--of-header">
-                <a href=index.html id="logo">
-                    Requisição/Balancete
-                </a>
+            <div class="layout-row layout-row--of-header layout-row--no-padding">
+                <a href=index.html id="logo"> Requisição/Balancete</a>
                 <div role="navigation" class="header__menu --display-flex-y-center">
                     <ul class="header__menu__ul --display-flex-y-center">
                         <li class="header__menu__li header__menu__li--realcar-totais">
                             <input type=checkbox id="checkbox-realcar-totais" class="header__menu__checkbox --cursor-pointer">
-                            <label for="checkbox-realcar-totais" class="header__menu__label --display-flex-y-center --cursor-pointer">
-                                Realçar&nbsp;totais
-                            </label>
+                            <label for="checkbox-realcar-totais" class="header__menu__label --display-flex-y-center --cursor-pointer">Realçar&nbsp;totais</label>
+                        </li>
                         <li class="header__menu__li">
                             <button class="header__menu__btn header__menu__btn--ir-para">Filtrar&nbsp;medicamento</button>
+                        </li>
                         <li class="header__menu__li">
                             <button class="header__menu__btn header__menu__btn--esvaziar-ficha">Esvaziar ficha</button>
+                        </li>
                         <li class="header__menu__li">
                             <button class="header__menu__btn header__menu__btn--imprimir">
                                 <span class="header__menu__item--hide-on-mobile --cursor-pointer">Imprimir</span>
                                 <span class="header__menu__item--hide-on-desktop --cursor-pointer">Salvar&nbsp;como&nbsp;PDF</span>
                             </button>
-                        <li class="header__menu__li header__menu__item--hide-on-mobile --hide-on-mobile">
+                        </li>
+                        <li class="header__menu__li header__menu__item--hide-on-mobile">
                             <button class="header__menu__btn header__menu__btn--sobre">Sobre</button>
+                        </li>
                         <li class="header__menu__li">
-                            <button class="header__menu__btn header__menu__btn--ajuda">
-                                Ajuda
-                            </button>
+                            <button class="header__menu__btn header__menu__btn--ajuda">Ajuda</button>
+                        </li>
                         <li class="header__menu__li header__menu__item--hide-on-desktop">
                             <button class="header__menu__btn header__menu__btn--partilhar">Partilhar...</button>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -133,7 +134,6 @@
                                 <input type="date" id="input-ate" class="input-nao-celular --fw-700" />
                             </div>
                         </div>
-
                         <div class="col-com-titulo-requisicao__linha-de-kits">
                             <div class="container-vazia --border-b"></div>
                             <div class="container-vazia --border-b --border-l"></div>
@@ -156,7 +156,6 @@
                                 <input type="number" id="input-kits-ape-recebidos" class="input-nao-celular --fw-700" />
                             </div>
                         </div>
-
                         <div class="col-com-titulo-requisicao__linha-de-kits">
                             <div class="ficha__header__container-de-label ficha__header__container-de-input--padding-l  --display-flex-y-center">
                                 <label for="input-num-consultas">N° de Consultas Externas Realizadas:</label>
@@ -221,7 +220,6 @@
                                 <span>Forma Farmacêutica</span>
                             </div>
                         </div>
-
                         <div class="ficha__col-com-titulo-req-do-nivel-prov-e-distrital">
                             <div class="ficha__linha-nivel-prov-ou-distrital --display-flex-xy-center --fw-700 --border-b --border-l">
                                 <span>Requisição do Nível Provincial ou Distrital</span>
@@ -7317,18 +7315,15 @@
                     </div>
                 </aside>
             </div>
-
             <div class="reference --no-print">
                 <div class="layout-row layout-row--of-reference">
                     <span class="reference__label">Linha:</span> 
                     <output class="reference__output reference__output--indicador --display-flex-y-center"></output>
-
                     <span class="reference__label">Coluna:</span> 
                     <output class="reference__output reference__output--coluna --display-flex-y-center"></output>
                 </div>
             </div>
-        </main>
-        
+        </main>   
         <section class="dialog-boxes --no-print">
             <div class="dialog-box-default dialog-box-default--sobre-aqd">
                 <h3 class="dialog-box-default__title">Requisição/Balancete</h3>
@@ -7341,21 +7336,18 @@
             </div>
             <div class="dialog-box-default dialog-box-default--small">
                 <h3 class="dialog-box-default__title">Requisição/Balancete</h3>
-                <p class="dialog-box-default__p dialog-box-default__p--js-console --display-flex-y-center">
-                    
-                </p>
+                <p class="dialog-box-default__p dialog-box-default__p--js-console --display-flex-y-center"></p>
                 <div class="dialog-box-default__btn-container">
                     <button class=dialog-box-default__btn>Fechar <span class="dialog-box-default__output-autoclose-loop"></span></button>
                 </div>
             </div>
-
             <div class="dialog-box-ir-para --display-flex-y-center">
                 <input type="search" placeholder="Nome do medicamento/artigo médico" class="dialog-box-ir-para__input-linha" />
                 <button class="dialog-box-ir-para__btn dialog-box-ir-para__btn--fechar" title=Fechar>&times;</button>
             </div>
             <div class="dialog-box-esvaziar-ficha">
                 <h3 class="dialog-box-esvaziar-ficha__titulo --fw-700">Esvaziar ficha</h3>
-                <p class="dialog-box-esvaziar-ficha__p--first">Tem certeza de que deseja esvaziar a ficha?
+                <p class="dialog-box-esvaziar-ficha__p--first">Tem certeza de que deseja esvaziar a ficha?</p>
                 <div class=dialog-box-esvaziar-ficha__svg-container>
                     <svg style=width:40px;height:40px>
                         <linearGradient id=meuGradiente x1=0% x2=0% y1=0% y2=100%>
@@ -7365,66 +7357,82 @@
                         <polygon fill=url(#meuGradiente) points="20,0 40,40, 0,40" stroke=#333 stroke-width=1></polygon>
                         <text style=font-weight:700;font-size:28px x=15.335 y=35.5>!</text>
                     </svg>
-                    <p class="dialog-box-esvaziar-ficha__p--last">Esta acção não pode ser desfeita.
+                    <p class="dialog-box-esvaziar-ficha__p--last">Esta acção não pode ser desfeita.</p>
                 </div>
                 <h4 class="dialog-box-esvaziar-ficha__titulo --fw-700">Incluindo:</h4>
                 <ul class=dialog-box-esvaziar-ficha__ul-dados-adicionais>
                     <li>
                         <input type=checkbox checked id="checkbox-lista-med" data-for=lista-de-med>
                         <label for=checkbox-lista-med>Lista de medicamentos</label>
+                    </li>
                     <li>
                         <input type=checkbox checked id="checkbox-us" data-for=input-us>
                         <label for=checkbox-us>Unidade Sanitária</label>
+                    </li>
                     <li>
                         <input type=checkbox checked id="checkbox-distrito" data-for=input-distrito>
                         <label for=checkbox-distrito>Distrito</label>
+                    </li>
                     <li>
                         <input type="checkbox" checked id="checkbox-nivel-dc" data-for="input-nivel-do-dc"/>
                         <label for="checkbox-nivel-dc">Nível de Qualificação do Responsável Clínico</label>
+                    </li>
                     <li>
                         <input type="checkbox" checked id="checkbox-num-req" data-for="input-num-de-req"/>
                         <label for="checkbox-num-req">N° de Requisição/Balancete</label>
+                    </li>
                     <li>
                         <input type=checkbox checked id="checkbox-prov" data-for=input-provincia>
                         <label for=checkbox-prov>Província</label>
+                    </li>
                     <li>
                         <input type="checkbox" checked id="checkbox-num-consultas" data-for="input-num-consultas"/>
                         <label for="checkbox-num-consultas">N° de Consultas Externas Realizadas</label>
+                    </li>
                     <li>
                         <input type="checkbox" checked id="checkbox-periodo" data-for="input-periodo"/>
                         <label for="checkbox-periodo">Período (Início)</label>
+                    </li>
                     <li>
                         <input type="checkbox" checked id="checkbox-ate" data-for="input-ate"/>
                         <label for="checkbox-ate">Período (Fim)</label>
+                    </li>
                     <li>
                         <input type="checkbox" checked id="checkbox-kits-recebidos" data-for="input-kits-recebidos"/>
                         <label for="checkbox-kits-recebidos">N° de Kits Recebidos</label>
+                    </li>
                     <li>
                         <input type="checkbox" id="checkbox-kits-us-recebidos" checked data-for="input-kits-us-recebidos"/>
                         <label for="checkbox-kits-us-recebidos">N° de Kits US Recebidos</label>
+                    </li>
                     <li>
                         <input type="checkbox" id="checkbox-kits-ape-recebidos" checked data-for="input-kits-ape-recebidos"/>
                         <label for="checkbox-kits-ape-recebidos">N° de Kits APE Recebidos</label>
+                    </li>
                     <li>
                         <input type="checkbox" id="checkbox-kits-abertos" checked data-for="input-kits-abertos"/>
                         <label for="checkbox-kits-abertos">N° de Kits Abertos</label>
-
+                    </li>
                     <li>
                         <input type="checkbox" id="checkbox-kits-us-abertos" checked data-for="input-kits-us-abertos"/>
                         <label for="checkbox-kits-us-abertos">N° de Kits US Abertos</label>
+                    </li>
                     <li>
                         <input type="checkbox" id="checkbox-kits-ape-abertos" checked data-for="input-kits-ape-abertos"/>
                         <label for="checkbox-kits-ape-abertos">N° de Kits APE Abertos</label>
+                    </li>
                     <li>
                         <input type="checkbox" id="checkbox-data-de-requisicao" checked data-for="input-data-de-requisicao"/>
                         <label for="checkbox-data-de-requisicao">Data de Requisição</label>
+                    </li>
                     <li>
                         <input type=checkbox checked id=checkbox-elaborador data-for=input-elaborador>
                         <label for=checkbox-elaborador>Elaborado por</label>
+                    </li>
                     <li>
                         <input type="checkbox" id="checkbox-visto" checked data-for="input-visto"/>
                         <label for="checkbox-visto">Visto do Responsável Clínico</label>
-                    
+                    </li>
                 </ul>
                 <div class=dialog-box-esvaziar-ficha__btns-container>
                     <button class="dialog-box-esvaziar-ficha__btn dialog-box-esvaziar-ficha__btn--cancelar">Cancelar</button>
@@ -7432,39 +7440,27 @@
                 </div>
             </div>
         </section>
-
         <section class="seccao-de-artigos --no-print">
             <article id="sobre" class="artigo artigo--sobre layout-row layout-row--artigo-sobre" >
                 <h2 class="artigo__titulo artigo__titulo--nivel-1">Visão geral sobre o requisição/balancete</h2>
                 <figure>
                     <img alt="Requisição/Balancete" src=imagens/requisicao-balancete.png class="artigo__img artigo__img--center">
-                </figure>
-                
-                <p>
-                    O <strong>Requisição/Balancete</strong> é um serviço online gratuito que auxilia na elaboração, como o nome sugere, da requisição/balancete, por meio do <strong>cálculo automático do Stock Teórico Fim do Período, Diferença entre stock teórico e stock físico e Quantidade a Requisitar</strong> com base nos dados de controlo da ficha de stock e inventário preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de requisição/balancete actualmente vigente no Serviço Nacional de Saúde em Moçambique.
-                </p>
-
+                </figure>         
+                <p>O <strong>Requisição/Balancete</strong> é um serviço online gratuito que auxilia na elaboração, como o nome sugere, da requisição/balancete, por meio do <strong>cálculo automático do Stock Teórico Fim do Período, Diferença entre stock teórico e stock físico e Quantidade a Requisitar</strong> com base nos dados de controlo da ficha de stock e inventário preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de requisição/balancete actualmente vigente no Serviço Nacional de Saúde em Moçambique.</p>
                 <h3 class="artigo__titulo artigo__titulo--nivel-2">Objectivos</h3>
-
                 <ul class="artigo__lista artigo__lista--ul">
                     <li>Auxiliar os Profissionais de Saúde no cálculo do Stock Teórico Fim do Período, Diferença entre stock teórico e stock físico e Quantidade a Requisitar com exatidão e prontidão;</li>
                     <li >Expandir o acesso à ficha de requsição/balancete.</li>
                 </ul>
-
                 <h3 class="artigo__titulo artigo__titulo--nivel-2 ">O que eu preciso dispor para, e como utilizar o totalizador?</h3>
-
                 <ul class="artigo__lista artigo__lista--ul">
                     <li>Um celular ou computador com acesso à internet.</li>
                     <li>Ficha(s) de Stock de cada fármaco/artigo médico com os movimentos do mês em alusão.</li>
-                    <li>E por fim, preencher os movimentos de cada fármaco/artigo médico nas células correspondentes (Stock no Início do Período, Soma das Entradas, Soma das Saídas, Inventário do Stock) e consequentemente os totais (Stock Teórico Fim do Período, Diferença entre stock teórico e stock físico e Quantidade a Requisitar) são, em tempo real, correcta e automaticamente calculados. </li>
+                    <li>E por fim, preencher os movimentos de cada fármaco/artigo médico nas células correspondentes (Stock no Início do Período, Soma das Entradas, Soma das Saídas, Inventário do Stock) e consequentemente os totais (Stock Teórico Fim do Período, Diferença entre stock teórico e stock físico e Quantidade a Requisitar) são, em tempo real, correcta e automaticamente calculados.</li>
                 </ul>
-
                 <h3 class="artigo__titulo artigo__titulo--nivel-2">Qual é o destino dos dados que eu insiro?</h3>
-
                 <p>São guardados no seu celular ou computador, por meio de um recurso chamado <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API" target="_blank">Web Storage</a> e você tem total controle sobre os dados, podendo mantê-los ou apagá-los por meio da opção "<b>Esvaziar ficha</b>" no menu do totalizador ou excluindo os dados de navegação (histórico) do navegador.</p>
-
                 <h3 class="artigo__titulo artigo__titulo--nivel-2">Vantagens do totalizador</h3>
-
                 <ul class="artigo__lista artigo__lista--ul">
                     <li>Calcula e preenche automaticamente o Stock Teórico Fim do Período, Diferença entre stock teórico e stock físico e Quantidade a Requisitar;</li>
                     <li>Fornece resultados exactos;</li>
@@ -7475,10 +7471,8 @@
                 </ul>
                 <button class="artigo__btn-x artigo__btn-x--fechar-sobre" title="Fechar">&times;</button>
             </article>
-
             <article class="artigo artigo--ajuda layout-row layout-row--no-padding">
                 <h2 class="artigo__titulo artigo__titulo--nivel-1 artigo__titulo--ajuda-e-procedimentos">Ajuda e Procedimentos</h2>
-
                 <details class="artigo__details">
                     <summary class="details__summary">Realçar totais</summary>
                     <p>Adiciona cor de fundo amarela às células de <b>Stock Teórico Fim do Período, Diferença e Quantidade a Requisitar</b>. Essas têm o acesso interdito e a funcionalidade de realçá-las, permite distinguí-las facilmente das outras células. Muito útil em celulares.</p>
@@ -7486,10 +7480,8 @@
                 <details class="artigo__details">
                      <summary class="details__summary">Filtrar medicamento</summary>
                     <p>Abre um campo no qual pode digitar o nome de um medicamento para destacá-lo e omitir os que não correspondem ao nome ou caracteres digitados. Esta funcionalidade facilita o preenchimento da requisição de acordo com a sequência da pilha das fichas de stock e não seguindo rigorosamente a sequência da lista dos medicamentos.</p>
-
                     <figure class="details__moldura details__moldura--margin-l">
                         <img src="imagens/filtrar-medicamentos.png" alt="Ilustração de 'Filtrar fármaco' com Hidróxdo de Alumínio">
-
                         <figcaption class="details__moldura__legenda">Imagem ilustrativa da funcionalidade <b>Filtrar medicamentos</b> com Hidróxido de Alumínio como exemplo.</figcaption>
                     </figure>
                 </details>
@@ -7498,7 +7490,6 @@
                     <p>Comando para limpar parcial ou totalmente a ficha após confirmação da acção na caixa de diálogo subsequente.</p>
                     <figure class="details__moldura details__moldura--margin-l">
                         <img src="imagens/caixa-de-dialogo-para-esvaziamento-da-ficha.png" alt="Caixa de diálogo para esvaziamento da ficha">
-
                         <figcaption class="details__moldura__legenda"><b>Legenda:</b> Caixa de diálogo para esvaziamento da ficha. Neste caso, os campos de <b>Lista de Medicamentos, Unidade Sanitária, Distrito e Província</b> seriam preservados (por ter suas checkboxes desmarcadas). Todos os outros cujas "checkboxes" estão marcadas seriam esvaziados.</figcaption>
                     </figure>
                 </details>
@@ -7506,38 +7497,22 @@
                     <summary class="details__summary">Salvar ficha como PDF</summary>
                     <h3 class="artigo__titulo artigo__titulo--nivel-2 artigo__titulo--cor-discreta">No computador:</h3>
                     <ol class="artigo__lista artigo__lista--ol">
-                        <li>
-                            Clique na opção <mark class="details__mark">Imprimir</mark> no menu do totalizador.
-                        <li>
-                            Na janela que abrirá, no campo de <mark class="details__mark">Impressora</mark> ou <mark class="details__mark">Destino</mark>
-                            selecione a opção <mark class="details__mark">Salvar&nbsp;como&nbsp;PDF</mark>.
-                        <li >
-                            Por fim, clique em <mark class="details__mark">Salvar</mark> e escolha um destino no seu computador.
+                        <li>Clique na opção <mark class="details__mark">Imprimir</mark> no menu do totalizador.</li>
+                        <li>Na janela que abrirá, no campo de <mark class="details__mark">Impressora</mark> ou <mark class="details__mark">Destino</mark>, selecione a opção <mark class="details__mark">Salvar&nbsp;como&nbsp;PDF</mark>.</li>
+                        <li>Por fim, clique em <mark class="details__mark">Salvar</mark> e escolha um destino no seu computador.</li>
                     </ol>
-
                     <h3 class="artigo__titulo artigo__titulo--nivel-2 artigo__titulo--cor-discreta">No celular / tablet:</h3>
                     <ol class="artigo__lista artigo__lista--ol">
-                        <li>
-                            Toque na opção <mark class="details__mark">Salvar como PDF</mark> no cabeçalho do totalizador.
-                        </li>
-                        <li>
-                            Na janela seguinte, logo abaixo do rótulo <mark class="details__mark">Tamanho do papel</mark>, toque na seta em forma de <mark class="details__mark">V</mark> para expandir as configurações.
-                        </li>
-
+                        <li>Toque na opção <mark class="details__mark">Salvar como PDF</mark> no cabeçalho do totalizador.</li>
+                        <li>Na janela seguinte, logo abaixo do rótulo <mark class="details__mark">Tamanho do papel</mark>, toque na seta em forma de <mark class="details__mark">V</mark> para expandir as configurações.</li>
                         <figure class="details__moldura">
                             <img src="imagens/salvar-ficha-como-pdf-1.png" alt="Como salvar a ficha em PDF no celular" class="artigo__img" />
-                        </figure>
-                           
-                        <li>
-                            No campo de <mark class="details__mark">Tamanho do papel</mark>, mantenha <mark class="details__mark">ISO A4</mark> e no de <mark class="details__mark">Orientação</mark>, selecione <mark class="details__mark">Panorama</mark> ou <mark class="details__mark">Paisagem</mark>.
-                        </li>
-
+                        </figure>        
+                        <li>No campo de <mark class="details__mark">Tamanho do papel</mark>, mantenha <mark class="details__mark">ISO A4</mark> e no de <mark class="details__mark">Orientação</mark>, selecione <mark class="details__mark">Panorama</mark> ou <mark class="details__mark">Paisagem</mark>.</li>
                         <figure class="details__moldura">
                             <img src="imagens/salvar-ficha-como-pdf-2.png" alt="Como salvar a ficha em PDF no celular" class="artigo__img" />
                         </figure>
-
                         <li>Por fim, toque no simbolo em forma de disquete e escolha um destino no seu celular para salvar o resumo.</li>
-
                         <figure class="details__moldura">
                             <img src="imagens/salvar-ficha-como-pdf-3.png" alt="Como salvar a ficha em PDF no celular" class="artigo__img"/>
                         </figure>
@@ -7546,80 +7521,44 @@
                 <details class="artigo__details">
                     <summary class="details__summary">Simular cópia (duplicado ou triplicado) da ficha</summary>
                     <p>Na margem esquerda da ficha, logo abaixo e à esquerda do 2<sup>o</sup> cabeçalho, encontram-se as opções <b>Original, Duplicado e Triplicado</b>.</p>
-
                     <p>Por padrão, está selecionada a opção Original. Mudando a seleção para <b>Duplicado</b>, a ficha muda de cor de fundo para <b>amarelo</b> (simulando um duplicado) e clicando sobre a opção <b>Triplicado</b>, o fundo muda para <b>azul claro</b> (simulando um triplicado), cores essas que em impressões coloridas, aproximam-se mais do aspecto de duplicado e triplicado.</p>
                     <figure class="details__moldura details__moldura--margin-l details__moldura--display-grid">
                         <img src="imagens/simulacao-de-duplicado.png" alt="Simulação de Duplicado" />
                         <img src="imagens/simulacao-de-triplicado.png" alt="Simulação de Triplicado" />
-
                         <figcaption class="details__moldura__legenda">Simulação de <b>Duplicado</b> (à esquerda) e de <b>Triplicado</b> (à direita).</figcaption>
                     </figure>
                 </details>
                 <details class="artigo__details artigo__details--border-b artigo__details--motivo-de-celulas-vermelhas">
                     <summary class="details__summary">Algumas células mudaram de cor de fundo para vermelho</summary>
                     <p>As células das secções <b>Controlo da Ficha de Stock e Controlo de Inventário</b> têm um tamanho para conter visivelmente 12 algarismos no máximo, isto é, mostram valores até <span class="number-format">999999999999</span> e as células das colunas <b>Quantidade Pedida e Qtd. Autorizada pelo Responsável Clínico</b> podem mostrar números com até 16 algarismos. Quando uma célula recebe um número com mais de 12 ou 16 algarismos, dá um alerta ficando vermelha e abrindo esta mensagem de texto para alertá-lo sobre a omissão dos algarismos e o real motivo.</p>
-
                     <p class="artigo__p--destaque">Para um país como Moçambique, onde o número de habitantes é de pouco mais de 30 milhões (<a href="https://energypedia.info/wiki/Moçambique:_Informação_sobre_o_País" target="_blank">dados demográficos de 2019</a>), podemos presumir que nenhuma Unidade Sanitária actualmente tem um número mensal de dados de algum indicador, de qualquer que seja a sua natureza, acima de <span class="number-format">999999999999</span>.</p>
                 </details>
-
                 <p class="artigo-ajuda__p--contactar-suporte">Se os tópicos acima não cobrem a sua dúvida. Pode ainda solicitar suporte por <a href="mailto:quinamine.aderitofelix@gmail.com?subject=Requisição%2FBalancete">Email</a> ou <a href="https://wa.me/258846709901/?text=Olá%2C+Quinamine!+Sobre+o+*Requisição%2FBalancete*%2C+tenho+a+seguinte+dúvida%3A%20">WhatsApp</a>.</p>
                 <button class="artigo__btn-x artigo__btn-x--fechar-ajuda" title="Fechar">&times;</button>
             </article>
         </section>
-
         <footer class="footer --no-print">
             <div class="layout-row footer__row">
                 <nav class=footer__nav>
                     <h4 class="footer__nav__title">Hiperligações para outros serviços afins</h4>
                     <ul>
-                        <li>
-                            <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-tuberculose/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de Tuberculose</a>
-                        </li>
-                        <li>
-                            <a href=https://quinamine.github.io/totalizador-de-mapa-resumo-mensal-de-caixa/index.html target=_blank class="footer__nav__link">Totalizador de Mapa Resumo Mensal de Caixa</a>
-                        </li>
-                        <li>
-                            <a href=https://quinamine.github.io/totalizador-de-resumo-trimestral-de-apss-e-pp/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Trimestral de APSS/PP</a>
-                        </li>
-                        <li>
-                            <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-consultas/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de Consultas</a>
-                        </li>
-                        <li>
-                            <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-hiv-e-sida/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de HIV/SIDA</a>
-                        </li>
-                        <li>
-                            <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-malaria/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de Malária</a>
-                        </li>
-                        <li>
-                            <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-prn-ii/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de PRN II</a>
-                        </li>
-                        <li>
-                            <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-prn-i/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de PRN I</a>
-                        </li>
-                        <li>
-                            <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-saaj/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de SAAJ</a>
-                        </li>
-                        <li>
-                            <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-ccd/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de CCD</a>
-                        </li>
-                        <li>
-                            <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-ats/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de ATS</a>
-                        </li>
-                        <li>
-                            <a href=https://quinamine.github.io/calculadora-de-doses-pediatricas/index.html target=_blank class="footer__nav__link">Calculadora de Doses Pediátricas</a>
-                        </li>
-                        <li>
-                            <a href=https://quinamine.github.io/tarv-pediatrico/index.html target=_blank class="footer__nav__link">Tarv Pediátrico</a>
-                        </li>
-                        <li>
-                            <a href=https://quinamine.github.io/tat-pediatrico/index.html target=_blank class="footer__nav__link">TAT Pediátrico</a>
-                        </li>
+                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-tuberculose/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de Tuberculose</a></li>
+						<li><a href=https://quinamine.github.io/totalizador-de-mapa-resumo-mensal-de-caixa/index.html target=_blank class="footer__nav__link">Totalizador de Mapa Resumo Mensal de Caixa</a></li>
+                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-trimestral-de-apss-e-pp/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Trimestral de APSS/PP</a></li>
+                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-consultas/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de Consultas</a></li>
+                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-hiv-e-sida/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de HIV/SIDA</a></li>
+                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-malaria/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de Malária</a></li>
+                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-prn-ii/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de PRN II</a></li>
+                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-prn-i/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de PRN I</a></li>
+                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-saaj/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de SAAJ</a></li>
+                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-ccd/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de CCD</a></li>
+                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-ats/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de ATS</a></li>
+                        <li><a href=https://quinamine.github.io/calculadora-de-doses-pediatricas/index.html target=_blank class="footer__nav__link">Calculadora de Doses Pediátricas</a></li>
+                        <li><a href=https://quinamine.github.io/tarv-pediatrico/index.html target=_blank class="footer__nav__link">Tarv Pediátrico</a></li>
+                        <li><a href=https://quinamine.github.io/tat-pediatrico/index.html target=_blank class="footer__nav__link">TAT Pediátrico</a></li>
                     </ul>
                 </nav>
-                <p class="footer__p footer__p--created-by">
-                    Criado com atenção e 💙 por <a href=https://quinamine.github.io/aderito-felix-quinamine/index.html title="Acessar biografia &raquo;">Adérito Félix Quinamine</a>
-                    | ©&nbsp;<span class="footer__current-year"></span> - Requisição/Balancete
-                </p>
+                <p class="footer__p footer__p--created-by">Criado com atenção e 💙 por <a href=https://quinamine.github.io/aderito-felix-quinamine/index.html title="Acessar biografia &raquo;">Adérito Félix Quinamine</a> | ©&nbsp;<span class="footer__current-year"></span> - Requisição/Balancete</p>
                 <a href=#root class=footer__link--back-to-top>Rolar para o topo</a>
             </div>
             <p class="footer__p footer__p--available-since">Disponível desde <time datetime="2023-08-30">30/08/2023</time>. Última actualização: Agosto/2024.</p>
