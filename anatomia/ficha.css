@@ -80,8 +80,8 @@
     min-height: 24px;
     max-width: 100%;
 }
-.ficha__header__container-de-input input[type=date] {
-    margin-left: 0;
+.ficha__header__container-de-input input[type=date]::-webkit-calendar-picker-indicator {
+    display: none !important;
 }
 .ficha__header__container-de-input input[type=number] {
     margin: 0;
