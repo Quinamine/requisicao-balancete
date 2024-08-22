@@ -33,7 +33,7 @@
 .ficha__header__col-cmam {
     background-color: var(--fullblack) !important;
 }
-.ficha__header__col-cmam span {
+.ficha__header__cmam-modelo-01 {
     color: var(--yt);
     transform: rotate(-90deg);
     display: inline-block;
@@ -80,8 +80,9 @@
     min-height: 24px;
     max-width: 100%;
 }
-.ficha__header__container-de-input input[type=date]::-webkit-calendar-picker-indicator {
-    display: none !important;
+.ficha__header__container-de-input input[type=date] {
+    margin-left: 0;
+    max-width: initial;
 }
 .ficha__header__container-de-input input[type=number] {
     margin: 0;
@@ -127,7 +128,7 @@
     color: var(--cor-de-risco);
     font-size: 20px;
     font-weight: 700;
-    font-family: 'Times New Roman',Times,serif!important
+    font-family: 'Times New Roman', Times, serif;
 }
 .col-com-titulo-requisicao__linha-de-provincia {
     display: grid;
@@ -289,18 +290,18 @@
         display: grid;
     }
 }
-.ficha__rodape input {
+.ficha__rodape__input {
     min-width: 200px
 }
 @media print {
-    .ficha__rodape input {
+    .ficha__rodape__input {
         border: none;
     }
 }
 .ficha__rodape__col-de-visto {
     padding-left: 8px;
 }
-.ficha__aside-modificadores-de-cor-da-ficha {
+.ficha__aside {
     position: absolute;
     top: 326px;
     left: 0;
@@ -310,17 +311,17 @@
     width: 20px;
     overflow: hidden;
 }
-.ficha__aside-modificadores-de-cor-da-ficha div {
+.ficha__aside__tipo-de-copia {
     transform: rotate(-90deg);
     display: flex;
     align-items: center;
     max-width: 20px
 }
-.ficha__aside-modificadores-de-cor-da-ficha label {
+.ficha__tipo-de-copia__label {
     margin-right: 25px;
     cursor: pointer;
 }
-.ficha__aside-modificadores-de-cor-da-ficha input {
+.ficha__tipo-de-copia__checkbox {
     width: 15px;
     height: 15px
 }

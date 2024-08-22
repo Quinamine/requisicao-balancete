@@ -540,7 +540,7 @@ details[open] .details__summary {
 .artigo__details--salvar-ficha-como-pdf li {
     line-height: 2;
 }
-/* Dialog-box-response-to-user-actions */
+/* Caixas de diálogo */
 .dialog-box-default {
     width: 100%;
     max-width: var(--layout-width);

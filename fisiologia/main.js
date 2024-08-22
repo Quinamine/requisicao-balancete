@@ -119,7 +119,7 @@ function escutarEventos() {
     let key = "rb-tipo-de-req"
     backup.saveCheckboxOption(checkboxesTipoDeReq, key);
     // Cor da Requisição 
-    const checkboxesBgcModifiers = document.querySelectorAll(".checkbox-modificador-de-cor-da-ficha");
+    const checkboxesBgcModifiers = document.querySelectorAll(".ficha__tipo-de-copia__checkbox");
     balancete.toRadioCheckboxes(checkboxesBgcModifiers);
     key = "rb-copia-de-req"
     backup.saveCheckboxOption(checkboxesBgcModifiers, key);

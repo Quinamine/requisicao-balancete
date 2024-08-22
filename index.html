@@ -73,7 +73,7 @@
             <div class="ficha --border-t --border-b --border-l">
                 <header class="ficha__header  --border-b">
                     <div class="ficha__header__col-cmam --display-flex-xy-center">
-                        <span><b>CMAM&nbsp;-&nbsp;Modelo&nbsp;01</b></span>
+                        <span class="ficha__header__cmam-modelo-01"><b>CMAM&nbsp;-&nbsp;Modelo&nbsp;01</b></span>
                     </div>
                     <div class="ficha__header__col-com-emblema ficha__header__col--display-grid">
                         <div class="ficha__linha-de-emblema --border-b">
@@ -7292,26 +7292,26 @@
                 <footer class="ficha__rodape --border-t --border-r --border-l">
                     <div>
                         <label for="input-elaborador">Elaborado por:</label>
-                        <input type="text" id="input-elaborador" class="input-nao-celular --fw-700 --border-b"/>
+                        <input type="text" id="input-elaborador" class="ficha__rodape__input input-nao-celular --fw-700 --border-b"/>
                     </div>
 
                     <div class="ficha__rodape__col-de-visto">
                         <label for="input-visto">Visto do Responsável Clínico:</label>
-                        <input type="text" id="input-visto" class="input-nao-celular --fw-700 --border-b" />
+                        <input type="text" id="input-visto" class="ficha__rodape__input input-nao-celular --fw-700 --border-b" />
                     </div>
                 </footer>
-                <aside class="ficha__aside-modificadores-de-cor-da-ficha">
-                    <div>
-                        <label for="checkbox-original">Original</label>
-                        <input type="checkbox" checked id="checkbox-original" class="checkbox-modificador-de-cor-da-ficha" data-copiadaficha="original"/>
+                <aside class="ficha__aside">
+                    <div class="ficha__aside__tipo-de-copia">
+                        <label for="checkbox-original" class="ficha__tipo-de-copia__label">Original</label>
+                        <input type="checkbox" checked id="checkbox-original" class="ficha__tipo-de-copia__checkbox" data-copiadaficha="original"/>
                     </div>
-                    <div>
-                        <label for="checkbox-duplicado">Duplicado</label>
-                        <input type="checkbox" id="checkbox-duplicado" class="checkbox-modificador-de-cor-da-ficha" data-copiadaficha="ficha--duplicado" />
+                    <div class="ficha__aside__tipo-de-copia">
+                        <label for="checkbox-duplicado" class="ficha__tipo-de-copia__label">Duplicado</label>
+                        <input type="checkbox" id="checkbox-duplicado" class="ficha__tipo-de-copia__checkbox" data-copiadaficha="ficha--duplicado" />
                     </div>
-                    <div>
-                        <label for="checkbox-triplicado">Triplicado</label>
-                        <input type="checkbox" id="checkbox-triplicado" class="checkbox-modificador-de-cor-da-ficha" data-copiadaficha="ficha--triplicado"/>
+                    <div class="ficha__aside__tipo-de-copia">
+                        <label for="checkbox-triplicado" class="ficha__tipo-de-copia__label">Triplicado</label>
+                        <input type="checkbox" id="checkbox-triplicado" class="ficha__tipo-de-copia__checkbox" data-copiadaficha="ficha--triplicado"/>
                     </div>
                 </aside>
             </div>
