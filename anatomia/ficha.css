@@ -78,7 +78,7 @@
     margin-left: 2px;
     display: block;
     min-height: 24px;
-    overflow: hidden;
+    max-width: 100%;
 }
 .ficha__header__container-de-input input[type=number] {
     margin: 0;
@@ -148,9 +148,13 @@
 .ficha__col-tipo-de-requisicao__subcol--min-height {
     min-height: 18px;
 }
+.col-tipo-de-requisicao__label-data-de-requisicao {
+    white-space: nowrap;
+}
 .col-tipo-de-requisicao__input-data-de-requisicao {
-    flex: 1;
+    width: 90px;
     margin-left: 4px;
+    margin-right: 1px;
 }
 .ficha__main__header {
     display: grid;
