@@ -67,7 +67,7 @@
     margin: 0 auto;
     padding: 0 15px;
 }
-@media screen and (max-width: 1336px) {
+@media screen and (min-width: 1336px) {
     .layout-row {
         padding: 0;
     }
@@ -216,6 +216,11 @@
 }
 .footer__nav {
     margin-bottom: 40px;
+}
+@media screen and (min-width: 1336px) {
+    .footer__nav {
+        margin-left: 20px;
+    }
 }
 .footer__nav__title {
     font-size: 16px;

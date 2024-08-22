@@ -90,16 +90,17 @@
 }
 .ficha input[readonly]:focus {
     border-bottom: 1px solid var(--cor-de-borda);
-    background-color: initial;
+    background-color: inherit;
 }
 @media screen {
-    .input--realcar-totais:focus,
+    .ficha [readonly].input--realcar-totais:focus,
     .input--realcar-totais {
-        background-color: var(--cor-de-realce-de-totais) !important;
+        background-color: var(--cor-de-realce-de-totais);
     }
 }
+.ficha [readonly].input--bg-color-danger:focus,
 .input--bg-color-danger {
-    background-color: var(--cor-de-risco) !important;;
+    background-color: var(--cor-de-risco);
     color: var(--yt)
 }
 .ficha__col-com-titulo {
