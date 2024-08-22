@@ -80,6 +80,9 @@
     min-height: 24px;
     max-width: 100%;
 }
+.ficha__header__container-de-input input[type=date] {
+    margin-left: 0;
+}
 .ficha__header__container-de-input input[type=number] {
     margin: 0;
 }
@@ -152,8 +155,8 @@
     white-space: nowrap;
 }
 .col-tipo-de-requisicao__input-data-de-requisicao {
-    width: 90px;
-    margin-left: 4px;
+    width: 95px;
+    margin-left: 2px;
     margin-right: 1px;
 }
 .ficha__main__header {
