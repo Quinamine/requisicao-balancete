@@ -6,6 +6,7 @@
     --cor-de-realce: #dce4f4;
     --cor-do-rodape: #f4f4f4;
     --cor-de-risco: #dd0000;
+    --heart-color: #f97171;
     --fullred: #ff0000;
     --cor-de-duplicado: yellow;
     --cor-de-triplicado: #e0edf3;
@@ -273,6 +274,9 @@
 }
 .footer__link--back-to-top:visited {
     color: var(--gray)
+}
+.footer__p__heart {
+    color: var(--heart-color);
 }
 /* LINHA DE REFERENCIA */
 .reference {

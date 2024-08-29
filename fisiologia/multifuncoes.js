@@ -63,7 +63,7 @@ const aqd = {
 function actualizarAnoDeCopyright() {
     const tempo = new Date();
     let anoActual = tempo.getFullYear();
-    if(anoActual < 2023) anoActual = 2023;
+    if(anoActual < 2024) anoActual = 2024;
     const currentYearOutput = document.querySelector(".footer__current-year");
     currentYearOutput.textContent = anoActual;
 }
