@@ -14,9 +14,9 @@ const backup = {
     },
     saveExtraInputs() {
         const inputsNaoCelulares = document.querySelectorAll(".input-nao-celular");
-        inputsNaoCelulares.forEach( extraInput => {
-            extraInput.addEventListener("input", () => localStorage.setItem(`${keyPrefix}-${extraInput.id}`, extraInput.value));
-            extraInput.value = localStorage.getItem(`${keyPrefix}-${extraInput.id}`);
+        inputsNaoCelulares.forEach( inputTarget => {
+            inputTarget.addEventListener("input", () => localStorage.setItem(`${keyPrefix}-${inputTarget.id}`, inputTarget.value));
+            inputTarget.value = localStorage.getItem(`${keyPrefix}-${inputTarget.id}`);
         });
     },
     saveCheckboxOption(checkboxes, key) {

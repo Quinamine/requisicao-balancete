@@ -65,7 +65,9 @@ const menu = {
             dialogBox: document.querySelector(".dialog-box-esvaziar-ficha"),
             abrirDialogBox() { 
                 const inputsDaFicha = document.querySelectorAll(".ficha__main__body input, .input-nao-celular");
+                const campoDeObs = document.querySelector(".obs__input");
                 let inputFilled = 0;
+                campoDeObs.textContent.length > 0 && (inputFilled = 1);
                 for(const input of inputsDaFicha) {
                     input.value.length > 0 && inputFilled++;
                 }
