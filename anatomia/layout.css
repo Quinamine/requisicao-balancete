@@ -22,7 +22,7 @@
     --gray--d: #dddddd;
     --gray--light: #f0f0f0;
     --blue: #0060EE;
-    --blue--light: #2573b5;
+    --blue--cobalt: #2573b5;
     --blue--highlight: lightblue;
     --purple: rgb(116, 116, 235);
     --orange: #faa032;
@@ -199,12 +199,14 @@
 .obs__label {
     padding: 5px;
     border-radius: 15px;
-    background-color: var(--greenyellow);
+    background-color: var(--blue--cobalt);
+    color: var(--yt);
 }
 @media print {
     .obs__label {
         padding-left: 0;
         background-color: var(--yt);
+        color: var(--fullblack);
     }
 }
 .obs__input {
@@ -486,7 +488,7 @@
     padding: 0 7px;
     border-radius: 50%;
     border: 1px solid var(--purple);
-    background-color: var(--blue--light);
+    background-color: var(--blue--cobalt);
     color: var(--yt);
     position: absolute;
     left: 15px;
@@ -902,7 +904,7 @@ details[open] .details__summary {
 }
 @media screen and (max-width: 1023px) {
     .topo-propaganda {
-        border-bottom: thin solid var(--blue--light);
+        border-bottom: thin solid var(--blue--cobalt);
     }
 }
 .topo-propaganda--off {
@@ -932,7 +934,7 @@ details[open] .details__summary {
     padding: 1px 7px;
     border-radius: 50%;
     border: 1px solid var(--purple);
-    background-color: var(--blue--light);
+    background-color: var(--blue--cobalt);
     color: var(--yt);
     position: absolute;
     left: 15px;
@@ -948,7 +950,7 @@ details[open] .details__summary {
     }
 }
 .topo-propaganda__btn {
-    background-color: var(--blue--light);
+    background-color: var(--blue--cobalt);
     color: var(--yt);
     font-size: 15px;
     border-radius: 50%;
