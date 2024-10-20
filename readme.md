@@ -14,7 +14,7 @@ O **Requisição/Balancete** é um serviço online gratuito que auxilia na elabo
 
 ## O que eu preciso dispor para, e como utilizar o totalizador?
 
-* Um celular ou computador com acesso à internet.
+* Um celular ou computador com acesso à internet;
 
 * Ficha(s) de Stock de cada fármaco/artigo médico com os movimentos do mês em alusão.
 
@@ -22,7 +22,7 @@ O **Requisição/Balancete** é um serviço online gratuito que auxilia na elabo
 
 ## Qual é o destino dos dados que eu insiro?
 
-São guardados no seu celular ou computador, por meio de um recurso chamado [Web Storage](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API) e você tem total controle sobre os dados, podendo mantê-los ou apagá-los por meio da opção "Esvaziar ficha" no menu do totalizador ou excluindo os dados de navegação (histórico) do navegador.
+São guardados no seu celular ou computador, por meio de um recurso chamado [Web Storage](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API) e você tem total controle sobre os dados, podendo mantê-los ou apagá-los por meio da opção "Esvaziar ficha" no menu do totalizador ou excluindo os dados de navegação do seu navegador.
 
 
 ## Vantagens do totalizador
