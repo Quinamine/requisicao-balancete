@@ -86,6 +86,15 @@ function fecharTopoPropaganda() {
     topoPropaganda.classList.add("topo-propaganda--off");
     body.classList.remove("body-com-topo-propaganda")
 }
+function omitirLinkDesteServicoNoRodape(){
+    const servicosAfins = document.querySelectorAll(".footer__nav__link");
+    let urlDestaPagina = location.href;
+    for (const servico of servicosAfins) {
+        if(servico.href === urlDestaPagina) {
+            servico.parentElement.hidden = true;
+        }
+    }
+}
 let btnAutoCloseLoop;
 window.addEventListener("load", () => {
     const readonlyInputs = document.querySelectorAll("[readonly]");
