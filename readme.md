@@ -35,6 +35,6 @@ São guardados no seu celular ou computador, por meio de um recurso chamado [Web
 
 * Flexibiliza a elaboração da requisição/balancete;
 
-* Pode ser impresso, inclusíve como uma simples ficha de requisição/balancete;
+* Pode ser impresso, inclusive como uma simples ficha de requisição/balancete;
 
 * Pode ser guardado como PDF.

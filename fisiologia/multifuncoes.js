@@ -80,8 +80,7 @@ function animarCaixaDeDialogo(event) {
         : dialogBox.classList.remove("--mexer");
     }
 }
-function fecharTopoPropaganda() {
-    const topoPropaganda = document.querySelector(".topo-propaganda");
+function fecharTopoPropaganda(topoPropaganda) {
     const body = document.querySelector("#body");
     topoPropaganda.classList.add("topo-propaganda--off");
     body.classList.remove("body-com-topo-propaganda")
@@ -115,6 +114,8 @@ window.addEventListener("load", () => {
     desfoque.addEventListener("mousedown", event => animarCaixaDeDialogo(event.type));
     desfoque.addEventListener("mouseup", event => animarCaixaDeDialogo(event.type));
     // Fechar Topo Propaganda 
-    const btnXDetopoProgaganda = document.querySelector(".topo-propaganda__btn");
-    btnXDetopoProgaganda.addEventListener("click", fecharTopoPropaganda);
+    const btnXDetopoProgaganda = document.querySelectorAll(".topo-propaganda__btn");
+    btnXDetopoProgaganda.forEach(btn => {
+        btn.addEventListener("click", () => fecharTopoPropaganda(btn.parentElement.parentElement));
+    });
 });
