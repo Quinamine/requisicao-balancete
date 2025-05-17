@@ -7,7 +7,7 @@ O **Requisição/Balancete** é um serviço online gratuito que auxilia na elabo
 
 ## Objectivos
 
-* Auxiliar os Profissionais de Saúde no cálculo do Stock Teórico Fim do Período, Diferença entre stock teórico e stock físico e Quantidade a Requisitar com exatidão e prontidão;
+* Auxiliar os profissionais de saúde no cálculo do Stock Teórico Fim do Período, Diferença entre stock teórico e stock físico e Quantidade a Requisitar com exatidão e prontidão;
 
 * Expandir o acesso à ficha de requsição/balancete.
 
