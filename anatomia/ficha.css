@@ -10,9 +10,11 @@
     }
 }
 .ficha--duplicado {
+    --cor-de-duplicado: yellow;
     background-color: var(--cor-de-duplicado);
 }
 .ficha--triplicado {
+    --cor-de-triplicado: #e0edf3;
     background-color: var(--cor-de-triplicado);
 }
 .ficha--duplicado *,
@@ -20,7 +22,7 @@
     background-color: inherit;
 }
 .ficha--duplicado * {
-    border-color: var(--gray--4) !important;
+    border-color: var(--gray-four) !important;
 }
 .ficha span {
     line-height: 1.2;
@@ -31,7 +33,7 @@
     grid-template-columns: 30px 390px 669px 226px
 }
 .ficha__header__col-cmam {
-    background-color: var(--fullblack) !important;
+    background-color: var(--black) !important;
 }
 .ficha__header__cmam-modelo-01 {
     color: var(--yt);
@@ -260,7 +262,7 @@
     text-align: left;
 }
 .msg-nothing-found-to-filtrar-medicamentos {
-    color: var(--gray--5);
+    color: var(--gray-five);
     position: absolute;
     top: 12px;
     z-index: 333;

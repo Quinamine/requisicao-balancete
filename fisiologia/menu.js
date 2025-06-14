@@ -51,12 +51,12 @@ const menu = {
                 msgNothingFound.textContent = "Nenhum medicamento/artigo médico corresponde à pesquisa."
                 msgNothingFound.classList.remove("--display-none");
                 this.body.scrollIntoView();
-                this.body.classList.add("body--overflow-h");
+                this.body.classList.add("--overflow-h");
             },
             hideNothingFoundMsg() {
                 const msgNothingFound = document.querySelector(".msg-nothing-found-to-filtrar-medicamentos");
                 msgNothingFound.classList.add("--display-none");
-                this.body.classList.remove("body--overflow-h");
+                this.body.classList.remove("--overflow-h");
             }
         }
     },
@@ -119,7 +119,7 @@ const menu = {
         const body = document.querySelector("body");
         artigo === "sobre" ? artigoSobre.classList.add("--open") 
         : artigoAjuda.classList.add("--open");
-        body.classList.add("body--overflow-h");
+        body.classList.add("--overflow-h");
         desfoqueDoFundo("desfocar");
     },
     fecharArtigo(artigo) {
@@ -134,7 +134,7 @@ const menu = {
             }
             artigoAjuda.classList.remove("--open");
         }
-        body.classList.remove("body--overflow-h");
+        body.classList.remove("--overflow-h");
         desfoqueDoFundo("focar");
     }
 }
@@ -189,11 +189,11 @@ function eventos() {
         if(itsMobile && articleIsOpen) {
             desfoqueDoFundo("focar");
             location.href = `index.html#${artigoSobre.id}`;
-            body.classList.remove("body--overflow-h");
+            body.classList.remove("--overflow-h");
             
         } else if(!itsMobile && articleIsOpen) {
             desfoqueDoFundo("desfocar");
-            body.classList.add("body--overflow-h");
+            body.classList.add("--overflow-h");
         }       
     });
     const btnAbrirAjuda = document.querySelector(".header__menu__btn--ajuda");
@@ -206,7 +206,7 @@ function eventos() {
         text: "Calcula automaticamente o Stock Teórico Fim do Período, Diferença entre stock teórico e stock físico e Quantidade a Requisitar com base nos dados de controlo da ficha de stock e inventário preenchidos pelo usuário. Foi desenvolvido de acordo com o modelo da ficha de requisição/balancete actualmente vigente no Serviço Nacional de Saúde em Moçambique.",
         url: "https://quinamine.github.io/requisicao-balancete/index.html"
     }
-    const btnPartilhar = document.querySelector(".header__menu__btn--partilhar");
+    const btnPartilhar = document.querySelector(".main__btn-fixed--share");
     btnPartilhar.addEventListener("click", () => {
         try {
             navigator.share(data).then(()=>console.log("Requisição/Balancete partilhado com sucesso."))

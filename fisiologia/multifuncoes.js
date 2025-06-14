@@ -11,7 +11,7 @@ function alertarSobre(msg) {
     const dialogBoxDefault__console = dialogBoxDefault.querySelector(".dialog-box-default__p--js-console");
     dialogBoxDefault__console.textContent = msg;
     clearInterval(btnAutoCloseLoop);
-    let time = 15;
+    let time = 10;
     const btn__outputTime = document.querySelector(".dialog-box-default__output-autoclose-loop");
     btn__outputTime.textContent = `(${time--}s)`;
     btnAutoCloseLoop = setInterval(() => {
@@ -80,11 +80,11 @@ function animarCaixaDeDialogo(event) {
         : dialogBox.classList.remove("--mexer");
     }
 }
-function fecharTopoPropaganda(topoPropaganda) {
+function fechartopoInfo(topoInfo) {
     const body = document.querySelector("#body");
-    topoPropaganda.classList.add("topo-propaganda--off");
-    if(!topoPropaganda.matches(".topo-propaganda--festas-felizes")) {
-        body.classList.remove("body-com-topo-propaganda");
+    topoInfo.classList.add("topo-info--off");
+    if(!topoInfo.matches(".topo-info--festas-felizes")) {
+        body.classList.remove("body-com-topo-info");
     }
 }
 function omitirLinkDesteServicoNoRodape(){
@@ -94,6 +94,14 @@ function omitirLinkDesteServicoNoRodape(){
         if(servico.href === urlDestaPagina) {
             servico.parentElement.hidden = true;
         }
+    }
+}
+const Tooltip = {
+    mostrar(tooltip) {
+        tooltip.classList.add("--show");
+    },
+    omitir(tooltip) {
+        tooltip.classList.remove("--show");
     }
 }
 let btnAutoCloseLoop;
@@ -115,8 +123,29 @@ window.addEventListener("load", () => {
     desfoque.addEventListener("mousedown", event => animarCaixaDeDialogo(event.type));
     desfoque.addEventListener("mouseup", event => animarCaixaDeDialogo(event.type));
     // Fechar Topo Propaganda 
-    const btnXDetopoProgaganda = document.querySelectorAll(".topo-propaganda__btn");
-    btnXDetopoProgaganda.forEach(btn => {
-        btn.addEventListener("click", () => fecharTopoPropaganda(btn.parentElement.parentElement));
+    const btnXDetopoInfo = document.querySelectorAll(".topo-info__btn");
+    btnXDetopoInfo.forEach(btn => {
+        btn.addEventListener("click", () => fechartopoInfo(btn.parentElement.parentElement));
+    });
+    omitirLinkDesteServicoNoRodape();
+    // Tooltips
+    const tooltipVazioIgualZero = document.querySelector(".tooltip--vazioigualzero");
+    const tooltipMenuAjuda = document.querySelector(".tooltip--menu-ajuda");
+    const menuOptionsContainer = document.querySelector(".header__menu__ul");
+    dialogBoxAQD__btn.addEventListener("click", () => {
+        setTimeout(() => {
+            Tooltip.mostrar(tooltipMenuAjuda);
+            if(window.innerWidth < 510) {
+                const btnMenuAjuda = document.querySelector(".header__menu__btn--ajuda").parentElement;
+                let cssValueForPropertyRight = btnMenuAjuda.clientWidth / 2 - 14;
+                tooltipMenuAjuda.style.cssText = `right: calc(0px + ${cssValueForPropertyRight}px);`;
+                menuOptionsContainer.scrollBy({left: 509, behavior: 'smooth'});
+                menuOptionsContainer.classList.add("--overflow-h");
+            }
+        }, 1500);
+        setTimeout(() => {
+            Tooltip.omitir(tooltipMenuAjuda);
+            menuOptionsContainer.classList.remove("--overflow-h");
+        }, 8500);
     });
 });

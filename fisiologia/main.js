@@ -116,13 +116,13 @@ function escutarEventos() {
     // Tipo de Requisição
     const checkboxesTipoDeReq = document.querySelectorAll(".input-tipo-de-requisicao");
     balancete.toRadioCheckboxes(checkboxesTipoDeReq);
-    let key = "rb-tipo-de-req"
-    backup.saveCheckboxOption(checkboxesTipoDeReq, key);
+    let checkboxStorageKey = "rb-tipo-de-req"
+    backup.saveCheckboxOption(checkboxesTipoDeReq, checkboxStorageKey);
     // Cor da Requisição 
     const checkboxesBgcModifiers = document.querySelectorAll(".ficha__tipo-de-copia__checkbox");
     balancete.toRadioCheckboxes(checkboxesBgcModifiers);
-    key = "rb-copia-de-req"
-    backup.saveCheckboxOption(checkboxesBgcModifiers, key);
+    checkboxStorageKey = "rb-copia-de-req"
+    backup.saveCheckboxOption(checkboxesBgcModifiers, checkboxStorageKey);
     checkboxesBgcModifiers.forEach( checkbox => {
         checkbox.addEventListener("change", () => {
             balancete.simularDuplicadoOuTriplicado(checkbox);
