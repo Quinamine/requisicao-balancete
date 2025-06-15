@@ -199,7 +199,10 @@ function eventos() {
     const btnAbrirAjuda = document.querySelector(".header__menu__btn--ajuda");
     btnAbrirAjuda.addEventListener("click", () => menu.abrirArtigo("ajuda"));
     const btnFecharAjuda = document.querySelector(".artigo__btn-x--fechar-ajuda")
-    btnFecharAjuda.addEventListener("click", () => menu.fecharArtigo("ajuda"));
+    btnFecharAjuda.addEventListener("click", () => {
+        menu.fecharArtigo("ajuda");
+        removerBordaDoMovitoDeRedCells();
+    });
     // PARTILHAR 
     const data = {
         title: "Requisição/Balancete",
