@@ -1,8 +1,8 @@
-# Requisição/Balancete
+# Totalizador de Requisição/Balancete
 
-![Trecho do Requisição/Balancete](imagens/requisicao-balancete.png)
+![Trecho do Totalizador de Requisição/Balancete](imagens/requisicao-balancete.png)
 
-O **Requisição/Balancete** é um serviço online gratuito que auxilia na elaboração, como o nome sugere, da requisição/balancete, por meio do *cálculo automático do Stock Teórico Fim do Período, Diferença entre stock teórico e stock físico e Quantidade a Requisitar* com base nos dados de controlo da ficha de stock e inventário preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de requisição/balancete actualmente vigente no Serviço Nacional de Saúde em Moçambique.
+O **Totalizador de Requisição/Balancete** é um serviço online gratuito que auxilia na elaboração, como o nome sugere, da requisição/balancete, por meio do *cálculo automático do Stock Teórico Fim do Período, Diferença entre stock teórico e stock físico e Quantidade a Requisitar* com base nos dados de controlo da ficha de stock e inventário preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de requisição/balancete actualmente vigente no Serviço Nacional de Saúde em Moçambique.
 
 
 ## Objectivos

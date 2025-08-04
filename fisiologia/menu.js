@@ -113,7 +113,8 @@ const menu = {
         balancete.clonarFooterDaFichaParaTodasPaginas();
         const urlOutput = document.querySelector(".ficha__url-pub");
         const url = location.href;
-        urlOutput.innerHTML = `Totalizado por computador. Totalizador disponível em: <span class="ficha__url-pub__link">${url}</span>`;
+        const title = document.title;
+        urlOutput.innerHTML = `Totalizado por computador. ${title} disponível em: <span class="ficha__url-pub__link">${url}</span>`;
         window.print()
     },
     abrirArtigo(artigo) {
@@ -208,14 +209,14 @@ function eventos() {
     });
     // PARTILHAR 
     const data = {
-        title: "Requisição/Balancete",
+        title: "Totalizador de Requisição/Balancete",
         text: "Calcula automaticamente o Stock Teórico Fim do Período, Diferença entre stock teórico e stock físico e Quantidade a Requisitar com base nos dados de controlo da ficha de stock e inventário preenchidos pelo usuário. Foi desenvolvido de acordo com o modelo da ficha de requisição/balancete actualmente vigente no Serviço Nacional de Saúde em Moçambique.",
         url: "https://quinamine.github.io/requisicao-balancete/index.html"
     }
     const btnPartilhar = document.querySelector(".main__btn-fixed--share");
     btnPartilhar.addEventListener("click", () => {
         try {
-            navigator.share(data).then(()=>console.log("Requisição/Balancete partilhado com sucesso."))
+            navigator.share(data).then(()=>console.log("Totalizador de Requisição/Balancete partilhado com sucesso."))
             .catch(e=> console.log(`Não foi possivel partilhar o serviço devido ao erro: ${e}.`))
         } catch (e) {
             console.log("O seu navegador não tem suporte ao método 'navigator.share()'.")
