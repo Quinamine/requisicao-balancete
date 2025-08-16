@@ -140,6 +140,7 @@ window.addEventListener("load", () => {
     dialogBoxAQD__btn.addEventListener("click", () => {
         setTimeout(() => {
             Tooltip.mostrar(tooltipMenuAjuda);
+            document.body.scrollIntoView();
             if(window.innerWidth < 510) {
                 const btnMenuAjuda = document.querySelector(".header__menu__btn--ajuda").parentElement;
                 let cssValueForPropertyRight = btnMenuAjuda.clientWidth / 2 - 14;
