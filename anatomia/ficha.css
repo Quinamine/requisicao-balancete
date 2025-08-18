@@ -80,7 +80,7 @@
     margin-left: 2px;
     display: block;
     min-height: 24px;
-    max-width: 100%;
+    width: 100%;
 }
 .ficha__header__container-de-input input[type=date] {
     margin-left: 0;

@@ -134,7 +134,6 @@ window.addEventListener("load", () => {
     });
     omitirLinkDesteServicoNoRodape();
     // Tooltips
-    const tooltipVazioIgualZero = document.querySelector(".tooltip--vazioigualzero");
     const tooltipMenuAjuda = document.querySelector(".tooltip--menu-ajuda");
     const menuOptionsContainer = document.querySelector(".header__menu__ul");
     dialogBoxAQD__btn.addEventListener("click", () => {
