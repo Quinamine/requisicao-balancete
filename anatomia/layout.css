@@ -1107,3 +1107,6 @@ details[open] .details__summary {
         color: var(--blue);
     }
 }
+.u-text-light {
+    font-weight: 400 !important;
+} 
