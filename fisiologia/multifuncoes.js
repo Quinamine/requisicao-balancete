@@ -109,7 +109,23 @@ const Tooltip = {
         tooltip.classList.remove("--show");
     }
 }
-let btnAutoCloseLoop;
+function redirecionarParaTES() {
+    let tempoRedirecionamento = 10000;
+    let segundos = tempoRedirecionamento / 1000;
+
+    const timer = setInterval(() => {
+        redirectionTime.innerText = `${segundos--}`;
+        if(segundos < 1) {
+            clearInterval(timer);
+        }
+
+    }, 1000);
+
+    setTimeout(() => {
+        window.location.href = 'https://quinamine.github.io/totalizador-estatistica-saude/?page=balancete'
+    }, tempoRedirecionamento)
+}
+let btnAutoCloseLoop, redirectionTime;
 window.addEventListener("load", () => {
     const readonlyInputs = document.querySelectorAll("[readonly]");
     readonlyInputs.forEach ( inputTarget => inputTarget.addEventListener("click", () => {
@@ -153,4 +169,8 @@ window.addEventListener("load", () => {
             menuOptionsContainer.classList.remove("--overflow-h");
         }, 8500);
     });
+
+    // Redirecionar
+    redirectionTime = document.querySelector('.tempo-de-redirecionamento');
+    redirecionarParaTES();
 });
